@@ -1,0 +1,170 @@
+{
+ "date": "2026-11-22",
+ "generated": "2026-11-22T10:30:00-05:00",
+ "by": "joe",
+ "summary": "今天最大的事是 **Anthropic 正式上市**：[S-1 招股书](https://www.anthropic.com/news/s1-sec)、[定价](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)、路演和[交割公告](https://www.anthropic.com/news/ipo-close)集中发布，同期还宣布设立公益基金。公司层面的节奏变了，后续产品和定价策略值得持续留意。\n\n开源模型这边，Thinking Machines 的 [Inkling-2-Mini](https://huggingface.co/thinkingmachines/Inkling-2-Mini) 登上 HF 热门第 1，HN 上有人把它塞进 5.4 GB 内存跑起来（441 分），unsloth 的 GGUF 量化版也同时上榜——一个能在本机跑的多模态小模型，适合拿来试本地 agent。\n\n和你的 agent 编排方向最相关的是 claude.dev 两篇：[Claude Code 团队如何做验证](https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/)，以及[用 Claude Fable 5.2 安全扩展多 agent 团队](https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/)。GitHub 今日榜也被 agent skills 占满：Claude-BugHunter +1,803★、firecrawl、你本机在用的 [superpowers](https://github.com/obra/superpowers) 和 CLI-Anything 都在前列。\n\n理论方向，科学空间新文[《最佳学习率调度的变分估计》](https://kexue.fm/archives/12010)接上「无调度学习率」系列；社区里热度最高的是[黎曼猜想的 Lean 形式化验证](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)（HN 984 分、820 条评论）。",
+ "items": [
+  {
+   "title_zh": "Anthropic 完成 IPO",
+   "title": "Anthropic announces closing of initial public offering",
+   "why": "招股书（S-1）、定价、路演、交割同期发布，公司进入上市阶段。",
+   "tag": "官方",
+   "url": "https://www.anthropic.com/news/ipo-close",
+   "sources": [
+    {
+     "source": "anthropic",
+     "name": "Anthropic News",
+     "url": "https://www.anthropic.com/news/ipo-close",
+     "title": "Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement"
+    },
+    {
+     "source": "anthropic",
+     "name": "Anthropic News",
+     "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+     "title": "Anthropic prices initial public offering"
+    },
+    {
+     "source": "anthropic",
+     "name": "Anthropic News",
+     "url": "https://www.anthropic.com/news/s1-sec",
+     "title": "Anthropic files S-1 with the SEC for proposed initial public offering"
+    }
+   ]
+  },
+  {
+   "title_zh": "Thinking Machines 发布 Inkling-2-Mini",
+   "title": "thinkingmachines/Inkling-2-Mini",
+   "why": "HF 热门模型第 1（❤3326），HN 有人在 5.4GB 内存里跑起来（441 分），GGUF 量化版也上榜，本地可跑的多模态小模型。",
+   "tag": "开源",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+   "sources": [
+    {
+     "source": "hf-models",
+     "name": "Hugging Face 热门模型",
+     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+     "title": "thinkingmachines/Inkling-2-Mini",
+     "rank": 1,
+     "score": 3326,
+     "score_kind": "likes"
+    },
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
+     "title": "Inkling-2-Mini in 5.4 GB Memory",
+     "rank": 4,
+     "score": 441,
+     "score_kind": "score"
+    },
+    {
+     "source": "hf-models",
+     "name": "Hugging Face 热门模型",
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "title": "unsloth/Inkling-2-Mini-GGUF",
+     "rank": 2,
+     "score": 704,
+     "score_kind": "likes"
+    }
+   ]
+  },
+  {
+   "title_zh": "Claude Code 团队谈验证与多 agent 扩展",
+   "title": "How the Claude Code team thinks about verification",
+   "why": "claude.dev 两篇：验证方法论，以及用 Claude Fable 5.2 安全扩展多 agent 团队；和你做 agent 编排直接相关。",
+   "tag": "官方",
+   "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+   "sources": [
+    {
+     "source": "claude-dev",
+     "name": "Claude Developer Blog",
+     "url": "https://claude.dev/blog/how-the-claude-code-team-thinks-about-verification/",
+     "title": "How the Claude Code team thinks about verification"
+    },
+    {
+     "source": "claude-dev",
+     "name": "Claude Developer Blog",
+     "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+     "title": "Safely scaling multi-agent teams with Claude Fable 5.2"
+    }
+   ]
+  },
+  {
+   "title_zh": "Agent skills 成为 GitHub 今日主角",
+   "title": "GitHub Trending: Claude-BugHunter, firecrawl, superpowers, CLI-Anything",
+   "why": "Claude-BugHunter +1,803★、firecrawl +1,006★、superpowers +883★（你本机就装着 superpowers）、CLI-Anything +769★。",
+   "tag": "开源",
+   "url": "https://github.com/elementalsouls/Claude-BugHunter",
+   "sources": [
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "rank": 1,
+     "score": 1803,
+     "score_kind": "stars"
+    },
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/firecrawl/firecrawl",
+     "title": "firecrawl/firecrawl",
+     "rank": 6,
+     "score": 1006,
+     "score_kind": "stars"
+    },
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/obra/superpowers",
+     "title": "obra/superpowers",
+     "rank": 2,
+     "score": 883,
+     "score_kind": "stars"
+    },
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/HKUDS/CLI-Anything",
+     "title": "HKUDS/CLI-Anything",
+     "rank": 3,
+     "score": 769,
+     "score_kind": "stars"
+    }
+   ]
+  },
+  {
+   "title_zh": "科学空间：最佳学习率调度的变分估计",
+   "title": "最佳学习率调度的变分估计",
+   "why": "用变分方法推最优学习率调度，接上「无调度学习率」系列。",
+   "tag": "论文",
+   "url": "https://kexue.fm/archives/12010",
+   "sources": [
+    {
+     "source": "kexue",
+     "name": "科学空间（苏剑林）",
+     "url": "https://kexue.fm/archives/12010",
+     "title": "最佳学习率调度的变分估计"
+    }
+   ]
+  },
+  {
+   "title_zh": "黎曼猜想的 Lean 形式化验证",
+   "title": "Lean verification of the Riemann Hypothesis",
+   "why": "HN 24 小时最高分 984、820 条评论。",
+   "tag": "社区",
+   "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
+     "title": "Lean verification of the Riemann Hypothesis",
+     "rank": 1,
+     "score": 984,
+     "score_kind": "score"
+    }
+   ]
+  }
+ ]
+}

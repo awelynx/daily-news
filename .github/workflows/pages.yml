@@ -1,5 +1,5 @@
 # Builds site/ from news/data on the current main and deploys it to GitHub Pages.
-# Called by daily.yml and fast.yml after they commit; also runs when site/ changes.
+# Called by daily.yml and fast.yml after they commit; also runs when site/ or the highlights change.
 name: pages
 
 on:
@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/pages.yml"]
+    # Site changes, and the daily highlights Joe pushes from the owner's Mac (~08:20 New York).
+    paths: ["site/**", "news/data/highlights/**", ".github/workflows/pages.yml"]
 
 permissions:
   contents: read

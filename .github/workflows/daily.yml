@@ -38,16 +38,28 @@ jobs:
       - if: steps.guard.outputs.run == 'true'
         uses: astral-sh/setup-uv@v10.4.0 # upstream has no floating v10 tag
         with:
-          enable-cache: false # stdlib only, nothing to cache
+          enable-cache: false # tiny dependency set, nothing worth caching
       - if: steps.guard.outputs.run == 'true'
         run: |
           uv run --no-project news/collect.py | tee -a "$GITHUB_STEP_SUMMARY"
           # Failed sources (e.g. linux.do blocking runner IPs) are listed in the digest, not fatal.
           sed -n '/^## 来源状态/,$p' "news/digests/$(date +%F).md" >> "$GITHUB_STEP_SUMMARY"
+      # 今日重点: Claude picks when the ANTHROPIC_API_KEY secret exists, rules otherwise (an unset
+      # secret is an empty string). Never fails the run; a hand-written pick is left alone.
+      - if: steps.guard.outputs.run == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: uv run --script news/highlight.py | tee -a "$GITHUB_STEP_SUMMARY" || echo "::warning::highlight.py failed"
       - if: steps.guard.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          # If Joe pushed today's highlights while this ran, keep his file, not the rules pick.
+          hl="news/data/highlights/$(date +%F).json"
+          git fetch -q origin main
+          if git show "origin/main:$hl" 2>/dev/null | python3 -c 'import json,sys; sys.exit(json.load(sys.stdin).get("by") != "joe")'; then
+            git checkout origin/main -- "$hl"
+          fi
           git add news
           git diff --cached --quiet && exit 0
           git commit -m "Daily digest $(date +%F)"
