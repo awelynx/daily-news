@@ -36,7 +36,7 @@ jobs:
             echo run=false
           fi >> "$GITHUB_OUTPUT"
       - if: steps.guard.outputs.run == 'true'
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.4.0 # upstream has no floating v10 tag
       - if: steps.guard.outputs.run == 'true'
         run: |
           uv run --no-project news/collect.py | tee -a "$GITHUB_STEP_SUMMARY"
