@@ -1,6 +1,6 @@
 {
  "date": "2026-11-22",
- "generated": "2026-11-22T02:59:11-05:00",
+ "generated": "2026-11-22T03:04:58-05:00",
  "feeds": [
   {
    "source": "openai",
@@ -289,9 +289,9 @@
      "id": "50589618",
      "title": "Lean verification of the Riemann Hypothesis",
      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-     "note": "976 points",
+     "note": "979 points",
      "discuss": {
-      "label": "820 评论",
+      "label": "821 评论",
       "url": "https://news.ycombinator.com/item?id=50589618"
      },
      "mark": "new",
@@ -313,7 +313,7 @@
      "id": "50587875",
      "title": "My monitor was cutting my download speed by 75%",
      "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
-     "note": "560 points",
+     "note": "561 points",
      "discuss": {
       "label": "266 评论",
       "url": "https://news.ycombinator.com/item?id=50587875"
@@ -337,7 +337,7 @@
      "id": "50596133",
      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
-     "note": "344 points",
+     "note": "355 points",
      "discuss": {
       "label": "170 评论",
       "url": "https://news.ycombinator.com/item?id=50596133"
@@ -397,9 +397,9 @@
      "id": "50591835",
      "title": "Jensen Huang's fall is bad news for Silicon Valley's accelerationists",
      "url": "https://www.economist.com/business/2026/11/19/jensen-huangs-fall-is-bad-news-for-silicon-valleys-accelerationists",
-     "note": "166 points",
+     "note": "167 points",
      "discuss": {
-      "label": "354 评论",
+      "label": "356 评论",
       "url": "https://news.ycombinator.com/item?id=50591835"
      },
      "mark": "new",
@@ -421,7 +421,7 @@
      "id": "50593737",
      "title": "Advice for the next 100 Rust GUIs",
      "url": "https://linebender.org/blog/next-100-guis/",
-     "note": "149 points",
+     "note": "150 points",
      "discuss": {
       "label": "44 评论",
       "url": "https://news.ycombinator.com/item?id=50593737"
@@ -445,9 +445,9 @@
      "id": "50595168",
      "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
      "url": "https://github.com/ItsNotRexed/Leonida",
-     "note": "136 points",
+     "note": "137 points",
      "discuss": {
-      "label": "104 评论",
+      "label": "105 评论",
       "url": "https://news.ycombinator.com/item?id=50595168"
      },
      "mark": "new",
@@ -457,16 +457,16 @@
      "id": "50595554",
      "title": "Data Processing Incidents on Inference Providers",
      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
-     "note": "114 points",
+     "note": "116 points",
      "discuss": {
-      "label": "41 评论",
+      "label": "42 评论",
       "url": "https://news.ycombinator.com/item?id=50595554"
      },
      "mark": "new",
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00"
+   "fetched": "2026-11-22T03:04:58-05:00"
   },
   {
    "source": "github-trending",
@@ -594,7 +594,7 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00"
+   "fetched": "2026-11-22T03:04:58-05:00"
   },
   {
    "source": "linuxdo",
@@ -722,7 +722,8 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00"
+   "fetched": "2026-11-22T02:59:11-05:00",
+   "stale": true
   },
   {
    "source": "hf-models",
@@ -733,7 +734,7 @@
      "id": "thinkingmachines/Inkling-2-Mini",
      "title": "thinkingmachines/Inkling-2-Mini",
      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-     "note": "image-text-to-text · ❤ 3318",
+     "note": "image-text-to-text · ❤ 3321",
      "mark": "new",
      "streak": 1
     },
@@ -741,7 +742,7 @@
      "id": "unsloth/Inkling-2-Mini-GGUF",
      "title": "unsloth/Inkling-2-Mini-GGUF",
      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-     "note": "image-text-to-text · ❤ 700",
+     "note": "image-text-to-text · ❤ 702",
      "mark": "new",
      "streak": 1
     },
@@ -749,7 +750,7 @@
      "id": "tencent/Hy4-flash",
      "title": "tencent/Hy4-flash",
      "url": "https://huggingface.co/tencent/Hy4-flash",
-     "note": "image-text-to-text · ❤ 559",
+     "note": "image-text-to-text · ❤ 560",
      "mark": "new",
      "streak": 1
     },
@@ -810,7 +811,7 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00"
+   "fetched": "2026-11-22T03:04:58-05:00"
   },
   {
    "source": "hf-spaces",
@@ -826,18 +827,18 @@
      "streak": 1
     },
     {
-     "id": "JCisHERE/wan2-2-i2v-v3",
-     "title": "JCisHERE/wan2-2-i2v-v3",
-     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
-     "note": "gradio · ❤ 575",
+     "id": "MiniMaxAI/minimax-h3-image",
+     "title": "MiniMaxAI/minimax-h3-image",
+     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+     "note": "gradio · ❤ 254",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "MiniMaxAI/minimax-h3-image",
-     "title": "MiniMaxAI/minimax-h3-image",
-     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
-     "note": "gradio · ❤ 252",
+     "id": "JCisHERE/wan2-2-i2v-v3",
+     "title": "JCisHERE/wan2-2-i2v-v3",
+     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+     "note": "gradio · ❤ 575",
      "mark": "new",
      "streak": 1
     },
@@ -866,7 +867,7 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00"
+   "fetched": "2026-11-22T03:04:58-05:00"
   },
   {
    "source": "producthunt",
@@ -874,88 +875,95 @@
    "type": "ranking",
    "items": [
     {
-     "id": "https://www.producthunt.com/products/beat-watcher",
-     "title": "Beat Watcher",
-     "url": "https://www.producthunt.com/products/beat-watcher",
+     "id": "https://www.producthunt.com/products/slotify-2",
+     "title": "Slotify",
+     "url": "https://www.producthunt.com/products/slotify-2",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/ai-context-flow",
-     "title": "AI Context Flow MCP",
-     "url": "https://www.producthunt.com/products/ai-context-flow",
+     "id": "https://www.producthunt.com/products/mockreel",
+     "title": "Mockreel",
+     "url": "https://www.producthunt.com/products/mockreel",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/codemany",
-     "title": "Codemany",
-     "url": "https://www.producthunt.com/products/codemany",
+     "id": "https://www.producthunt.com/products/ulika",
+     "title": "Ulika",
+     "url": "https://www.producthunt.com/products/ulika",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/publicit",
-     "title": "Publicit",
-     "url": "https://www.producthunt.com/products/publicit",
+     "id": "https://www.producthunt.com/products/resurf-2",
+     "title": "Resurf",
+     "url": "https://www.producthunt.com/products/resurf-2",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/smorza",
-     "title": "Smorza",
-     "url": "https://www.producthunt.com/products/smorza",
+     "id": "https://www.producthunt.com/products/denotch",
+     "title": "DeNotch",
+     "url": "https://www.producthunt.com/products/denotch",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/waitfeed-2",
-     "title": "WaitFeed",
-     "url": "https://www.producthunt.com/products/waitfeed-2",
+     "id": "https://www.producthunt.com/products/pushback-flight-tracker",
+     "title": "Pushback: Flight Tracker",
+     "url": "https://www.producthunt.com/products/pushback-flight-tracker",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/loudflow",
-     "title": "LoudFlow",
-     "url": "https://www.producthunt.com/products/loudflow",
+     "id": "https://www.producthunt.com/products/yoroll",
+     "title": "Yoroll",
+     "url": "https://www.producthunt.com/products/yoroll",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/hollr-3",
-     "title": "Hollr",
-     "url": "https://www.producthunt.com/products/hollr-3",
+     "id": "https://www.producthunt.com/products/teaserkit",
+     "title": "TeaserKit",
+     "url": "https://www.producthunt.com/products/teaserkit",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/gitroots",
-     "title": "gitroots",
-     "url": "https://www.producthunt.com/products/gitroots",
+     "id": "https://www.producthunt.com/products/leapdeck",
+     "title": "Leapdeck",
+     "url": "https://www.producthunt.com/products/leapdeck",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/shipyard",
-     "title": "Shipyard",
-     "url": "https://www.producthunt.com/products/shipyard",
+     "id": "https://www.producthunt.com/products/wispim-online-teleprompter",
+     "title": "Wispim",
+     "url": "https://www.producthunt.com/products/wispim-online-teleprompter",
      "note": "",
      "mark": "new",
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00"
+   "fetched": "2026-11-22T03:04:58-05:00"
   }
  ],
- "status": []
+ "status": [
+  {
+   "source": "linuxdo",
+   "name": "LINUX DO 今日热门",
+   "kind": "error",
+   "message": "RuntimeError: HTTP 403, curl 也失败（exit 22），可能是 IP 被拦（榜单保留了今天 02:59 抓到的结果）"
+  }
+ ]
 }
