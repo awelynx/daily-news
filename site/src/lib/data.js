@@ -76,3 +76,25 @@ export const rankMeta = (sec, i) => {
 
 // Sources whose summaries carry more per line (Chinese prose) get two lines instead of one.
 export const noteLines = (id) => (id === "kexue" ? 2 : 1);
+
+// Wide layouts split a group into two lanes (side-by-side columns), each filled top to bottom.
+// Rankings split by kind of content: news-like lists vs. model/product lists.
+const RANK_LANES = [["hn", "github-trending", "linuxdo"], ["hf-models", "hf-spaces", "producthunt"]];
+// Rough rendered height, only used to balance the feed lanes.
+const feedHeight = (sec) => 50 + Math.min(sec.items.length, sec.items.length <= 4 ? 4 : 3) * 72 + (sec.items.length > 4 ? 44 : 0);
+
+// Returns two lanes of { sec, order }, `order` being the card's place in the single-column view.
+export function lanes(secs, key) {
+  const out = [[], []];
+  if (key === "rank") {
+    secs.forEach((sec, order) => out[RANK_LANES[0].includes(sec.source) ? 0 : 1].push({ sec, order }));
+    return out;
+  }
+  const h = [0, 0];
+  secs.forEach((sec, order) => {
+    const i = h[0] <= h[1] ? 0 : 1;
+    out[i].push({ sec, order });
+    h[i] += feedHeight(sec);
+  });
+  return out;
+}

@@ -13,7 +13,7 @@ const preview = (d) =>
   {months.map(([month, ds]) => (
     <>
       <h2>{month.replace("-", " 年 ")} 月</h2>
-      <ul class="card items">
+      <ul class="card items split-list">
         {ds.map((d) => (
           <li class="item day">
             <a class="t" href={url(`d/${d.date}/`)}>

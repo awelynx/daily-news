@@ -54,7 +54,7 @@ const byLast = Object.entries(Object.groupBy(timeline, (e) => e.last));
         <h3><a href={url(`d/${last}/`)}>最近在榜 {last}</a></h3>
         <span class="meta">{entries.length} 条</span>
       </div>
-      <ul class="items">
+      <ul class="items split-list">
         {entries.map((e) => {
           const t = splitTitle(e.sec, e.item);
           return (
@@ -68,7 +68,7 @@ const byLast = Object.entries(Object.groupBy(timeline, (e) => e.last));
         })}
       </ul>
     </section>
-  )) : days.map(({ d, sec }) => sec && (
+  )) : <div class="card-grid">{days.map(({ d, sec }) => sec && (
     <section class="card">
       <div class="card-head">
         <h3><a href={url(`d/${d.date}/`)}>{d.date}</a></h3>
@@ -76,7 +76,7 @@ const byLast = Object.entries(Object.groupBy(timeline, (e) => e.last));
       </div>
       <ul class="items">{sec.items.map((item) => <Item item={item} />)}</ul>
     </section>
-  ))}
+  ))}</div>}
 </Base>
 
 <style>

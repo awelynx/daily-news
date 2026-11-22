@@ -61,7 +61,7 @@ import { sources, url } from "../lib/data.js";
     out.innerHTML = Object.entries(days).map(([d, items]) => `
       <section class="card">
         <div class="card-head"><h3><a href="${base}d/${d}/">${d}</a></h3><span class="meta">${items.length} 条</span></div>
-        <ul class="items">${items.map((i) => `<li class="item">
+        <ul class="items split-list">${items.map((i) => `<li class="item">
           <a class="t" href="${esc(i.u)}" target="_blank" rel="noopener">${mark(i.t, terms)}</a>
           <div class="note"><span class="src">${esc(data.sources[i.s] || i.s)}</span>${i.n ? " · " + mark(i.n, terms) : ""}</div>
         </li>`).join("")}</ul>
@@ -78,7 +78,7 @@ import { sources, url } from "../lib/data.js";
 </script>
 
 <style>
-  .search { display: flex; gap: 8px; margin: 12px 0 8px; }
+  .search { display: flex; gap: 8px; margin: 12px 0 8px; max-width: 680px; }
   .search select { flex: none; max-width: 38%; padding: 0 10px; font-size: .9375rem; min-height: 44px; }
   #results :global(mark) { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 1px; }
   #results :global(.src) { color: var(--accent); }

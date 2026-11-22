@@ -3,7 +3,8 @@ import More from "./More.astro";
 import RankItem from "./RankItem.astro";
 import { fmtTime, hasHistory, isNew, sourceById, url } from "../lib/data.js";
 
-const { sec } = Astro.props;
+// `order`: position in the single-column view, where the wide layout's lanes are merged.
+const { sec, order = 0 } = Astro.props;
 const ranked = sec.items.map((item, n) => ({ item, rank: n + 1 }));
 const fresh = ranked.filter((r) => isNew(r.item));
 const staying = ranked.filter((r) => !isNew(r.item));
@@ -19,7 +20,7 @@ const longest = Math.max(0, ...staying.map((r) => r.item.streak ?? 0));
 const unit = sourceById[sec.source]?.kind === "github_trending" ? "右列为今日新增 star" : "";
 const caption = [sec.stale ? `${fmtTime(sec.fetched)} 的快照` : allNew ? "全部是新上榜" : "", unit].filter(Boolean).join(" · ");
 ---
-<section class="card rank-card" id={`src-${sec.source}`} data-source={sec.source}>
+<section class="card rank-card" id={`src-${sec.source}`} data-source={sec.source} style={`order:${order}`}>
   <div class="card-head">
     <h3><a href={url(`sources/${sec.source}/`)}>{sec.name}</a></h3>
     <span class="meta">{sec.items.length} 条</span>

@@ -131,6 +131,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     --radius: 10px;
     --nav-h: 52px;
     --bar-h: 44px;
+    --gutter: 16px;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -177,7 +178,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   }
   a { color: var(--link); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 var(--gutter); }
 
   /* Nav: sticky, tucks away on scroll down. */
   .top {
@@ -229,7 +230,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     position: sticky; top: var(--nav-real, var(--nav-h)); z-index: 10;
     display: flex; align-items: center; gap: 10px;
     min-height: var(--bar-h);
-    margin: 0 -16px 8px; padding: 0 16px;
+    margin: 0 calc(-1 * var(--gutter)) 8px; padding: 0 var(--gutter);
     background: var(--bg); /* opaque: text scrolling under the switch must not show through */
     border-bottom: 1px solid var(--faint);
     transition: top .2s ease;
@@ -250,9 +251,9 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     color: var(--muted); text-decoration: none; font-size: .8125rem; white-space: nowrap; border-bottom: 2px solid transparent;
   }
   .jumps a[aria-current="true"] { color: var(--text); border-bottom-color: var(--accent); }
-  .js .jumps:not([data-for="feeds"]) { display: none; }
-  .js[data-tab="rank"] .jumps[data-for="feeds"] { display: none; }
-  .js[data-tab="rank"] .jumps[data-for="rank"] { display: flex; }
+  .js .bar .jumps:not([data-for="feeds"]) { display: none; }
+  .js[data-tab="rank"] .bar .jumps[data-for="feeds"] { display: none; }
+  .js[data-tab="rank"] .bar .jumps[data-for="rank"] { display: flex; }
   .to-top { flex: none; font-size: .8125rem; color: var(--accent); text-decoration: none; min-height: var(--bar-h); display: flex; align-items: center; }
   .to-top[hidden] { display: none; }
   .bar:not(:has(.jumps)) .tabs { margin-right: auto; }
@@ -260,6 +261,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
 
   /* Panels: both shown without JS; with JS only the selected group. */
   .panel { scroll-margin-top: calc(var(--nav-real, var(--nav-h)) + var(--bar-real, var(--bar-h)) + 8px); }
+  .nav-up .panel, .nav-up .card { scroll-margin-top: calc(var(--bar-real, var(--bar-h)) + 8px); }
   .js .panel-title { display: none; }
   .js [data-panel="rank"] { display: none; }
   .js[data-tab="rank"] [data-panel="rank"] { display: block; }
@@ -350,8 +352,65 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     .card-head { margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: 0; }
     .more-btn { width: calc(100% + 32px); margin: 0 -16px; padding: 0 16px; }
   }
+  /* ---- Wider screens. Phones (<768px) keep the single column above. ----
+     Text columns stay 600–680px wide (about 36–42 Chinese characters); more width means more
+     columns, never longer lines. */
+
+  /* A group's cards sit in two lanes once the group is wide enough (container query); narrower,
+     the lanes dissolve and each card's inline `order` restores source order. Lanes are separate
+     columns, so expanding a card only moves the cards below it in the same lane. */
+  .panel { container-type: inline-size; }
+  .lanes { display: flex; flex-direction: column; }
+  .lane { display: contents; }
+  .col-strip { display: none; }
+  @container (min-width: 720px) {
+    .lanes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; align-items: start; }
+    .lane { display: block; min-width: 0; }
+  }
+
+  @media (min-width: 768px) {
+    :root { --gutter: 24px; }
+    .wrap { max-width: 1140px; }
+    .split-list { columns: 440px; column-gap: 32px; }
+    .split-list > li { break-inside: avoid; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); column-gap: 16px; align-items: start; }
+  }
+
+  /* Articles and rankings side by side; the 文章|榜单 switch and its bar give way to one sticky
+     jump strip per column. */
+  @media (min-width: 1200px) {
+    .wrap { max-width: calc(2 * 680px + 24px + 2 * var(--gutter)); }
+    .bar { display: none; }
+    html.js .board > .panel[data-panel] { display: block; }
+    .board { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; align-items: start; }
+    .overview { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 12px; margin: 12px 0 16px; }
+    .overview .ov { background: var(--panel); border: 1px solid var(--faint); border-radius: var(--radius); padding: 10px 14px; }
+    .col-strip.whole { display: flex; }
+    .col-strip {
+      position: sticky; top: var(--nav-real, var(--nav-h)); z-index: 5;
+      background: var(--bg); border-bottom: 1px solid var(--faint); margin: 0 0 10px;
+      transition: top .2s ease;
+    }
+    .nav-up .col-strip { top: 0; }
+    .strip-label { flex: none; display: flex; align-items: center; font-weight: 600; font-size: .875rem; margin-right: 6px; }
+    .strip-label .n { font-weight: 400; color: var(--muted); font-size: .75rem; margin-left: 3px; }
+    .card, .panel { scroll-margin-top: calc(var(--nav-real, var(--nav-h)) + var(--bar-h) + 8px); }
+    .nav-up .card, .nav-up .panel { scroll-margin-top: calc(var(--bar-h) + 8px); }
+    @container (min-width: 720px) {
+      .col-strip.whole { display: none; }
+      .lane-strip { display: flex; }
+    }
+  }
+
+  /* Three columns: articles | news-like rankings | model and product rankings. Only where each
+     column still gets 600px. */
+  @media (min-width: 1880px) {
+    .wrap { max-width: calc(3 * 680px + 2 * 24px + 2 * var(--gutter)); }
+    .board { grid-template-columns: 1fr 2fr; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .top, .bar, .more, .more-btn .chev, .card-head { transition: none !important; }
+    .top, .bar, .col-strip, .more, .more-btn .chev, .card-head { transition: none !important; }
     .more:not(.open) .more-clip { transition: none; }
     html { scroll-behavior: auto; }
   }

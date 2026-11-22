@@ -2,13 +2,14 @@
 import More from "./More.astro";
 import { noteLines, url } from "../lib/data.js";
 
-const { sec } = Astro.props;
+// `order`: position in the single-column view, where the wide layout's lanes are merged.
+const { sec, order = 0 } = Astro.props;
 // Three titles, then 再看 N 篇 — unless only one would be hidden.
 const show = sec.items.length <= 4 ? 4 : 3;
 const head = sec.items.slice(0, show);
 const rest = sec.items.slice(show);
 ---
-<section class="card feed" id={`src-${sec.source}`} data-source={sec.source} style={`--lines:${noteLines(sec.source)}`}>
+<section class="card feed" id={`src-${sec.source}`} data-source={sec.source} style={`--lines:${noteLines(sec.source)};order:${order}`}>
   <div class="card-head">
     <h3><a href={url(`sources/${sec.source}/`)}>{sec.name}</a></h3>
     <span class="meta">{sec.items.length} 篇</span>

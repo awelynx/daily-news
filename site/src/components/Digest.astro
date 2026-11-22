@@ -1,7 +1,7 @@
 ---
 import FeedCard from "./FeedCard.astro";
 import RankCard from "./RankCard.astro";
-import { count, fmtTime, hasHistory, isNew, newCount, short, weekday } from "../lib/data.js";
+import { count, fmtTime, hasHistory, isNew, lanes, newCount, short, weekday } from "../lib/data.js";
 
 const { d, heading } = Astro.props;
 const withHistory = d.rankings.filter(hasHistory);
@@ -27,11 +27,11 @@ const groups = [
 <slot />
 
 <div class="overview" id="overview">
-  <p>
+  <p class="ov">
     <a href="#panel-feeds" data-go="feeds">新文章 <b>{count(d.feeds)}</b> 篇</a>
     {d.feeds.map((s) => <> · <a href={`#src-${s.source}`} data-go="feeds">{short(s.source)} {s.items.length}</a></>)}
   </p>
-  <p>
+  <p class="ov">
     {withHistory.length > 0 ? (
       <>
         <a href="#panel-rank" data-go="rank">新上榜 <b>{newCount(d.rankings)}</b> 条</a>
@@ -42,7 +42,7 @@ const groups = [
     )}
   </p>
   {longest && (
-    <p>
+    <p class="ov">
       <a href={`#src-${longest.s.source}`} data-go="rank">霸榜最久：{longest.i.title}</a> 第 <b>{longest.i.streak}</b> 天
     </p>
   )}
@@ -57,19 +57,41 @@ const groups = [
     ))}
   </div>
   {groups.map((g) => (
-    <nav class="jumps" data-for={g.key} aria-label={`${g.label}来源`}>
+    <nav class="jumps" data-for={g.key} data-scope={`panel-${g.key}`} aria-label={`${g.label}来源`}>
       {g.secs.map((s) => <a href={`#src-${s.source}`} data-jump={s.source}>{short(s.source)}</a>)}
     </nav>
   ))}
   <a class="to-top" href="#overview" data-top hidden>速览 ↑</a>
 </div>
 
-{groups.map((g) => (
-  <div class="panel" id={`panel-${g.key}`} role="tabpanel" aria-labelledby={`tab-${g.key}`} data-panel={g.key}>
-    <h2 class="panel-title">{g.key === "feeds" ? "新文章" : "今日榜单"} <span class="n">{count(g.secs)}</span></h2>
-    {g.secs.length ? g.secs.map((sec) => <g.Card sec={sec} />) : <p class="empty">今天各博客都没有新文章。</p>}
-  </div>
-))}
+<!-- Wide screens: groups side by side, each with its own sticky jump strip; a wide group splits
+     into two lanes. Narrow screens: lanes collapse and cards fall back to source order. -->
+<div class="board">
+  {groups.map((g) => (
+    <div class="panel" id={`panel-${g.key}`} role="tabpanel" aria-labelledby={`tab-${g.key}`} data-panel={g.key}>
+      <h2 class="panel-title">{g.key === "feeds" ? "新文章" : "今日榜单"} <span class="n">{count(g.secs)}</span></h2>
+      <nav class="jumps col-strip whole" data-scope={`panel-${g.key}`} aria-label={`${g.label}来源`}>
+        <span class="strip-label">{g.label} <span class="n">{count(g.secs)}</span></span>
+        {g.secs.map((s) => <a href={`#src-${s.source}`} data-jump={s.source}>{short(s.source)}</a>)}
+      </nav>
+      {g.secs.length ? (
+        <div class="lanes">
+          {lanes(g.secs, g.key).map((lane, n) => (
+            <div class="lane" id={`lane-${g.key}-${n}`}>
+              {g.key === "rank" && (
+                <nav class="jumps col-strip lane-strip" data-scope={`lane-${g.key}-${n}`} aria-label={`${g.label}来源`}>
+                  <span class="strip-label">{n === 0 ? "榜单" : "模型与产品"}</span>
+                  {lane.map(({ sec }) => <a href={`#src-${sec.source}`} data-jump={sec.source}>{short(sec.source)}</a>)}
+                </nav>
+              )}
+              {lane.map(({ sec, order }) => <g.Card sec={sec} order={order} />)}
+            </div>
+          ))}
+        </div>
+      ) : <p class="empty">今天各博客都没有新文章。</p>}
+    </div>
+  ))}
+</div>
 
 {d.status.length === 0 && <p class="all-ok">所有来源正常 · {fmtTime(d.generated)} 抓取</p>}
 
@@ -121,8 +143,14 @@ const groups = [
       if (!card) return;
       const panel = card.closest("[data-panel]");
       if (panel) select(panel.dataset.panel);
+      // Scrolling down tucks the nav away; do it first so the card lands right under the strip.
+      document.body.classList.toggle("nav-up", card.getBoundingClientRect().top > 0);
       card.scrollIntoView({ behavior: reduce || instant ? "auto" : "smooth", block: "start" });
-      if (card.classList.contains("card")) flash(card);
+      if (card.classList.contains("card")) {
+        flash(card);
+        pinned = card.dataset.source;
+        schedule();
+      }
     };
     document.addEventListener("click", (e) => {
       const a = e.target.closest("a[data-jump], a[data-go], a[data-top]");
@@ -134,28 +162,38 @@ const groups = [
       } else go(a.hash.slice(1));
     });
 
-    // Highlight the jump link for the card under the sticky bar, and keep it in view in the strip.
-    const links = Object.fromEntries([...document.querySelectorAll("a[data-jump]")].map((a) => [a.dataset.jump, a]));
-    // The current card is the one under the bar's bottom edge (or the last one above it).
-    let current, queued;
+    // Each visible jump strip highlights the card of its own column that crosses the strip's
+    // bottom edge (the lowest card that has reached it), and keeps that link in view.
+    // After a jump the target stays highlighted until the reader scrolls: cards near the end of
+    // the page can't scroll up to the strip.
+    let queued, pinned;
+    ["wheel", "touchstart", "keydown"].forEach((ev) =>
+      addEventListener(ev, () => pinned && ((pinned = null), schedule()), { passive: true }));
     const track = () => {
       queued = false;
-      const line = bar.getBoundingClientRect().bottom + 1;
-      const cards = [...document.querySelectorAll(`[data-panel="${root.dataset.tab}"] section.card[data-source]`)];
-      const card = cards.filter((c) => c.getBoundingClientRect().top <= line).pop() ?? cards[0];
-      const a = card && links[card.dataset.source];
-      if (!a || a === current) return;
-      current?.removeAttribute("aria-current");
-      a.setAttribute("aria-current", "true");
-      current = a;
-      const strip = a.parentElement;
-      if (a.offsetLeft < strip.scrollLeft || a.offsetLeft + a.offsetWidth > strip.scrollLeft + strip.clientWidth * 0.85)
-        strip.scrollTo({ left: a.offsetLeft - 8, behavior: reduce ? "auto" : "smooth" });
+      for (const strip of document.querySelectorAll("nav.jumps")) {
+        if (!strip.offsetParent || !strip.offsetHeight) continue;
+        // Cards land 8px under the strip after a jump; count those as reached.
+        const line = strip.getBoundingClientRect().bottom + 12;
+        const cards = [...document.getElementById(strip.dataset.scope).querySelectorAll("section.card[data-source]")];
+        const tops = cards.map((c) => c.getBoundingClientRect().top);
+        let best = -1;
+        tops.forEach((t, i) => t <= line && (best < 0 || t > tops[best]) && (best = i));
+        const card = cards.find((c) => c.dataset.source === pinned) ?? cards[best] ?? cards[0];
+        const a = card && strip.querySelector(`a[data-jump="${card.dataset.source}"]`);
+        const was = strip.querySelector("a[aria-current]");
+        if (!a || a === was) continue;
+        was?.removeAttribute("aria-current");
+        a.setAttribute("aria-current", "true");
+        if (a.offsetLeft < strip.scrollLeft || a.offsetLeft + a.offsetWidth > strip.scrollLeft + strip.clientWidth * 0.85)
+          strip.scrollTo({ left: a.offsetLeft - 8, behavior: reduce ? "auto" : "smooth" });
+      }
     };
     const schedule = () => queued || ((queued = true), requestAnimationFrame(track));
     addEventListener("scroll", schedule, { passive: true });
     addEventListener("resize", schedule);
-    bar.addEventListener("transitionend", schedule); // the bar slides when the nav tucks away
+    // Strips slide when the nav tucks away; re-check once they settle.
+    document.querySelectorAll(".bar, .col-strip").forEach((el) => el.addEventListener("transitionend", schedule));
     track();
 
     // Past two screens, offer a way back to the overview.

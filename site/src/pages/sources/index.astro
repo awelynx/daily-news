@@ -9,8 +9,9 @@ const groups = [["feed", "博客与新闻", "只收录没见过的新文章"], [
 <Base title="来源" active="sources">
   <h1>来源</h1>
   <p class="sub">{sources.length} 个来源。点进去看某个来源在所有日报里的内容。</p>
+  <div class="card-grid">
   {groups.map(([type, label, hint]) => (
-    <>
+    <section>
       <h2>{label} <span class="n">{hint}</span></h2>
       <ul class="card items">
         {sources.filter((s) => (s.type ?? "feed") === type).map((s) => (
@@ -26,8 +27,9 @@ const groups = [["feed", "博客与新闻", "只收录没见过的新文章"], [
           </li>
         ))}
       </ul>
-    </>
+    </section>
   ))}
+  </div>
 </Base>
 
 <style>
