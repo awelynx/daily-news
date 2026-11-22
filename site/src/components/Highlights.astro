@@ -64,16 +64,19 @@ const two = (n) => String(n).padStart(2, "0");
   .briefing { margin: 28px 0 0; }
   .brief-label { margin: 0 0 14px; color: var(--seal); }
   .brief-label .by { color: var(--ink-2); text-transform: none; letter-spacing: .04em; }
-  .report-body { font: 400 1.0625rem/1.85 var(--serif); color: var(--ink); }
+  .report-body { font: 400 1.0625rem/1.85 var(--serif); color: var(--ink); line-break: strict; }
   .report-body :global(p) { margin: 0 0 1.2em; }
   .report-body :global(ul) { margin: 0 0 1.2em; padding-left: 1.2em; }
   .report-body :global(strong) { font-weight: 700; }
   .report-body :global(a) { color: inherit; text-decoration: underline; text-decoration-color: var(--seal); text-decoration-thickness: 1px; text-underline-offset: .28em; transition: text-decoration-thickness .12s var(--ease), color .12s var(--ease); }
   .report-body :global(a:hover) { text-decoration-thickness: 2px; }
   .report-body :global(code) { font: .85em var(--mono); background: color-mix(in srgb, var(--rule) 50%, transparent); padding: 0 4px; border-radius: 2px; }
-  .report-body :global(.fn) { font: 500 .625rem/0 var(--mono); vertical-align: super; margin: 0 0 0 1px; }
+  .report-body :global(.fn) { font: 500 .625rem/0 var(--mono); vertical-align: super; margin: 0; }
+  .report-body :global(.fn-tail) { white-space: nowrap; }
+  .report-body :global(.fn-tail > a) { white-space: normal; }
+  .report-body :global(.fn-tail .nb) { white-space: nowrap; }
   .report-body :global(.fn a) {
-    position: relative; display: inline-block; padding: 2px 3px; line-height: 1; text-align: center;
+    position: relative; display: inline-block; padding: 2px 2px 2px 1px; line-height: 1; text-align: center;
     color: var(--seal); text-decoration: none; border-radius: 2px;
   }
   .report-body :global(.fn a::after) { content: ""; position: absolute; inset: -12px -6px; } /* thumb-sized target */

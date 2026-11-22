@@ -20,6 +20,13 @@ const marks = (html) =>
   html
     .replace(new RegExp(`${FN}(\\d+)${FN}(?=((?:(?!${FN})[\\s\\S]){0,120}?)${FN}\\1${FN})`, "g"), (m, n, between) =>
       between.replace(/<[^>]+>/g, "").length <= 8 ? "" : m)
+    // The link's last character, its mark and a following Chinese punctuation mark stay on one
+    // line (nowrap spans, plus a word joiner: Chrome ignores nowrap at the link's edge), while
+    // the rest of the link text still wraps.
+    .replace(new RegExp(`(<a [^>]*>(?:(?!</a>)[\\s\\S])*</a>)${FN}(\\d+)${FN}([，。、；：]?)`, "g"),
+      (_, a, n, punct) =>
+        `<span class="fn-tail">${a.replace(/(&[#\w]+;|[^<>])<\/a>$/, '<span class="nb">$1\u2060</span></a>')}` +
+        `<sup class="fn"><a href="#pick-${n}" data-pick="${n}" aria-label="今日重点第 ${n} 条">${n}</a></sup>${punct}</span>`)
     .replace(new RegExp(`${FN}(\\d+)${FN}`, "g"), '<sup class="fn"><a href="#pick-$1" data-pick="$1" aria-label="今日重点第 $1 条">$1</a></sup>');
 
 export function renderMarkdown(src = "", notes) {
