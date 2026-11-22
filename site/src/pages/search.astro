@@ -1,0 +1,70 @@
+---
+import Base from "../layouts/Base.astro";
+import { sources, url } from "../lib/data.js";
+---
+<Base title="搜索" active="search">
+  <h1>搜索</h1>
+  <p class="sub">在所有日报和快速检查结果里搜标题、摘要和来源。</p>
+  <form role="search" onsubmit="return false">
+    <input id="q" type="search" placeholder="例如：Claude、黎曼、Rust……" autocomplete="off" enterkeyhint="search" autofocus />
+  </form>
+  <div class="chips" role="group" aria-label="按来源筛选">
+    <button class="chip" type="button" data-filter="" aria-pressed="true">全部来源</button>
+    {sources.map((s) => <button class="chip" type="button" data-filter={s.id} aria-pressed="false">{s.name}</button>)}
+  </div>
+  <p id="info" class="sub" aria-live="polite">载入中……</p>
+  <ul id="results" class="items card" hidden></ul>
+</Base>
+
+<script is:inline define:vars={{ dataUrl: url("search.json"), base: url() }}>
+  const q = document.getElementById("q");
+  const info = document.getElementById("info");
+  const list = document.getElementById("results");
+  const chips = [...document.querySelectorAll(".chip[data-filter]")];
+  const params = new URL(location.href).searchParams;
+  let source = params.get("source") || "";
+  q.value = params.get("q") || "";
+  let data;
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const mark = (s, terms) => {
+    let out = esc(s);
+    for (const t of terms) out = out.replace(new RegExp(esc(t).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"), (m) => `<mark>${m}</mark>`);
+    return out;
+  };
+  function render() {
+    chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.filter === source)));
+    const u = new URL(location.href);
+    q.value ? u.searchParams.set("q", q.value) : u.searchParams.delete("q");
+    source ? u.searchParams.set("source", source) : u.searchParams.delete("source");
+    history.replaceState(null, "", u);
+    if (!data) return;
+    const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!terms.length && !source) {
+      info.textContent = `共 ${data.items.length} 条可搜。`;
+      list.hidden = true;
+      return;
+    }
+    const hits = data.items.filter((i) => {
+      if (source && i.s !== source) return false;
+      const hay = (i.t + " " + i.n + " " + data.sources[i.s]).toLowerCase();
+      return terms.every((t) => hay.includes(t));
+    }).sort((a, b) => (a.d < b.d ? 1 : a.d > b.d ? -1 : 0));
+    const shown = hits.slice(0, 200);
+    info.textContent = hits.length ? `找到 ${hits.length} 条${hits.length > shown.length ? `，显示最近 ${shown.length} 条` : ""}。` : "没有找到。";
+    list.hidden = !shown.length;
+    list.innerHTML = shown.map((i) => `<li class="item"><div>
+      <span class="badge src">${esc(data.sources[i.s] || i.s)}</span>
+      <a class="t" href="${esc(i.u)}" target="_blank" rel="noopener">${mark(i.t, terms)}</a>
+      <div class="note"><a href="${base}d/${i.d}/">${i.d}</a>${i.n ? " · " + mark(i.n, terms) : ""}</div>
+    </div></li>`).join("");
+  }
+  chips.forEach((c) => c.addEventListener("click", () => { source = c.getAttribute("aria-pressed") === "true" ? "" : c.dataset.filter; render(); }));
+  q.addEventListener("input", render);
+  fetch(dataUrl).then((r) => r.json()).then((d) => { data = d; render(); }, () => (info.textContent = "搜索数据载入失败，请刷新重试。"));
+  render();
+</script>
+
+<style>
+  form { margin: 12px 0 6px; }
+  #results :global(mark) { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 1px; }
+</style>

@@ -1,0 +1,40 @@
+---
+import Base from "../../layouts/Base.astro";
+import Item from "../../components/Item.astro";
+import { digests, fastHits, homepage, sources, url } from "../../lib/data.js";
+
+export function getStaticPaths() {
+  return sources.map((s) => ({ params: { id: s.id }, props: { s } }));
+}
+const { s } = Astro.props;
+const ranking = s.type === "ranking";
+const days = digests
+  .map((d) => ({ d, sec: [...d.feeds, ...d.rankings].find((x) => x.source === s.id), status: d.status.find((x) => x.source === s.id) }))
+  .filter((x) => x.sec || x.status);
+const hits = fastHits.filter((h) => h.source === s.id);
+const List = ranking ? "ol" : "ul";
+---
+<Base title={s.name} active="sources">
+  <h1>{s.name}</h1>
+  <p class="sub">
+    {ranking ? "每日榜单" : "博客与新闻"}{s.cadence_days && ` · 平时约每 ${s.cadence_days} 天更新`} ·
+    <a href={homepage(s)} target="_blank" rel="noopener">原站</a>
+  </p>
+  {hits.length > 0 && (
+    <section class="card">
+      <div class="card-head"><h3>快速检查发现的</h3><span class="meta">{hits.length} 条</span></div>
+      <ul class="items">{hits.map((h) => <Item item={h} />)}</ul>
+    </section>
+  )}
+  {days.length === 0 && <p class="empty">归档里还没有这个来源的内容。</p>}
+  {days.map(({ d, sec, status }) => (
+    <section class="card">
+      <div class="card-head">
+        <h3><a href={url(`d/${d.date}/`)}>{d.date}</a></h3>
+        <span class="meta">{sec ? `${sec.items.length} 条` : ""}</span>
+      </div>
+      {status && <ul class="status"><li>{status.message}</li></ul>}
+      {sec && <List class="items">{sec.items.map((item) => <Item item={item} />)}</List>}
+    </section>
+  ))}
+</Base>

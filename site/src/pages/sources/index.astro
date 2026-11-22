@@ -1,0 +1,39 @@
+---
+import Base from "../../layouts/Base.astro";
+import { digests, homepage, latest, sources, url } from "../../lib/data.js";
+
+const total = (id) => digests.reduce((n, d) => n + ([...d.feeds, ...d.rankings].find((s) => s.source === id)?.items.length ?? 0), 0);
+const issue = (id) => latest?.status.find((s) => s.source === id);
+const groups = [["feed", "博客与新闻", "只收录没见过的新文章"], ["ranking", "每日榜单", "每天一份 24 小时快照，标出新上榜和连续上榜天数"]];
+---
+<Base title="来源" active="sources">
+  <h1>来源</h1>
+  <p class="sub">{sources.length} 个来源。点进去看某个来源在所有日报里的内容。</p>
+  {groups.map(([type, label, hint]) => (
+    <>
+      <h2>{label} <span class="n">{hint}</span></h2>
+      <ul class="card items">
+        {sources.filter((s) => (s.type ?? "feed") === type).map((s) => (
+          <li class="item row">
+            <span>
+              <a class="t" href={url(`sources/${s.id}/`)}>{s.name}</a>
+              {s.fast && <span class="badge new" title="白天每 2 小时检查一次">快速检查</span>}
+            </span>
+            <span class="stats">
+              {issue(s.id) ? <span class="warn">异常</span> : <span>正常</span>}
+              {" · "}{total(s.id)} 条 · <a href={homepage(s)} target="_blank" rel="noopener">原站</a>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </>
+  ))}
+</Base>
+
+<style>
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .stats { color: var(--muted); font-size: 14px; }
+  .stats a { color: var(--muted); }
+  .warn { color: var(--warn); }
+  h2 .n { font-weight: 400; }
+</style>

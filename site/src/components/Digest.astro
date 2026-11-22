@@ -1,0 +1,45 @@
+---
+import Section from "./Section.astro";
+import { count, fmtTime, sections, weekday } from "../lib/data.js";
+
+const { d, heading } = Astro.props;
+const all = sections(d);
+---
+<h1>{heading ?? `${d.date} 要闻`}</h1>
+<p class="sub">{d.date} {weekday(d.date)} · {fmtTime(d.generated)} 生成 · 新文章 {count(d.feeds)} 篇 · 榜单 {count(d.rankings)} 条</p>
+<slot />
+
+<div class="chips" role="group" aria-label="按来源筛选">
+  <button class="chip" type="button" data-filter="" aria-pressed="true">全部</button>
+  {all.map((s) => <button class="chip" type="button" data-filter={s.source} aria-pressed="false">{s.name}</button>)}
+</div>
+
+<h2 data-group>新文章 <span class="n">{count(d.feeds)}</span></h2>
+{d.feeds.length ? d.feeds.map((sec) => <Section sec={sec} />) : <p class="empty">今天各博客都没有新文章。</p>}
+
+<h2 data-group>今日榜单 <span class="n">{count(d.rankings)}</span></h2>
+{d.rankings.map((sec) => <Section sec={sec} />)}
+
+<h2 data-group>来源状态</h2>
+{d.status.length ? (
+  <ul class="status">
+    {d.status.map((s) => <li><b>{s.name}</b>：{s.message}</li>)}
+  </ul>
+) : <p class="ok">✓ 所有来源都正常抓到了。</p>}
+
+<script is:inline>
+  (() => {
+    const chips = [...document.querySelectorAll(".chip[data-filter]")];
+    const cards = [...document.querySelectorAll("section[data-source]")];
+    const apply = (id) => {
+      chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.filter === id)));
+      cards.forEach((c) => (c.hidden = !!id && c.dataset.source !== id));
+      const u = new URL(location.href);
+      id ? u.searchParams.set("source", id) : u.searchParams.delete("source");
+      history.replaceState(null, "", u);
+    };
+    chips.forEach((c) => c.addEventListener("click", () => apply(c.getAttribute("aria-pressed") === "true" ? "" : c.dataset.filter)));
+    const start = new URL(location.href).searchParams.get("source");
+    if (start && chips.some((c) => c.dataset.filter === start)) apply(start);
+  })();
+</script>

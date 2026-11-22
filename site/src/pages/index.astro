@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+import Digest from "../components/Digest.astro";
+import { digests, fmtDay, fmtTime, freshHits, latest, url } from "../lib/data.js";
+
+const prev = digests[1];
+---
+<Base active="today">
+  {latest ? (
+    <Digest d={latest} heading="今日要闻">
+      {freshHits.length > 0 && (
+        <aside class="fresh" aria-label="刚刚发布">
+          <div class="fresh-head"><span class="dot" />刚刚发布 <span class="n">日报之后官方博客的新文章</span></div>
+          <ul>
+            {freshHits.map((h) => (
+              <li>
+                <time datetime={h.time}>{fmtDay(h.time)} {fmtTime(h.time)}</time>
+                <span class="badge src">{h.name}</span>
+                <a href={h.url} target="_blank" rel="noopener">{h.title}</a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+    </Digest>
+  ) : <p class="empty">还没有日报。</p>}
+  <nav class="pager">
+    <span />
+    {prev && <a href={url(`d/${prev.date}/`)}>前一天 {prev.date} →</a>}
+  </nav>
+</Base>
+
+<style>
+  .fresh { border: 1px solid var(--accent); background: var(--accent-soft); border-radius: var(--radius); padding: 12px 14px; margin: 14px 0 6px; }
+  .fresh-head { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .fresh-head .n { font-weight: 400; color: var(--muted); font-size: 13px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .35; } }
+  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+  .fresh ul { list-style: none; margin: 8px 0 0; padding: 0; }
+  .fresh li { padding: 6px 0; border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); font-size: 15px; }
+  .fresh li:first-child { border-top: 0; }
+  .fresh time { color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; margin-right: 6px; }
+  .fresh a { font-weight: 500; text-decoration: none; }
+  .fresh a:hover { text-decoration: underline; }
+</style>

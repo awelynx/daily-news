@@ -1,0 +1,62 @@
+# Daily digest at 08:00 New York time. GitHub cron is UTC and has no DST, so it fires at both
+# 12:00 UTC (08:00 EDT) and 13:00 UTC (08:00 EST); the guard lets through only the run that lands
+# at or after 08:00 local on a day that has no digest yet. Manual runs always go through.
+name: daily
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: news-collect # shared with fast.yml so two runs never commit at once
+  cancel-in-progress: false
+
+env:
+  TZ: America/New_York
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      run: ${{ steps.guard.outputs.run }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: guard
+        run: |
+          if [ "$GITHUB_EVENT_NAME" != schedule ]; then
+            echo run=true
+          elif [ "$(date +%-H)" -ge 8 ] && [ ! -f "news/data/$(date +%F).json" ]; then
+            echo run=true
+          else
+            echo "::notice::Skipped: $(date '+%F %H:%M %Z') is before 08:00 or today's digest exists"
+            echo run=false
+          fi >> "$GITHUB_OUTPUT"
+      - if: steps.guard.outputs.run == 'true'
+        uses: astral-sh/setup-uv@v10
+      - if: steps.guard.outputs.run == 'true'
+        run: |
+          uv run --no-project news/collect.py | tee -a "$GITHUB_STEP_SUMMARY"
+          # Failed sources (e.g. linux.do blocking runner IPs) are listed in the digest, not fatal.
+          sed -n '/^## 来源状态/,$p' "news/digests/$(date +%F).md" >> "$GITHUB_STEP_SUMMARY"
+      - if: steps.guard.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add news
+          git diff --cached --quiet && exit 0
+          git commit -m "Daily digest $(date +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+  pages:
+    needs: collect
+    if: needs.collect.outputs.run == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

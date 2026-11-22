@@ -1,0 +1,33 @@
+---
+import Base from "../layouts/Base.astro";
+import { count, digests, url, weekday } from "../lib/data.js";
+
+const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7)));
+---
+<Base title="归档" active="archive">
+  <h1>归档</h1>
+  <p class="sub">共 {digests.length} 期日报</p>
+  {months.map(([month, ds]) => (
+    <>
+      <h2>{month.replace("-", " 年 ")} 月</h2>
+      <ul class="card items">
+        {ds.map((d) => (
+          <li class="item row">
+            <a class="t" href={url(`d/${d.date}/`)}>{d.date} <span class="wd">{weekday(d.date)}</span></a>
+            <span class="stats">
+              新文章 {count(d.feeds)} · 榜单 {count(d.rankings)}
+              {d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </>
+  ))}
+</Base>
+
+<style>
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .wd { color: var(--muted); font-weight: 400; font-size: 14px; margin-left: 4px; }
+  .stats { color: var(--muted); font-size: 14px; }
+  .warn { color: var(--warn); }
+</style>

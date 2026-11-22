@@ -1,0 +1,17 @@
+---
+import Base from "../../layouts/Base.astro";
+import Digest from "../../components/Digest.astro";
+import { digests, url } from "../../lib/data.js";
+
+export function getStaticPaths() {
+  return digests.map((d, i) => ({ params: { date: d.date }, props: { d, newer: digests[i - 1], older: digests[i + 1] } }));
+}
+const { d, newer, older } = Astro.props;
+---
+<Base title={d.date} active={d === digests[0] ? "today" : "archive"}>
+  <Digest d={d} />
+  <nav class="pager">
+    {newer ? <a href={url(`d/${newer.date}/`)}>← 后一天 {newer.date}</a> : <span />}
+    {older ? <a href={url(`d/${older.date}/`)}>前一天 {older.date} →</a> : <span />}
+  </nav>
+</Base>

@@ -1,0 +1,50 @@
+# Checks the official blogs (sources with "fast": true) every 2 hours from about 09:00 to 23:00
+# New York time. Hits are appended to news/data/fast/DATE.json and shown on the site as 刚刚发布;
+# the site is redeployed only when something new turned up.
+name: fast
+
+on:
+  schedule:
+    - cron: "0 1,3,13,15,17,19,21,23 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: news-collect # shared with daily.yml so two runs never commit at once
+  cancel-in-progress: false
+
+env:
+  TZ: America/New_York
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - run: uv run --no-project news/collect.py --fast | tee -a "$GITHUB_STEP_SUMMARY"
+      - id: commit
+        run: |
+          if git diff --quiet -- news/data && [ -z "$(git ls-files --others --exclude-standard news/data)" ]; then
+            echo changed=false >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add news
+          git commit -m "Fast check $(date '+%F %H:%M')"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo changed=true >> "$GITHUB_OUTPUT"
+
+  pages:
+    needs: collect
+    if: needs.collect.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
