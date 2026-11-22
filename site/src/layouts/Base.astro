@@ -230,9 +230,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     display: flex; align-items: center; gap: 10px;
     min-height: var(--bar-h);
     margin: 0 -16px 8px; padding: 0 16px;
-    background: color-mix(in srgb, var(--bg) 92%, transparent);
-    backdrop-filter: saturate(1.4) blur(10px);
-    -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    background: var(--bg); /* opaque: text scrolling under the switch must not show through */
     border-bottom: 1px solid var(--faint);
     transition: top .2s ease;
   }
@@ -316,6 +314,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   .name { font-weight: 600; }
   .row.dim .t { color: var(--muted); font-weight: 400; }
   .row.dim .name { font-weight: 500; }
+  .inline-meta { color: var(--muted); font-size: .8125rem; white-space: nowrap; }
   .meta-line { color: var(--muted); font-size: .8125rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .meta-line a { color: var(--muted); }
   .val { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }

@@ -14,7 +14,8 @@ const first = split ? fresh : ranked;
 // Five rows, then 再看 N 条 — unless only one would be hidden.
 const show = first.length <= 6 ? 6 : 5;
 const longest = Math.max(0, ...staying.map((r) => r.item.streak ?? 0));
-const caption = sec.stale ? `${fmtTime(sec.fetched)} 的快照` : !hasHistory(sec) ? "首日收录，明天起区分新上榜" : allNew ? "全部是新上榜" : "";
+// First-day lists get no caption: the overview already says 首日收录 once.
+const caption = sec.stale ? `${fmtTime(sec.fetched)} 的快照` : allNew ? "全部是新上榜" : "";
 ---
 <section class="card rank-card" id={`src-${sec.source}`} data-source={sec.source}>
   <div class="card-head">

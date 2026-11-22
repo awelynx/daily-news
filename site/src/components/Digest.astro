@@ -89,6 +89,7 @@ const groups = [
         if (on && focus) t.focus();
       });
       try { localStorage.setItem("tab", key); } catch {}
+      requestAnimationFrame(() => track());
     };
     select(root.dataset.tab === "rank" ? "rank" : "feeds");
     tabs.forEach((t) => {
@@ -135,19 +136,27 @@ const groups = [
 
     // Highlight the jump link for the card under the sticky bar, and keep it in view in the strip.
     const links = Object.fromEntries([...document.querySelectorAll("a[data-jump]")].map((a) => [a.dataset.jump, a]));
-    const io = new IntersectionObserver((entries) => {
-      for (const en of entries) {
-        if (!en.isIntersecting) continue;
-        const a = links[en.target.dataset.source];
-        if (!a) continue;
-        a.parentElement.querySelectorAll("a").forEach((x) => x.removeAttribute("aria-current"));
-        a.setAttribute("aria-current", "true");
-        const strip = a.parentElement;
-        if (a.offsetLeft < strip.scrollLeft || a.offsetLeft + a.offsetWidth > strip.scrollLeft + strip.clientWidth * 0.85)
-          strip.scrollTo({ left: a.offsetLeft - 8, behavior: reduce ? "auto" : "smooth" });
-      }
-    }, { rootMargin: "-120px 0px -65% 0px" });
-    document.querySelectorAll("section.card[data-source]").forEach((c) => io.observe(c));
+    // The current card is the one under the bar's bottom edge (or the last one above it).
+    let current, queued;
+    const track = () => {
+      queued = false;
+      const line = bar.getBoundingClientRect().bottom + 1;
+      const cards = [...document.querySelectorAll(`[data-panel="${root.dataset.tab}"] section.card[data-source]`)];
+      const card = cards.filter((c) => c.getBoundingClientRect().top <= line).pop() ?? cards[0];
+      const a = card && links[card.dataset.source];
+      if (!a || a === current) return;
+      current?.removeAttribute("aria-current");
+      a.setAttribute("aria-current", "true");
+      current = a;
+      const strip = a.parentElement;
+      if (a.offsetLeft < strip.scrollLeft || a.offsetLeft + a.offsetWidth > strip.scrollLeft + strip.clientWidth * 0.85)
+        strip.scrollTo({ left: a.offsetLeft - 8, behavior: reduce ? "auto" : "smooth" });
+    };
+    const schedule = () => queued || ((queued = true), requestAnimationFrame(track));
+    addEventListener("scroll", schedule, { passive: true });
+    addEventListener("resize", schedule);
+    bar.addEventListener("transitionend", schedule); // the bar slides when the nav tucks away
+    track();
 
     // Past two screens, offer a way back to the overview.
     const top = document.querySelector("[data-top]");

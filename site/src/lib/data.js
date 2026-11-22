@@ -52,8 +52,8 @@ const num = (n) => n.toLocaleString("en-US");
 // The number shown right-aligned on a ranking row, with what it means.
 export const value = (i) =>
   i.score != null ? { text: num(i.score), label: `${i.score} 分` }
-  : i.stars != null ? { text: "+" + num(i.stars), label: `今日 +${i.stars} star` }
-  : i.likes != null ? { text: num(i.likes), label: `${i.likes} 个喜欢` }
+  : i.stars != null ? { text: "今日 ★ +" + num(i.stars), label: `今日 +${i.stars} star` }
+  : i.likes != null ? { text: "❤ " + num(i.likes), label: `累计 ${i.likes} 个赞` }
   : i.votes != null ? { text: num(i.votes), label: `${i.votes} 票` }
   : null;
 
@@ -64,12 +64,13 @@ export const splitTitle = (sec, i) => {
   return m ? { org: m[1], name: m[2] } : { name: i.title };
 };
 
-// Meta line under a ranking title, and a one-line summary where the source has a useful one.
+// Meta line under a ranking title, a short tag after the title (`inline`), and a one-line
+// summary where the source has a useful one.
 export const rankMeta = (sec, i) => {
   const kind = sourceById[sec.source]?.kind;
   if (kind === "hn_top") return i.score != null ? { discuss: i.discuss } : { text: i.note, discuss: i.discuss };
-  if (kind === "github_trending") return i.stars != null || i.desc != null ? { text: i.lang, summary: i.desc } : { summary: i.note };
-  if (kind === "hf") return { text: i.likes != null ? i.tag : i.note };
+  if (kind === "github_trending") return i.stars != null || i.desc != null ? { inline: i.lang, summary: i.desc } : { summary: i.note };
+  if (kind === "hf") return i.likes != null ? { inline: i.tag } : { text: i.note };
   return { summary: i.note };
 };
 
