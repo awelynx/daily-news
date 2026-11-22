@@ -33,7 +33,9 @@ export function GET(context) {
     title: "Joe 每日要闻",
     description: "AI 公司博客、技术博客与各大榜单的每日汇总",
     site: base.href,
-    customData: "<language>zh-CN</language>",
+    customData:
+      "<language>zh-CN</language>" +
+      `<image><url>${new URL("og.png", base).href}</url><title>Joe 每日要闻</title><link>${base.href}</link></image>`,
     items: digests.slice(0, 30).map((d) => {
       const link = new URL(`d/${d.date}/`, base).href;
       const hl = highlights[d.date];

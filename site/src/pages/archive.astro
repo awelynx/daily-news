@@ -1,51 +1,66 @@
 ---
 import Base from "../layouts/Base.astro";
-import { count, digests, hasHistory, highlights, newCount, url, weekday } from "../lib/data.js";
+import { count, digests, headline, highlights, issueNo, url, weekdayEn } from "../lib/data.js";
 
 const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7)));
-// Each day leads with its 今日重点; days without one preview the highest-scoring ranking item
-// (HN), else the first new post.
-const preview = (d) =>
-  d.rankings.flatMap((s) => s.items).filter((i) => i.score != null).sort((a, b) => b.score - a.score)[0] ?? d.feeds[0]?.items[0];
+// Each day reads as one line: the report's first sentence; without a report, the top pick; before
+// picks existed, the highest-scoring ranking item (HN), else the first new post.
+const line = (d) => {
+  const hl = highlights[d.date];
+  return headline(hl) ?? hl?.items[0]?.title_zh ??
+    (d.rankings.flatMap((s) => s.items).filter((i) => i.score != null).sort((a, b) => b.score - a.score)[0] ?? d.feeds[0]?.items[0])?.title ?? "";
+};
+const tally = (d) => (highlights[d.date] ? `${highlights[d.date].items.length} 条重点` : `${count(d.feeds) + count(d.rankings)} 条`);
 ---
 <Base title="归档" active="archive">
   <h1>归档</h1>
   <p class="sub">共 {digests.length} 期日报</p>
   {months.map(([month, ds]) => (
-    <>
-      <h2>{month.replace("-", " 年 ")} 月</h2>
-      <ul class="card items split-list">
+    <section class="month" aria-labelledby={`m-${month}`}>
+      <h2 id={`m-${month}`}>{month.slice(0, 4)} 年 {+month.slice(5)} 月 <span class="n">{ds.length} 期</span></h2>
+      <ol class="days">
         {ds.map((d) => (
-          <li class="item day">
-            <a class="t" href={url(`d/${d.date}/`)}>
-              <span class="date">{d.date.slice(5).replace("-", " 月 ")} 日 <span class="wd">{weekday(d.date)}</span></span>
-              <span class="stats">
-                文章 {count(d.feeds)} · {d.rankings.some(hasHistory) ? `新上榜 ${newCount(d.rankings)}` : `榜单 ${count(d.rankings)}`}
-                {d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
+          <li>
+            <a class="day" href={url(`d/${d.date}/`)}>
+              <span class="when"><span class="md">{d.date.slice(5).replace("-", ".")}</span> {weekdayEn(d.date)}</span>
+              <span class="line">{line(d)}</span>
+              <span class="meta">
+                <span class="no">No. {issueNo(d)}</span>
+                {tally(d)}{d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
               </span>
             </a>
-            {highlights[d.date] ? (
-              <ol class="picks">
-                {highlights[d.date].items.map((h) => (
-                  <li><span class="tag">{h.tag}</span><a href={h.url} target="_blank" rel="noopener">{h.title_zh}</a></li>
-                ))}
-              </ol>
-            ) : preview(d) && <div class="note clamp">{preview(d).title}</div>}
           </li>
         ))}
-      </ul>
-    </>
+      </ol>
+    </section>
   ))}
 </Base>
 
 <style>
-  .day .t { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 4px 0; }
-  .wd { color: var(--muted); font-weight: 400; font-size: .875rem; margin-left: 4px; }
-  .stats { color: var(--muted); font-size: .8125rem; font-weight: 400; font-variant-numeric: tabular-nums; }
-  .warn { color: var(--warn); }
-  .picks { list-style: none; margin: 4px 0 2px; padding: 0; font-size: .875rem; }
-  .picks li { padding: 3px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .picks a { color: var(--text); text-decoration: none; }
-  .picks a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .tag { display: inline-block; font-size: .6875rem; line-height: 1; padding: 3px 5px; margin-right: 6px; border-radius: 4px; color: var(--accent); background: var(--accent-soft); vertical-align: .12em; }
+  .month h2 { border-bottom: 1px solid var(--ink); padding-bottom: 8px; margin-bottom: 0; }
+  .days { list-style: none; margin: 0; padding: 0; }
+  .day {
+    display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); grid-template-areas: "when line" ". meta";
+    column-gap: 14px; row-gap: 2px; align-items: baseline;
+    padding: 14px 0 13px; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink);
+    transition: background .1s var(--ease);
+  }
+  .day:active { background: color-mix(in srgb, var(--rule) 30%, transparent); }
+  .when { grid-area: when; font: 500 .75rem var(--mono); letter-spacing: .06em; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .md { color: var(--seal); }
+  .line { grid-area: line; font: 600 1.0625rem/1.45 var(--serif); text-wrap: pretty; }
+  .day:hover .line { text-decoration: underline; text-decoration-color: var(--seal); text-underline-offset: .25em; }
+  .meta { grid-area: meta; font: .6875rem var(--mono); letter-spacing: .06em; color: var(--ink-2); }
+  .no { margin-right: 10px; }
+  .warn { color: var(--seal); }
+  @media (max-width: 480px) {
+    .day { grid-template-columns: 1fr; grid-template-areas: "when" "line" "meta"; }
+  }
+  @media (min-width: 768px) {
+    .month { max-width: 680px; }
+  }
+  @media (min-width: 1024px) {
+    .month, h1, .sub { max-width: 680px; margin-left: auto; margin-right: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) { .day { transition: none; } }
 </style>

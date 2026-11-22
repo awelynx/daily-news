@@ -2,12 +2,16 @@
 import FeedCard from "./FeedCard.astro";
 import Highlights from "./Highlights.astro";
 import RankCard from "./RankCard.astro";
-import { count, fmtTime, hasHistory, highlights, isNew, lanes, newCount, short, weekday } from "../lib/data.js";
+import { count, dateline, fmtTime, hasHistory, headline, highlights, isNew, issueNo, lanes, newCount, short } from "../lib/data.js";
 
 const { d, heading } = Astro.props;
 // With a 今日重点 list, the full digest starts folded behind 查看全部 N 条.
 const hl = highlights[d.date];
 const total = count(d.feeds) + count(d.rankings);
+const hasSummary = !!hl?.summary?.trim();
+// The one big line on the page: the report's first sentence, else the page's own heading.
+const title = headline(hl) ?? heading ?? `${+d.date.slice(5, 7)} 月 ${+d.date.slice(8)} 日要闻`;
+const tally = [`${count(d.feeds)} 篇新文章`, `${count(d.rankings)} 条榜单`, hl && `${hl.items.length} 条重点`].filter(Boolean).join(" · ");
 const withHistory = d.rankings.filter(hasHistory);
 const newBySource = withHistory.map((s) => [s, s.items.filter(isNew).length]).filter(([, n]) => n > 0);
 const longest = d.rankings
@@ -18,26 +22,43 @@ const groups = [
   { key: "rank", label: "榜单", secs: d.rankings, Card: RankCard },
 ];
 ---
-<h1>{heading ?? `${d.date} 要闻`}</h1>
-<p class="sub">{d.date} {weekday(d.date)} · {fmtTime(d.generated)} 生成</p>
+<div class:list={["front", { "has-side": hl && hasSummary }]}>
+  <div class="lead">
+    <header class="masthead">
+      <p class="folio label"><span>No. {issueNo(d)}</span><time datetime={d.generated}>{dateline(d)}</time></p>
+      <h1 class="headline">{title}</h1>
+      <p class="tally label">{tally}</p>
+      <div class="masthead-rule" aria-hidden="true"></div>
+    </header>
 
-{d.status.length > 0 && (
-  <details class="alert">
-    <summary>{d.status.length} 个来源异常：{d.status.map((s) => short(s.source)).join("、")}</summary>
-    <ul>{d.status.map((s) => <li><b>{s.name}</b>：{s.message}</li>)}</ul>
-  </details>
-)}
+    {d.status.length > 0 && (
+      <details class="alert">
+        <summary class="label">
+          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M8 1.5 15 14H1L8 1.5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 6v4" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="12" r=".8" fill="currentColor"/></svg>
+          <span>{d.status.map((s) => short(s.source)).join("、")} 抓取失败</span>
+        </summary>
+        <ul>{d.status.map((s) => <li><b>{s.name}</b>：{s.message}</li>)}</ul>
+      </details>
+    )}
 
-<slot />
+    <slot />
 
-{hl && <Highlights hl={hl} />}
+    {hl && <Highlights hl={hl} part="briefing" />}
+  </div>
+  {hl && <Highlights hl={hl} part="picks" />}
+</div>
+
 {hl && (
-  <button class="show-all" type="button" aria-expanded="false" aria-controls="all" data-open-label="收起全部" data-closed-label={`查看全部 ${total} 条`}>
-    <span>查看全部 {total} 条</span><span class="chev" aria-hidden="true">▾</span>
-  </button>
+  <div class="all-toggle">
+    <button class="show-all label" type="button" aria-expanded="false" aria-controls="all" data-open-label="收起全部" data-closed-label={`查看全部 ${total} 条`}>
+      <span>查看全部 {total} 条</span><span class="chev" aria-hidden="true">↓</span>
+    </button>
+  </div>
 )}
 
 <div id="all" class:list={["all", { foldable: hl }]}>
+<div class="all-clip">
+{hl && <h2 class="all-title" id="all-title" tabindex="-1">全部条目 <span class="n">{total}</span></h2>}
 <div class="overview" id="overview">
   <p class="ov">
     <a href="#panel-feeds" data-go="feeds">新文章 <b>{count(d.feeds)}</b> 篇</a>
@@ -107,6 +128,7 @@ const groups = [
 
 {d.status.length === 0 && <p class="all-ok">所有来源正常 · {fmtTime(d.generated)} 抓取</p>}
 </div>
+</div>
 
 <script is:inline>
   (() => {
@@ -151,26 +173,39 @@ const groups = [
       head.classList.add("flash");
       setTimeout(() => head.classList.remove("flash"), 600);
     };
-    // 查看全部 N 条: open state lives on <html data-all> (set before paint) and in localStorage.
+    // 查看全部 N 条: opens the full digest in place (rows 0fr -> 1fr) and puts #all in the URL;
+    // the open state lives on <html data-all>, set before paint when the URL already has #all.
+    // While the height moves the panel clips; once settled it stops clipping, so the sticky
+    // strips inside work and full-bleed cards keep their edges.
     const showAll = document.querySelector(".show-all");
-    const setAll = (open) => {
+    const all = document.getElementById("all");
+    const settle = () => all.classList.remove("moving");
+    all.addEventListener("transitionend", (e) => e.target === all && settle());
+    const setAll = (open, user) => {
       if (open) root.dataset.all = "open"; else delete root.dataset.all;
       if (showAll) {
         showAll.setAttribute("aria-expanded", String(open));
         showAll.firstElementChild.textContent = showAll.dataset[open ? "openLabel" : "closedLabel"];
       }
-      try { localStorage.setItem("showAll", open ? "1" : "0"); } catch {}
+      if (user) {
+        all.classList.add("moving");
+        setTimeout(settle, reduce ? 0 : 400);
+        history.replaceState(null, "", open ? "#all" : location.pathname + location.search);
+        if (open) document.getElementById("all-title")?.focus({ preventScroll: true });
+        else showAll.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+      }
       requestAnimationFrame(() => track());
     };
     if (showAll) {
       setAll(root.dataset.all === "open");
-      showAll.addEventListener("click", () => setAll(root.dataset.all !== "open"));
+      showAll.addEventListener("click", () => setAll(root.dataset.all !== "open", true));
+      addEventListener("hashchange", () => location.hash === "#all" && root.dataset.all !== "open" && setAll(true, true));
     }
 
     const go = (id, instant) => {
       const card = document.getElementById(id);
       if (!card) return;
-      if (card.closest(".all.foldable") && root.dataset.all !== "open") setAll(true);
+      if (card.closest(".all.foldable") && root.dataset.all !== "open") setAll(true, true);
       const panel = card.closest("[data-panel]");
       if (panel) select(panel.dataset.panel);
       // Scrolling down tucks the nav away; do it first so the card lands right under the strip.
@@ -235,3 +270,171 @@ const groups = [
     if (src) requestAnimationFrame(() => go("src-" + src, true));
   })();
 </script>
+
+<script is:inline>
+  // The front page: footnotes jump to their item, long reasons expand, the header line tracks
+  // reading through the report, and on wide screens the sidebar follows the paragraph being read.
+  (() => {
+    const body = document.querySelector(".report-body");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const flash = (el) => {
+      el.classList.add("flash");
+      // Hold the tint for a second; then let it fade (unless motion is reduced).
+      setTimeout(() => el.classList.remove("flash"), reduce ? 1000 : 60);
+    };
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[data-pick]");
+      if (!a) return;
+      const pick = document.getElementById("pick-" + a.dataset.pick);
+      if (!pick) return;
+      e.preventDefault();
+      const r = pick.getBoundingClientRect();
+      if (r.top < 60 || r.bottom > innerHeight) {
+        document.body.classList.toggle("nav-up", r.top > 0);
+        pick.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+      }
+      pick.querySelector(".pick-title")?.focus({ preventScroll: true });
+      flash(pick);
+    });
+
+    // 展开 only where the reason is really cut off at two lines.
+    const fit = () => document.querySelectorAll(".pick-why").forEach((p) => {
+      const btn = p.nextElementSibling;
+      if (!btn?.classList.contains("why-more") || p.classList.contains("open")) return;
+      btn.hidden = p.scrollHeight <= p.clientHeight + 1;
+    });
+    fit();
+    document.fonts?.ready.then(fit);
+    addEventListener("resize", fit);
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".why-more");
+      if (!btn) return;
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", String(open));
+      document.getElementById(btn.getAttribute("aria-controls")).classList.toggle("open", open);
+      btn.textContent = open ? "收起" : "展开";
+    });
+
+    if (!body) return;
+    const root = document.documentElement;
+    const side = matchMedia("(min-width: 1280px)");
+    const paras = [...body.children];
+    const picks = [...document.querySelectorAll(".pick")];
+    let queued = false;
+    const update = () => {
+      queued = false;
+      // Progress: 0 when the report's top meets the header, 1 when its end reaches the bottom.
+      const nav = document.querySelector(".top").getBoundingClientRect().bottom;
+      const r = body.getBoundingClientRect();
+      const span = r.height - (innerHeight - Math.max(nav, 0));
+      const p = span > 0 ? Math.min(1, Math.max(0, (Math.max(nav, 0) - r.top) / span)) : 0;
+      root.style.setProperty("--read", p.toFixed(4));
+      root.style.setProperty("--read-o", p > 0 && p < 1 ? "1" : "0");
+      if (!side.matches) return;
+      // Sidebar: the paragraph crossing 40% of the viewport lights its footnoted items.
+      const line = innerHeight * 0.4;
+      const at = paras.find((el) => el.getBoundingClientRect().bottom > line) ?? paras.at(-1);
+      const on = new Set(r.top < line && r.bottom > line / 2 ? [...at.querySelectorAll("a[data-pick]")].map((a) => a.dataset.pick) : []);
+      picks.forEach((li) => li.classList.toggle("current", on.has(li.dataset.n)));
+      body.querySelectorAll("a[data-pick]").forEach((a) => a.classList.toggle("on", on.has(a.dataset.pick) && at.contains(a)));
+    };
+    const schedule = () => queued || ((queued = true), requestAnimationFrame(update));
+    addEventListener("scroll", schedule, { passive: true });
+    addEventListener("resize", schedule);
+    side.addEventListener?.("change", () => {
+      picks.forEach((li) => li.classList.remove("current"));
+      body.querySelectorAll("a.on").forEach((a) => a.classList.remove("on"));
+      schedule();
+    });
+    update();
+  })();
+</script>
+
+<style>
+  /* ---- Masthead: folio strip, the day's one big line, the tally. ---- */
+  .masthead { margin: 16px 0 0; }
+  .folio {
+    display: flex; justify-content: space-between; gap: 4px 12px; flex-wrap: wrap;
+    margin: 0; padding: 6px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule);
+  }
+  .folio span { color: var(--seal); }
+  .headline { font: 700 1.75rem/1.2143 var(--serif); letter-spacing: .005em; margin: 18px 0 12px; text-wrap: balance; }
+  .tally { margin: 0 0 14px; }
+  .masthead-rule { height: 1px; background: var(--ink); transform-origin: 0 50%; }
+
+  /* Source trouble: one quiet vermilion line; details on demand. */
+  .alert { margin: 0; border-bottom: 1px solid var(--rule); font-size: .875rem; }
+  .alert summary { display: flex; align-items: center; gap: 7px; min-height: 40px; color: var(--seal); cursor: pointer; list-style: none; }
+  .alert summary::-webkit-details-marker { display: none; }
+  .alert summary::after { content: "详情"; margin-left: auto; color: var(--ink-2); text-transform: none; letter-spacing: .04em; }
+  .alert[open] summary::after { content: "收起"; }
+  .alert ul { margin: 0; padding: 0 0 12px 1.1em; color: var(--ink-2); line-height: 1.6; }
+  .alert b { color: var(--ink); font-weight: 600; }
+
+  /* 查看全部: a hairline across, the button centred on it. */
+  .all-toggle { position: relative; display: flex; justify-content: center; margin: 36px 0 20px; }
+  .all-toggle::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--rule); }
+  .show-all {
+    position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px;
+    border: 1px solid var(--ink); border-radius: 2px; background: var(--paper); color: var(--ink);
+    font-size: .75rem; cursor: pointer; transition: background .15s var(--ease), color .15s var(--ease), transform .1s var(--ease);
+  }
+  .show-all:hover { background: var(--ink); color: var(--paper); }
+  .show-all:active { transform: scale(.98); }
+  .show-all .chev { display: inline-block; transition: transform .24s var(--ease); }
+  .show-all[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  :global(html:not(.js)) .all-toggle { display: none; }
+  .all-title { margin: 0 0 4px; scroll-margin-top: calc(var(--nav-real, var(--nav-h)) + 12px); }
+  .all-title:focus { outline: none; }
+  .all-title:focus-visible { outline: none; }
+
+  /* The fold: rows 0fr -> 1fr, clipped only while moving. */
+  :global(.js) .all.foldable { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 0fr; transition: grid-template-rows .24s var(--ease); }
+  :global(.js[data-all="open"]) .all.foldable { grid-template-rows: 1fr; }
+  .all-clip { min-height: 0; }
+  :global(.js) .all.foldable > .all-clip { overflow: hidden; }
+  :global(.js:not([data-all="open"])) .all.foldable > .all-clip { visibility: hidden; transition: visibility 0s .24s; }
+  :global(.js[data-all="open"]) .all.foldable:not(.moving) > .all-clip { overflow: visible; }
+
+  /* First visit of the day: the rule draws, the headline and paragraphs rise in turn. */
+  @keyframes draw { from { transform: scaleX(0); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+  @keyframes fade { from { opacity: 0; } }
+  :global(.intro) .masthead-rule { animation: draw .36s cubic-bezier(.22, 1, .36, 1) both; }
+  :global(.intro) .headline, :global(.intro) .tally, :global(.intro) .front :global(.brief-label), :global(.intro) .front :global(.report-body > *) {
+    animation: rise .28s cubic-bezier(.22, 1, .36, 1) both;
+  }
+  :global(.intro) .tally { animation-delay: 50ms; }
+  :global(.intro) .front :global(.brief-label) { animation-delay: 150ms; }
+  :global(.intro) .front :global(.report-body > :nth-child(1)) { animation-delay: 200ms; }
+  :global(.intro) .front :global(.report-body > :nth-child(2)) { animation-delay: 250ms; }
+  :global(.intro) .front :global(.report-body > :nth-child(3)) { animation-delay: 300ms; }
+  :global(.intro) .front :global(.report-body > :nth-child(n + 4)) { animation-delay: 350ms; }
+
+  @media (min-width: 1024px) {
+    .masthead { margin-top: 28px; }
+    .headline { font-size: 2.75rem; line-height: 1.1818; margin: 26px 0 16px; }
+    .front { max-width: 680px; margin: 0 auto; }
+    .all-toggle { max-width: 680px; margin-left: auto; margin-right: auto; }
+  }
+  /* ≥1280: the report stays a centred 680px column; the picks sit beside it, sticky. */
+  @media (min-width: 1280px) {
+    .front.has-side {
+      max-width: none; display: grid; grid-template-columns: minmax(0, 680px) 320px; column-gap: 64px;
+      justify-content: center; align-items: start;
+    }
+    .front.has-side > :global(.picks) {
+      position: sticky; top: calc(var(--nav-real, var(--nav-h)) + 24px); margin-top: 28px;
+      transition: top .2s var(--ease);
+    }
+    :global(.nav-up) .front.has-side > :global(.picks) { top: 24px; }
+    .front.has-side + .all-toggle { max-width: calc(680px + 64px + 320px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(.js) .all.foldable, .show-all, .show-all .chev, .front.has-side > :global(.picks) { transition: none; }
+    :global(.intro) .masthead-rule, :global(.intro) .headline, :global(.intro) .tally, :global(.intro) .front :global(.brief-label), :global(.intro) .front :global(.report-body > *) {
+      animation: fade .12s linear both; animation-delay: 0s;
+    }
+  }
+</style>

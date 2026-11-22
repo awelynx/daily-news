@@ -1,109 +1,138 @@
 ---
-import { fmtTime, short } from "../lib/data.js";
+import { fmtTime, footnotes, short } from "../lib/data.js";
 import { renderMarkdown } from "../lib/md.js";
 
-// 今日汇报 + its items (news/data/highlights/DATE.json). The report is Joe's written summary;
-// below it each item links to the main article, with a pill for every place the story appeared.
-// A rules-only pick has no summary and shows just the items, under 今日重点.
-const { hl } = Astro.props;
+// 今日汇报 + 今日重点 (news/data/highlights/DATE.json), rendered in two parts so the page can
+// place them: `part="briefing"` is Joe's written report, `part="picks"` the numbered items.
+// Links in the report that point at an item carry that item's number as a footnote.
+// A rules-only pick has no report and shows just the items.
+const { hl, part } = Astro.props;
 const BY = { joe: "Joe", "claude-api": "Claude", rules: "规则" };
 const hasSummary = !!hl.summary?.trim();
 const num = (n) => n.toLocaleString("en-US");
 const metric = (s) =>
-  s.score == null ? "" : s.score_kind === "stars" ? ` +${num(s.score)}★` : s.score_kind === "likes" ? ` ❤${num(s.score)}` : ` ${num(s.score)}分`;
-// Several links from one source (three Anthropic posts, four repos) are told apart by name.
-const pill = (s, item) => {
-  const same = item.sources.filter((x) => x.source === s.source).length > 1;
-  const name = s.title?.includes("/") ? s.title.split("/").pop() : s.title ?? "";
-  const label = same && name ? (name.length > 22 ? name.slice(0, 21) + "…" : name) : short(s.source) + (s.rank ? ` 第${s.rank}` : "");
-  return label + metric(s);
+  s.score == null ? "" : s.score_kind === "stars" ? ` ★+${num(s.score)}` : s.score_kind === "likes" ? ` ❤${num(s.score)}` : ` ▲${num(s.score)}`;
+// Ranked sources read "HN #4 ▲441". Several unranked links from one source (three Anthropic
+// posts) fold into one "Anthropic ×3"; the report links each of them.
+const srcList = (item) => {
+  const out = [];
+  for (const s of item.sources ?? []) {
+    if (s.rank) { out.push({ s, label: `${short(s.source)} #${s.rank}${metric(s)}`, title: `${s.name}：${s.title ?? ""}` }); continue; }
+    const prev = out.find((o) => !o.s.rank && o.s.source === s.source);
+    if (prev) { prev.n++; prev.title += `\n${s.title ?? ""}`; continue; }
+    out.push({ s, n: 1, label: short(s.source) + metric(s), title: `${s.name}：${s.title ?? ""}` });
+  }
+  return out.map((o) => ({ ...o, label: o.n > 1 ? `${o.label} ×${o.n}` : o.label }));
 };
+const two = (n) => String(n).padStart(2, "0");
 ---
-<section class:list={["hl", { "with-summary": hasSummary }]} aria-labelledby="hl-title">
-  {hasSummary && (
-    <div class="report">
-      <div class="hl-head">
-        <h2 id="hl-title">今日汇报</h2>
-        <span class="meta">由 {BY[hl.by] ?? hl.by} 生成 · {fmtTime(hl.generated)}</span>
-      </div>
-      <div class="report-body" set:html={renderMarkdown(hl.summary)} />
-    </div>
-  )}
-  <div class="picks">
-  <div class="hl-head">
-    {hasSummary ? <h3>提到的条目</h3> : <h2 id="hl-title">今日重点</h2>}
-    <span class="meta">{hl.items.length} 条{!hasSummary && ` · 按${BY[hl.by] ?? hl.by}挑选`}</span>
-  </div>
-  <ol class="hl-list">
-    {hl.items.map((item) => (
-      <li class="hl-item">
-        <a class="t hl-title" href={item.url} target="_blank" rel="noopener">
-          <span class="hl-tag">{item.tag}</span>{item.title_zh}
-        </a>
-        {item.title && item.title !== item.title_zh && <div class="hl-orig">{item.title}</div>}
-        <p class="hl-why">{item.why}</p>
-        <div class="hl-src">
-          {item.sources.map((s) => (
-            <a class="pill" href={s.url} target="_blank" rel="noopener" title={`${s.name}：${s.title ?? ""}`}>{pill(s, item)}</a>
-          ))}
-        </div>
-      </li>
-    ))}
-  </ol>
-  </div>
-</section>
+{part === "briefing" && hasSummary && (
+  <section class="briefing" aria-labelledby="brief-title">
+    <h2 id="brief-title" class="label brief-label">The Briefing<span class="by"> · 由 {BY[hl.by] ?? hl.by} 撰写 · {fmtTime(hl.generated)}</span></h2>
+    <div class="report-body" set:html={renderMarkdown(hl.summary, footnotes(hl))} />
+  </section>
+)}
+
+{part === "picks" && (
+  <section class:list={["picks", { solo: !hasSummary }]} id="picks" aria-labelledby="picks-title">
+    <h2 id="picks-title" class="label picks-label">Today's Picks · {hl.items.length}{!hasSummary && <span> · 按{BY[hl.by] ?? hl.by}挑选</span>}</h2>
+    <ol class="pick-list">
+      {hl.items.map((item, i) => (
+        <li class="pick" id={`pick-${i + 1}`} data-n={i + 1}>
+          <span class="pick-n" aria-hidden="true">{two(i + 1)}</span>
+          <div class="pick-body">
+            {item.tag && <span class="label pick-tag">{item.tag}</span>}
+            <a class="t pick-title" href={item.url} target="_blank" rel="noopener">{item.title_zh}</a>
+            {item.why && <p class="pick-why" id={`why-${i + 1}`}>{item.why}</p>}
+            {item.why && <button class="why-more" type="button" aria-expanded="false" aria-controls={`why-${i + 1}`} hidden>展开</button>}
+            {item.sources?.length > 0 && (
+              <p class="pick-src">
+                {srcList(item).map((o, k) => (
+                  <>{k > 0 && <span class="sep" aria-hidden="true"> · </span>}<a href={o.s.url} target="_blank" rel="noopener" title={o.title}>{o.label}</a></>
+                ))}
+              </p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
 
 <style>
-  .hl { margin: 6px 0 14px; display: grid; gap: 14px; }
-  .report { background: var(--panel); border: 1px solid var(--faint); border-radius: var(--radius); padding: 12px 16px 4px; }
-  .report-body { font-size: 1rem; line-height: 1.75; }
-  .report-body :global(p) { margin: 0 0 10px; }
-  .report-body :global(ul) { margin: 0 0 10px; padding-left: 1.2em; }
-  .report-body :global(a) { color: var(--accent); text-underline-offset: 3px; }
-  .report-body :global(code) { font-size: .875em; background: var(--faint); padding: 0 4px; border-radius: 4px; }
-  .hl-head h3 { margin: 0; font-size: .9375rem; color: var(--muted); }
-  /* With a report above, the items become a compact list: one line of reason each. */
-  .with-summary .hl-list { gap: 8px; }
-  .with-summary .hl-item { padding: 9px 12px; }
-  .with-summary .hl-title { font-size: .9375rem; }
-  .with-summary .hl-orig { display: none; }
-  .with-summary .hl-why { margin: 2px 0 6px; font-size: .8125rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  /* Pills stay on one line and scroll sideways rather than adding rows. */
-  .with-summary .hl-src { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 7px 0; margin: -6px 0; }
-  .with-summary .pill::after { inset: -6px -2px; } /* inside the row's padding, so nothing overflows */
-  .with-summary .hl-src::-webkit-scrollbar { display: none; }
-  @media (max-width: 480px) {
-    .report { padding: 10px 14px 2px; }
-    .report-body { font-size: .9375rem; line-height: 1.7; }
-    .with-summary .hl-list { gap: 6px; }
-    .with-summary .hl-item { padding: 8px 12px; }
+  /* ---- The briefing: serif prose, a drop cap, links as footnotes. ---- */
+  .briefing { margin: 28px 0 0; }
+  .brief-label { margin: 0 0 14px; color: var(--seal); }
+  .brief-label .by { color: var(--ink-2); text-transform: none; letter-spacing: .04em; }
+  .report-body { font: 400 1.0625rem/1.85 var(--serif); color: var(--ink); }
+  .report-body :global(p) { margin: 0 0 1.2em; }
+  .report-body :global(ul) { margin: 0 0 1.2em; padding-left: 1.2em; }
+  .report-body :global(strong) { font-weight: 700; }
+  .report-body :global(a) { color: inherit; text-decoration: underline; text-decoration-color: var(--seal); text-decoration-thickness: 1px; text-underline-offset: .28em; transition: text-decoration-thickness .12s var(--ease), color .12s var(--ease); }
+  .report-body :global(a:hover) { text-decoration-thickness: 2px; }
+  .report-body :global(code) { font: .85em var(--mono); background: color-mix(in srgb, var(--rule) 50%, transparent); padding: 0 4px; border-radius: 2px; }
+  .report-body :global(.fn) { font: 500 .625rem/0 var(--mono); vertical-align: super; margin: 0 0 0 1px; }
+  .report-body :global(.fn a) {
+    position: relative; display: inline-block; padding: 2px 3px; line-height: 1; text-align: center;
+    color: var(--seal); text-decoration: none; border-radius: 2px;
   }
-  /* Wide screens: report and items side by side, so the whole report fits one screen. */
-  @media (min-width: 1200px) {
-    .hl.with-summary { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
-    .with-summary .hl-list { grid-template-columns: 1fr; }
+  .report-body :global(.fn a::after) { content: ""; position: absolute; inset: -12px -6px; } /* thumb-sized target */
+  .report-body :global(.fn a:hover) { background: var(--seal-soft); }
+  .report-body :global(.fn a.on) { background: var(--seal); color: var(--paper); }
+  /* Drop cap: two lines where initial-letter works, a floated cap elsewhere. */
+  .report-body > :global(p:first-child::first-letter) { font-weight: 700; float: left; font-size: 3.1em; line-height: 1; margin: .08em .12em 0 0; }
+  @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    .report-body > :global(p:first-child::first-letter) { float: none; font-size: inherit; line-height: inherit; margin: 0 .14em 0 0; -webkit-initial-letter: 2; initial-letter: 2; }
   }
-  .hl-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
-  .report .hl-head { margin-bottom: 4px; }
-  .hl-head h2 { margin: 0; font-size: 1.1875rem; }
-  .hl-head .meta { font-size: .75rem; color: var(--muted); }
-  .hl-list {
-    list-style: none; margin: 0; padding: 0;
-    display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+
+  /* ---- Today's picks: numbered index rows, not cards. ---- */
+  .picks { margin: 12px 0 0; }
+  .picks-label { margin: 0; padding: 0 0 10px; border-bottom: 1px solid var(--ink); color: var(--seal); }
+  .pick-list { list-style: none; margin: 0; padding: 0; }
+  .pick {
+    position: relative; display: grid; grid-template-columns: 2.75rem minmax(0, 1fr); column-gap: 6px;
+    padding: 16px 0 15px; border-bottom: 1px solid var(--rule);
+    transition: background 1s var(--ease);
   }
-  .hl-item { background: var(--panel); border: 1px solid var(--faint); border-radius: var(--radius); padding: 12px 14px; min-width: 0; }
-  .hl-title { display: block; font-size: 1.0625rem; font-weight: 600; line-height: 1.45; }
-  .hl-tag {
-    display: inline-block; font-size: .6875rem; font-weight: 500; line-height: 1; padding: 3px 6px; margin-right: 7px;
-    border-radius: 4px; color: var(--accent); background: var(--accent-soft); vertical-align: .18em;
+  .pick:has(.pick-title:active) { background: color-mix(in srgb, var(--rule) 30%, transparent); transition: background .1s; }
+  .pick.flash { background: color-mix(in srgb, var(--seal) 6%, transparent); transition: none; }
+  .pick-n { font: 500 1.5rem/1 var(--mono); color: var(--seal); font-variant-numeric: tabular-nums; padding-top: 2px; transition: color .2s var(--ease); }
+  .pick-body { min-width: 0; }
+  .pick-tag { display: block; margin-bottom: 4px; }
+  .pick-title { display: block; font: 600 1.0625rem/1.45 var(--serif); color: var(--ink); text-wrap: pretty; }
+  .pick-title::after { content: ""; position: absolute; inset: 0; } /* the whole row opens the item */
+  .pick-title:hover { text-decoration: underline; text-decoration-color: var(--seal); text-underline-offset: .25em; }
+  .pick-title.read, .pick:has(.pick-title.read) .pick-n { color: var(--ink-2); }
+  .pick-why {
+    margin: 6px 0 0; font-size: .875rem; line-height: 1.6; color: var(--ink-2);
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
   }
-  .hl-orig { color: var(--muted); font-size: .8125rem; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .hl-why { margin: 6px 0 8px; font-size: .9375rem; line-height: 1.55; }
-  .hl-src { display: flex; flex-wrap: wrap; gap: 6px; }
-  .pill {
-    position: relative; flex: none; font-size: .75rem; color: var(--muted); text-decoration: none; white-space: nowrap;
-    border: 1px solid var(--faint); border-radius: 99px; padding: 2px 9px; font-variant-numeric: tabular-nums;
+  .pick-why.open { -webkit-line-clamp: unset; display: block; }
+  .why-more {
+    position: relative; z-index: 1; display: inline-flex; align-items: center; min-height: 32px; margin: 0 0 -6px;
+    padding: 0; border: 0; background: none; color: var(--seal); font: 500 .6875rem var(--mono); letter-spacing: .08em; cursor: pointer;
   }
-  .pill::after { content: ""; position: absolute; inset: -8px -2px; } /* 44px touch target */
-  .pill:hover { color: var(--accent); border-color: var(--accent); }
+  .why-more::after { content: ""; position: absolute; inset: -6px -10px; }
+  .why-more[hidden] { display: none; }
+  .pick-src { position: relative; z-index: 1; margin: 8px 0 0; font: 400 .6875rem/1.7 var(--mono); letter-spacing: .03em; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .pick-src a { color: var(--ink-2); text-decoration: none; padding: 4px 0; white-space: nowrap; }
+  .pick-src a:hover { color: var(--seal); text-decoration: underline; }
+  .pick-src .sep { color: var(--rule); }
+  /* Wide sidebar: the item the reader is on lights up. */
+  .pick.current .pick-n { color: var(--paper); }
+  .pick.current .pick-n { background: var(--seal); }
+
+  @media (min-width: 1024px) {
+    .report-body { font-size: 1.125rem; line-height: 1.9; }
+  }
+  @media (min-width: 1280px) {
+    .picks:not(.solo) { margin: 0; }
+    .picks:not(.solo) .pick { grid-template-columns: 2.25rem minmax(0, 1fr); padding: 12px 0 11px; }
+    .picks:not(.solo) .pick-n { font-size: 1.125rem; align-self: start; justify-self: start; padding: 3px 4px; margin-left: -4px; border-radius: 2px; transition: color .2s var(--ease), background .2s var(--ease); }
+    .picks:not(.solo) .pick-title { font-size: 1rem; }
+    .picks:not(.solo) .pick-why { font-size: .8125rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pick, .pick-n, .report-body :global(a) { transition: none; }
+  }
 </style>

@@ -102,3 +102,38 @@ export function lanes(secs, key) {
   });
   return out;
 }
+
+// Issue number: which daily digest this is, counting from the first one.
+export const issueNo = (d) => String(digests.length - digests.indexOf(d)).padStart(3, "0");
+
+// Masthead dateline: 2026.11.22 SUN · 08:20 EST.
+export const dateline = (d) => {
+  const wd = new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short" }).format(new Date(d.date + "T12:00:00Z"));
+  const zone = new Intl.DateTimeFormat("en-US", { timeZone: TZ, timeZoneName: "short" }).formatToParts(new Date(d.generated)).find((p) => p.type === "timeZoneName")?.value;
+  return `${d.date.replaceAll("-", ".")} ${wd.toUpperCase()} · ${fmtTime(d.generated)}${zone ? " " + zone : ""}`;
+};
+export const weekdayEn = (day) =>
+  new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "short" }).format(new Date(day + "T12:00:00Z")).toUpperCase();
+
+// The day's headline: the first sentence of the report's first paragraph, as plain text, cut at
+// the first full stop (or colon) and at most 28 characters. Null when there is no report.
+export function headline(hl) {
+  const first = hl?.summary?.trim().split(/\n\s*\n/)[0];
+  if (!first) return null;
+  const plain = first
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/[*`]/g, "")
+    .replace(/^[-#]+\s*/, "")
+    .trim();
+  const sentence = plain.split(/[。！？：；\n]/)[0].trim();
+  const chars = [...sentence];
+  return chars.length > 28 ? chars.slice(0, 27).join("") + "…" : sentence;
+}
+
+// Footnote numbers for the report: every url an item points at (main link and all sources) maps
+// to that item's 1-based position. The first item to claim a url keeps it.
+export function footnotes(hl) {
+  const map = new Map();
+  hl?.items?.forEach((it, i) => [it.url, ...(it.sources ?? []).map((s) => s.url)].forEach((u) => u && !map.has(u) && map.set(u, i + 1)));
+  return map;
+}
