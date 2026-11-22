@@ -30,6 +30,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
         const t = localStorage.getItem("theme");
         if (t) root.dataset.theme = t;
         if (localStorage.getItem("tab") === "rank") root.dataset.tab = "rank";
+        if (localStorage.getItem("showAll") === "1") root.dataset.all = "open";
       } catch {}
     </script>
   </head>
@@ -210,6 +211,18 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   .sub { color: var(--muted); font-size: .875rem; margin: 0 0 10px; }
   .empty { color: var(--muted); }
 
+  /* The full digest folds behind 查看全部 N 条 on days with a 今日重点 list (JS only). */
+  .js:not([data-all="open"]) .all.foldable { display: none; }
+  html:not(.js) .show-all { display: none; }
+  .show-all {
+    display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 44px; margin: 0 0 14px;
+    border: 1px solid var(--faint); border-radius: var(--radius); background: var(--panel); color: var(--accent);
+    font: inherit; font-size: .9375rem; font-weight: 500; cursor: pointer;
+  }
+  .show-all:hover { border-color: var(--accent); }
+  .show-all .chev { transition: transform .18s ease; }
+  .show-all[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
   /* Status: only takes space when something is wrong. */
   .alert { background: var(--warn-soft); color: var(--warn); border-radius: 8px; padding: 0 12px; margin: 0 0 10px; font-size: .875rem; }
   .alert summary { cursor: pointer; padding: 10px 0; min-height: 44px; display: flex; align-items: center; list-style-position: inside; }
@@ -276,6 +289,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   .card-head .meta { font-size: .75rem; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .caption { margin: -2px 0 6px; font-size: .75rem; color: var(--muted); }
   .items, .rows { list-style: none; margin: 0; padding: 0; }
+  ul.card.items { padding: 4px 14px 2px; margin-bottom: 12px; } /* a list that is itself the card */
   .item { padding: 8px 0; border-top: 1px solid var(--faint); }
   .card .items > .item:first-child { border-top: 0; }
   .t { text-decoration: none; font-weight: 500; }
@@ -348,7 +362,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     .brand { font-size: .9375rem; }
     .top nav a { padding: 10px 6px; font-size: .875rem; }
     /* Full-bleed cards: drop side borders and corners for ~26px more line width. */
-    .card { margin: 0 -16px 10px; border-left: 0; border-right: 0; border-radius: 0; padding: 2px 16px 0; }
+    .card, ul.card.items { margin: 0 -16px 10px; border-left: 0; border-right: 0; border-radius: 0; padding: 2px 16px 0; }
     .card-head { margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: 0; }
     .more-btn { width: calc(100% + 32px); margin: 0 -16px; padding: 0 16px; }
   }
@@ -415,7 +429,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .top, .bar, .col-strip, .more, .more-btn .chev, .card-head { transition: none !important; }
+    .top, .bar, .col-strip, .more, .more-btn .chev, .show-all .chev, .card-head { transition: none !important; }
     .more:not(.open) .more-clip { transition: none; }
     html { scroll-behavior: auto; }
   }

@@ -1,9 +1,13 @@
 ---
 import FeedCard from "./FeedCard.astro";
+import Highlights from "./Highlights.astro";
 import RankCard from "./RankCard.astro";
-import { count, fmtTime, hasHistory, isNew, lanes, newCount, short, weekday } from "../lib/data.js";
+import { count, fmtTime, hasHistory, highlights, isNew, lanes, newCount, short, weekday } from "../lib/data.js";
 
 const { d, heading } = Astro.props;
+// With a 今日重点 list, the full digest starts folded behind 查看全部 N 条.
+const hl = highlights[d.date];
+const total = count(d.feeds) + count(d.rankings);
 const withHistory = d.rankings.filter(hasHistory);
 const newBySource = withHistory.map((s) => [s, s.items.filter(isNew).length]).filter(([, n]) => n > 0);
 const longest = d.rankings
@@ -26,6 +30,14 @@ const groups = [
 
 <slot />
 
+{hl && <Highlights hl={hl} />}
+{hl && (
+  <button class="show-all" type="button" aria-expanded="false" aria-controls="all" data-open-label="收起全部" data-closed-label={`查看全部 ${total} 条`}>
+    <span>查看全部 {total} 条</span><span class="chev" aria-hidden="true">▾</span>
+  </button>
+)}
+
+<div id="all" class:list={["all", { foldable: hl }]}>
 <div class="overview" id="overview">
   <p class="ov">
     <a href="#panel-feeds" data-go="feeds">新文章 <b>{count(d.feeds)}</b> 篇</a>
@@ -94,6 +106,7 @@ const groups = [
 </div>
 
 {d.status.length === 0 && <p class="all-ok">所有来源正常 · {fmtTime(d.generated)} 抓取</p>}
+</div>
 
 <script is:inline>
   (() => {
@@ -138,9 +151,26 @@ const groups = [
       head.classList.add("flash");
       setTimeout(() => head.classList.remove("flash"), 600);
     };
+    // 查看全部 N 条: open state lives on <html data-all> (set before paint) and in localStorage.
+    const showAll = document.querySelector(".show-all");
+    const setAll = (open) => {
+      if (open) root.dataset.all = "open"; else delete root.dataset.all;
+      if (showAll) {
+        showAll.setAttribute("aria-expanded", String(open));
+        showAll.firstElementChild.textContent = showAll.dataset[open ? "openLabel" : "closedLabel"];
+      }
+      try { localStorage.setItem("showAll", open ? "1" : "0"); } catch {}
+      requestAnimationFrame(() => track());
+    };
+    if (showAll) {
+      setAll(root.dataset.all === "open");
+      showAll.addEventListener("click", () => setAll(root.dataset.all !== "open"));
+    }
+
     const go = (id, instant) => {
       const card = document.getElementById(id);
       if (!card) return;
+      if (card.closest(".all.foldable") && root.dataset.all !== "open") setAll(true);
       const panel = card.closest("[data-panel]");
       if (panel) select(panel.dataset.panel);
       // Scrolling down tucks the nav away; do it first so the card lands right under the strip.

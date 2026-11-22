@@ -15,6 +15,10 @@ export const sourceById = Object.fromEntries(sources.map((s) => [s.id, s]));
 export const digests = datedFiles(join(NEWS, "data")).map((f) => readJson(join(NEWS, "data", f)));
 export const latest = digests[0];
 
+// 今日重点 per date (news/data/highlights/DATE.json), when the day has one.
+const HL = join(NEWS, "data", "highlights");
+export const highlights = Object.fromEntries(datedFiles(HL).map((f) => [f.slice(0, 10), readJson(join(HL, f))]));
+
 // Intraday --fast hits, newest first.
 export const fastHits = datedFiles(join(NEWS, "data", "fast"))
   .flatMap((f) => readJson(join(NEWS, "data", "fast", f)))

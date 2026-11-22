@@ -1,9 +1,10 @@
 ---
 import Base from "../layouts/Base.astro";
-import { count, digests, hasHistory, newCount, url, weekday } from "../lib/data.js";
+import { count, digests, hasHistory, highlights, newCount, url, weekday } from "../lib/data.js";
 
 const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7)));
-// Preview: the day's highest-scoring ranking item (HN), else its first new post.
+// Each day leads with its 今日重点; days without one preview the highest-scoring ranking item
+// (HN), else the first new post.
 const preview = (d) =>
   d.rankings.flatMap((s) => s.items).filter((i) => i.score != null).sort((a, b) => b.score - a.score)[0] ?? d.feeds[0]?.items[0];
 ---
@@ -23,7 +24,13 @@ const preview = (d) =>
                 {d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
               </span>
             </a>
-            {preview(d) && <div class="note clamp">{preview(d).title}</div>}
+            {highlights[d.date] ? (
+              <ol class="picks">
+                {highlights[d.date].items.map((h) => (
+                  <li><span class="tag">{h.tag}</span><a href={h.url} target="_blank" rel="noopener">{h.title_zh}</a></li>
+                ))}
+              </ol>
+            ) : preview(d) && <div class="note clamp">{preview(d).title}</div>}
           </li>
         ))}
       </ul>
@@ -36,4 +43,9 @@ const preview = (d) =>
   .wd { color: var(--muted); font-weight: 400; font-size: .875rem; margin-left: 4px; }
   .stats { color: var(--muted); font-size: .8125rem; font-weight: 400; font-variant-numeric: tabular-nums; }
   .warn { color: var(--warn); }
+  .picks { list-style: none; margin: 4px 0 2px; padding: 0; font-size: .875rem; }
+  .picks li { padding: 3px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .picks a { color: var(--text); text-decoration: none; }
+  .picks a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .tag { display: inline-block; font-size: .6875rem; line-height: 1; padding: 3px 5px; margin-right: 6px; border-radius: 4px; color: var(--accent); background: var(--accent-soft); vertical-align: .12em; }
 </style>
