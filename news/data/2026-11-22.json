@@ -1,12 +1,18 @@
 {
  "date": "2026-11-22",
- "generated": "2026-11-22T03:10:34-05:00",
+ "generated": "2026-11-22T15:22:57-05:00",
  "feeds": [
   {
    "source": "openai",
    "name": "OpenAI News",
    "type": "feed",
    "items": [
+    {
+     "id": "https://openai.com/index/perplexity-and-intelligence",
+     "title": "Perplexity and Intelligence",
+     "url": "https://openai.com/index/perplexity-and-intelligence",
+     "note": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities."
+    },
     {
      "id": "https://openai.com/index/combatting-adversarial-distillation",
      "title": "Combatting adversarial distillation",
@@ -286,106 +292,31 @@
    "type": "ranking",
    "items": [
     {
-     "id": "50589618",
-     "title": "Lean verification of the Riemann Hypothesis",
-     "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-     "note": "984 points",
-     "discuss": {
-      "label": "821 评论",
-      "url": "https://news.ycombinator.com/item?id=50589618"
-     },
-     "score": 984,
-     "comments": 821,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50588982",
-     "title": "Detonating a pile of lead azide",
-     "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
-     "note": "599 points",
-     "discuss": {
-      "label": "382 评论",
-      "url": "https://news.ycombinator.com/item?id=50588982"
-     },
-     "score": 599,
-     "comments": 382,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50587875",
-     "title": "My monitor was cutting my download speed by 75%",
-     "url": "https://blog.tymscar.com/posts/studiodisplayethernet/",
-     "note": "561 points",
-     "discuss": {
-      "label": "266 评论",
-      "url": "https://news.ycombinator.com/item?id=50587875"
-     },
-     "score": 561,
-     "comments": 266,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50591853",
-     "title": "Inkling-2-Mini in 5.4 GB Memory",
-     "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
-     "note": "441 points",
-     "discuss": {
-      "label": "109 评论",
-      "url": "https://news.ycombinator.com/item?id=50591853"
-     },
-     "score": 441,
-     "comments": 109,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
      "id": "50596133",
      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
-     "note": "363 points",
+     "note": "1070 points",
      "discuss": {
-      "label": "177 评论",
+      "label": "631 评论",
       "url": "https://news.ycombinator.com/item?id=50596133"
      },
-     "score": 363,
-     "comments": 177,
+     "score": 1070,
+     "comments": 631,
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
     },
     {
-     "id": "50587208",
-     "title": "GnuPG Security Advisory for GPGME",
-     "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html",
-     "note": "250 points",
+     "id": "50597612",
+     "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+     "url": "https://betterdatacenterproject.com/2026/11/16/how-ai-is-powered-a-breakdown-of-byop-and-grid-power/",
+     "note": "708 points",
      "discuss": {
-      "label": "98 评论",
-      "url": "https://news.ycombinator.com/item?id=50587208"
+      "label": "748 评论",
+      "url": "https://news.ycombinator.com/item?id=50597612"
      },
-     "score": 250,
-     "comments": 98,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50587859",
-     "title": "FBI reportedly investigating apparent hack of its criminal database",
-     "url": "https://www.bbc.com/news/articles/cvze7de86pk3o",
-     "note": "179 points",
-     "discuss": {
-      "label": "90 评论",
-      "url": "https://news.ycombinator.com/item?id=50587859"
-     },
-     "score": 179,
-     "comments": 90,
+     "score": 708,
+     "comments": 748,
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -394,103 +325,28 @@
      "id": "50594911",
      "title": "Sandwich Simulator",
      "url": "https://stulle.app/",
-     "note": "178 points",
+     "note": "515 points",
      "discuss": {
-      "label": "63 评论",
+      "label": "182 评论",
       "url": "https://news.ycombinator.com/item?id=50594911"
      },
-     "score": 178,
-     "comments": 63,
+     "score": 515,
+     "comments": 182,
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
     },
     {
-     "id": "50588916",
-     "title": "Astra 6.2 and Sol 6.2 flop at Simple Bench",
-     "url": "https://simple-bench.com/",
-     "note": "171 points",
+     "id": "50601525",
+     "title": "Perplexity and Intelligence",
+     "url": "https://openai.com/index/perplexity-and-intelligence/",
+     "note": "297 points",
      "discuss": {
-      "label": "162 评论",
-      "url": "https://news.ycombinator.com/item?id=50588916"
+      "label": "197 评论",
+      "url": "https://news.ycombinator.com/item?id=50601525"
      },
-     "score": 171,
-     "comments": 162,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50591835",
-     "title": "Jensen Huang's fall is bad news for Silicon Valley's accelerationists",
-     "url": "https://www.economist.com/business/2026/11/19/jensen-huangs-fall-is-bad-news-for-silicon-valleys-accelerationists",
-     "note": "167 points",
-     "discuss": {
-      "label": "356 评论",
-      "url": "https://news.ycombinator.com/item?id=50591835"
-     },
-     "score": 167,
-     "comments": 356,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50590279",
-     "title": "Show HN: Zero C# – C# without a runtime or GC",
-     "url": "https://onurgumus.github.io/zero-csharp/index.html",
-     "note": "152 points",
-     "discuss": {
-      "label": "106 评论",
-      "url": "https://news.ycombinator.com/item?id=50590279"
-     },
-     "score": 152,
-     "comments": 106,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50593737",
-     "title": "Advice for the next 100 Rust GUIs",
-     "url": "https://linebender.org/blog/next-100-guis/",
-     "note": "151 points",
-     "discuss": {
-      "label": "48 评论",
-      "url": "https://news.ycombinator.com/item?id=50593737"
-     },
-     "score": 151,
-     "comments": 48,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50591260",
-     "title": "PostgreSQL Extensions in Go",
-     "url": "https://jespino.github.io/gopgext/",
-     "note": "140 points",
-     "discuss": {
-      "label": "24 评论",
-      "url": "https://news.ycombinator.com/item?id=50591260"
-     },
-     "score": 140,
-     "comments": 24,
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "50595168",
-     "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
-     "url": "https://github.com/ItsNotRexed/Leonida",
-     "note": "139 points",
-     "discuss": {
-      "label": "105 评论",
-      "url": "https://news.ycombinator.com/item?id=50595168"
-     },
-     "score": 139,
-     "comments": 105,
+     "score": 297,
+     "comments": 197,
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -499,19 +355,154 @@
      "id": "50595554",
      "title": "Data Processing Incidents on Inference Providers",
      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
-     "note": "117 points",
+     "note": "265 points",
      "discuss": {
-      "label": "45 评论",
+      "label": "88 评论",
       "url": "https://news.ycombinator.com/item?id=50595554"
      },
-     "score": 117,
-     "comments": 45,
+     "score": 265,
+     "comments": 88,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50593737",
+     "title": "Advice for the next 100 Rust GUIs",
+     "url": "https://linebender.org/blog/next-100-guis/",
+     "note": "247 points",
+     "discuss": {
+      "label": "143 评论",
+      "url": "https://news.ycombinator.com/item?id=50593737"
+     },
+     "score": 247,
+     "comments": 143,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50599762",
+     "title": "Show HN: I built a game where you are an LLM's subagent",
+     "url": "https://github.com/gulivan/worker755",
+     "note": "208 points",
+     "discuss": {
+      "label": "48 评论",
+      "url": "https://news.ycombinator.com/item?id=50599762"
+     },
+     "score": 208,
+     "comments": 48,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50595168",
+     "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
+     "url": "https://github.com/ItsNotRexed/Leonida",
+     "note": "205 points",
+     "discuss": {
+      "label": "159 评论",
+      "url": "https://news.ycombinator.com/item?id=50595168"
+     },
+     "score": 205,
+     "comments": 159,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50596155",
+     "title": "Fast-Anything: Don't rewrite it in Rust. Rewrite the 5% that's slow",
+     "url": "https://github.com/EL4CTEO/fast-anything",
+     "note": "168 points",
+     "discuss": {
+      "label": "128 评论",
+      "url": "https://news.ycombinator.com/item?id=50596155"
+     },
+     "score": 168,
+     "comments": 128,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50600511",
+     "title": "Open Social Web Alliance",
+     "url": "https://osw-alliance.net/en/",
+     "note": "167 points",
+     "discuss": {
+      "label": "173 评论",
+      "url": "https://news.ycombinator.com/item?id=50600511"
+     },
+     "score": 167,
+     "comments": 173,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50594132",
+     "title": "PcapAnalyzer – self-hosted pcap analyzer with 27 problem detectors",
+     "url": "https://github.com/sebaandrada-cell/PcapAnalyzer",
+     "note": "158 points",
+     "discuss": {
+      "label": "20 评论",
+      "url": "https://news.ycombinator.com/item?id=50594132"
+     },
+     "score": 158,
+     "comments": 20,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50595537",
+     "title": "The Mythology of Conscious AI",
+     "url": "https://www.noemamag.com/the-mythology-of-conscious-ai/",
+     "note": "145 points",
+     "discuss": {
+      "label": "423 评论",
+      "url": "https://news.ycombinator.com/item?id=50595537"
+     },
+     "score": 145,
+     "comments": 423,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50593481",
+     "title": "Pandex – Official European Law for AI Agents, over MCP",
+     "url": "https://www.pandex.io",
+     "note": "137 points",
+     "discuss": {
+      "label": "33 评论",
+      "url": "https://news.ycombinator.com/item?id=50593481"
+     },
+     "score": 137,
+     "comments": 33,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50600677",
+     "title": "Europe weakens chemical rules as science links them to 'lifestyle diseases'",
+     "url": "https://www.lemonde.fr/en/opinion/article/2026/11/22/as-science-increasingly-shows-the-role-chemical-substances-play-in-lifestyle-diseases-europe-weakens-its-regulations_6786595_23.html",
+     "note": "129 points",
+     "discuss": {
+      "label": "102 评论",
+      "url": "https://news.ycombinator.com/item?id=50600677"
+     },
+     "score": 129,
+     "comments": 102,
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:10:34-05:00",
+   "fetched": "2026-11-22T15:22:57-05:00",
    "history": false
   },
   {
@@ -523,8 +514,8 @@
      "id": "elementalsouls/Claude-BugHunter",
      "title": "elementalsouls/Claude-BugHunter",
      "url": "https://github.com/elementalsouls/Claude-BugHunter",
-     "note": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.  (Python · +1,803⭐ 今日)",
-     "stars": 1803,
+     "note": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.  (Python · +1,721⭐ 今日)",
+     "stars": 1721,
      "lang": "Python",
      "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
      "mark": "new",
@@ -535,8 +526,8 @@
      "id": "obra/superpowers",
      "title": "obra/superpowers",
      "url": "https://github.com/obra/superpowers",
-     "note": "An agentic skills framework & software development methodology that works.  (Shell · +883⭐ 今日)",
-     "stars": 883,
+     "note": "An agentic skills framework & software development methodology that works.  (Shell · +785⭐ 今日)",
+     "stars": 785,
      "lang": "Shell",
      "desc": "An agentic skills framework & software development methodology that works.",
      "mark": "new",
@@ -547,8 +538,8 @@
      "id": "HKUDS/CLI-Anything",
      "title": "HKUDS/CLI-Anything",
      "url": "https://github.com/HKUDS/CLI-Anything",
-     "note": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/  (Python · +769⭐ 今日)",
-     "stars": 769,
+     "note": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/  (Python · +687⭐ 今日)",
+     "stars": 687,
      "lang": "Python",
      "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
      "mark": "new",
@@ -559,8 +550,8 @@
      "id": "jingyaogong/minimind",
      "title": "jingyaogong/minimind",
      "url": "https://github.com/jingyaogong/minimind",
-     "note": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.  (Python · +488⭐ 今日)",
-     "stars": 488,
+     "note": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.  (Python · +473⭐ 今日)",
+     "stars": 473,
      "lang": "Python",
      "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
      "mark": "new",
@@ -571,8 +562,8 @@
      "id": "cursor/plugins",
      "title": "cursor/plugins",
      "url": "https://github.com/cursor/plugins",
-     "note": "Cursor plugin specification and official plugins  (TypeScript · +260⭐ 今日)",
-     "stars": 260,
+     "note": "Cursor plugin specification and official plugins  (TypeScript · +301⭐ 今日)",
+     "stars": 301,
      "lang": "TypeScript",
      "desc": "Cursor plugin specification and official plugins",
      "mark": "new",
@@ -583,8 +574,8 @@
      "id": "firecrawl/firecrawl",
      "title": "firecrawl/firecrawl",
      "url": "https://github.com/firecrawl/firecrawl",
-     "note": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.  (TypeScript · +1,006⭐ 今日)",
-     "stars": 1006,
+     "note": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.  (TypeScript · +910⭐ 今日)",
+     "stars": 910,
      "lang": "TypeScript",
      "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
      "mark": "new",
@@ -595,8 +586,8 @@
      "id": "nginx/nginx",
      "title": "nginx/nginx",
      "url": "https://github.com/nginx/nginx",
-     "note": "The official NGINX Open Source repository.  (C · +189⭐ 今日)",
-     "stars": 189,
+     "note": "The official NGINX Open Source repository.  (C · +168⭐ 今日)",
+     "stars": 168,
      "lang": "C",
      "desc": "The official NGINX Open Source repository.",
      "mark": "new",
@@ -607,8 +598,8 @@
      "id": "openvinotoolkit/openvino",
      "title": "openvinotoolkit/openvino",
      "url": "https://github.com/openvinotoolkit/openvino",
-     "note": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference  (C++ · +200⭐ 今日)",
-     "stars": 200,
+     "note": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference  (C++ · +155⭐ 今日)",
+     "stars": 155,
      "lang": "C++",
      "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
      "mark": "new",
@@ -619,8 +610,8 @@
      "id": "cathrynlavery/diagram-design",
      "title": "cathrynlavery/diagram-design",
      "url": "https://github.com/cathrynlavery/diagram-design",
-     "note": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.  (HTML · +583⭐ 今日)",
-     "stars": 583,
+     "note": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.  (HTML · +513⭐ 今日)",
+     "stars": 513,
      "lang": "HTML",
      "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
      "mark": "new",
@@ -631,8 +622,8 @@
      "id": "mvanhorn/last30days-skill",
      "title": "mvanhorn/last30days-skill",
      "url": "https://github.com/mvanhorn/last30days-skill",
-     "note": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary  (Python · +560⭐ 今日)",
-     "stars": 560,
+     "note": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary  (Python · +673⭐ 今日)",
+     "stars": 673,
      "lang": "Python",
      "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
      "mark": "new",
@@ -643,8 +634,8 @@
      "id": "google-labs-code/stitch-skills",
      "title": "google-labs-code/stitch-skills",
      "url": "https://github.com/google-labs-code/stitch-skills",
-     "note": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.  (TypeScript · +326⭐ 今日)",
-     "stars": 326,
+     "note": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.  (TypeScript · +516⭐ 今日)",
+     "stars": 516,
      "lang": "TypeScript",
      "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
      "mark": "new",
@@ -655,10 +646,10 @@
      "id": "mjmirza/app-store-compliance",
      "title": "mjmirza/app-store-compliance",
      "url": "https://github.com/mjmirza/app-store-compliance",
-     "note": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 111 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.  (Shell · +720⭐ 今日)",
-     "stars": 720,
+     "note": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.  (Shell · +617⭐ 今日)",
+     "stars": 617,
      "lang": "Shell",
-     "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 111 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+     "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -667,8 +658,8 @@
      "id": "Tracer-Cloud/opensre",
      "title": "Tracer-Cloud/opensre",
      "url": "https://github.com/Tracer-Cloud/opensre",
-     "note": "The open-source agent for CI/CD reliability.  (Python · +450⭐ 今日)",
-     "stars": 450,
+     "note": "The open-source agent for CI/CD reliability.  (Python · +395⭐ 今日)",
+     "stars": 395,
      "lang": "Python",
      "desc": "The open-source agent for CI/CD reliability.",
      "mark": "new",
@@ -679,8 +670,8 @@
      "id": "toeverything/AFFiNE",
      "title": "toeverything/AFFiNE",
      "url": "https://github.com/toeverything/AFFiNE",
-     "note": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.  (TypeScript · +574⭐ 今日)",
-     "stars": 574,
+     "note": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.  (TypeScript · +537⭐ 今日)",
+     "stars": 537,
      "lang": "TypeScript",
      "desc": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
      "mark": "new",
@@ -691,8 +682,8 @@
      "id": "XiaoYouChR/Ghost-Downloader-3",
      "title": "XiaoYouChR/Ghost-Downloader-3",
      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
-     "note": "The only downloader you need. 下载器的集大成者。  (Python · +779⭐ 今日)",
-     "stars": 779,
+     "note": "The only downloader you need. 下载器的集大成者。  (Python · +690⭐ 今日)",
+     "stars": 690,
      "lang": "Python",
      "desc": "The only downloader you need. 下载器的集大成者。",
      "mark": "new",
@@ -700,7 +691,7 @@
      "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:10:34-05:00",
+   "fetched": "2026-11-22T15:22:57-05:00",
    "history": false
   },
   {
@@ -845,7 +836,8 @@
     }
    ],
    "fetched": "2026-11-22T03:10:34-05:00",
-   "history": false
+   "history": false,
+   "stale": true
   },
   {
    "source": "hf-models",
@@ -856,8 +848,8 @@
      "id": "thinkingmachines/Inkling-2-Mini",
      "title": "thinkingmachines/Inkling-2-Mini",
      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-     "note": "image-text-to-text · ❤ 3326",
-     "likes": 3326,
+     "note": "image-text-to-text · ❤ 4776",
+     "likes": 4776,
      "tag": "image-text-to-text",
      "mark": "new",
      "streak": 1,
@@ -867,19 +859,8 @@
      "id": "unsloth/Inkling-2-Mini-GGUF",
      "title": "unsloth/Inkling-2-Mini-GGUF",
      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-     "note": "image-text-to-text · ❤ 704",
-     "likes": 704,
-     "tag": "image-text-to-text",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "tencent/Hy4-flash",
-     "title": "tencent/Hy4-flash",
-     "url": "https://huggingface.co/tencent/Hy4-flash",
-     "note": "image-text-to-text · ❤ 562",
-     "likes": 562,
+     "note": "image-text-to-text · ❤ 852",
+     "likes": 852,
      "tag": "image-text-to-text",
      "mark": "new",
      "streak": 1,
@@ -889,20 +870,9 @@
      "id": "inworld/voice-isolator",
      "title": "inworld/voice-isolator",
      "url": "https://huggingface.co/inworld/voice-isolator",
-     "note": "audio-to-audio · ❤ 539",
-     "likes": 539,
+     "note": "audio-to-audio · ❤ 614",
+     "likes": 614,
      "tag": "audio-to-audio",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "apple/FastFrames-L",
-     "title": "apple/FastFrames-L",
-     "url": "https://huggingface.co/apple/FastFrames-L",
-     "note": "text-to-video · ❤ 501",
-     "likes": 501,
-     "tag": "text-to-video",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -911,8 +881,8 @@
      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
      "title": "harness-hub/Qwen3.8-27B-pi-adapted",
      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
-     "note": "image-text-to-text · ❤ 945",
-     "likes": 945,
+     "note": "image-text-to-text · ❤ 984",
+     "likes": 984,
      "tag": "image-text-to-text",
      "mark": "new",
      "streak": 1,
@@ -922,20 +892,9 @@
      "id": "higurashi-ai/Haru-4B",
      "title": "higurashi-ai/Haru-4B",
      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
-     "note": "audio-to-audio · ❤ 846",
-     "likes": 846,
+     "note": "audio-to-audio · ❤ 886",
+     "likes": 886,
      "tag": "audio-to-audio",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "Qwen/Qwen3.8-27B",
-     "title": "Qwen/Qwen3.8-27B",
-     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-     "note": "image-text-to-text · ❤ 20827",
-     "likes": 20827,
-     "tag": "image-text-to-text",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -944,8 +903,41 @@
      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
      "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-     "note": "image-text-to-text · ❤ 304",
-     "likes": 304,
+     "note": "image-text-to-text · ❤ 455",
+     "likes": 455,
+     "tag": "image-text-to-text",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "apple/DepthPro2",
+     "title": "apple/DepthPro2",
+     "url": "https://huggingface.co/apple/DepthPro2",
+     "note": "depth-estimation · ❤ 268",
+     "likes": 268,
+     "tag": "depth-estimation",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "tencent/Hy4-flash",
+     "title": "tencent/Hy4-flash",
+     "url": "https://huggingface.co/tencent/Hy4-flash",
+     "note": "image-text-to-text · ❤ 615",
+     "likes": 615,
+     "tag": "image-text-to-text",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Qwen/Qwen3.8-27B",
+     "title": "Qwen/Qwen3.8-27B",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+     "note": "image-text-to-text · ❤ 20876",
+     "likes": 20876,
      "tag": "image-text-to-text",
      "mark": "new",
      "streak": 1,
@@ -955,15 +947,15 @@
      "id": "sensenova/SenseNova-Loop-9B",
      "title": "sensenova/SenseNova-Loop-9B",
      "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
-     "note": "image-text-to-text · ❤ 468",
-     "likes": 468,
+     "note": "image-text-to-text · ❤ 514",
+     "likes": 514,
      "tag": "image-text-to-text",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:10:34-05:00",
+   "fetched": "2026-11-22T15:22:57-05:00",
    "history": false
   },
   {
@@ -975,20 +967,9 @@
      "id": "huggingface/moe-blogpost",
      "title": "huggingface/moe-blogpost",
      "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
-     "note": "docker · ❤ 813",
-     "likes": 813,
+     "note": "docker · ❤ 821",
+     "likes": 821,
      "tag": "docker",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "MiniMaxAI/minimax-h3-image",
-     "title": "MiniMaxAI/minimax-h3-image",
-     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
-     "note": "gradio · ❤ 254",
-     "likes": 254,
-     "tag": "gradio",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -997,8 +978,19 @@
      "id": "JCisHERE/wan2-2-i2v-v3",
      "title": "JCisHERE/wan2-2-i2v-v3",
      "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
-     "note": "gradio · ❤ 575",
-     "likes": 575,
+     "note": "gradio · ❤ 601",
+     "likes": 601,
+     "tag": "gradio",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "MiniMaxAI/minimax-h3-image",
+     "title": "MiniMaxAI/minimax-h3-image",
+     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+     "note": "gradio · ❤ 266",
+     "likes": 266,
      "tag": "gradio",
      "mark": "new",
      "streak": 1,
@@ -1008,20 +1000,9 @@
      "id": "joelniklaus/harness-leaderboard",
      "title": "joelniklaus/harness-leaderboard",
      "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
-     "note": "docker · ❤ 503",
-     "likes": 503,
+     "note": "docker · ❤ 514",
+     "likes": 514,
      "tag": "docker",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "waitinghere/Krea2T-Revamped",
-     "title": "waitinghere/Krea2T-Revamped",
-     "url": "https://huggingface.co/spaces/waitinghere/Krea2T-Revamped",
-     "note": "gradio · ❤ 118",
-     "likes": 118,
-     "tag": "gradio",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
@@ -1030,15 +1011,26 @@
      "id": "Lakonik/pi-H3",
      "title": "Lakonik/pi-H3",
      "url": "https://huggingface.co/spaces/Lakonik/pi-H3",
-     "note": "gradio · ❤ 91",
-     "likes": 91,
+     "note": "gradio · ❤ 112",
+     "likes": 112,
+     "tag": "gradio",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "waitinghere/Krea2T-Revamped",
+     "title": "waitinghere/Krea2T-Revamped",
+     "url": "https://huggingface.co/spaces/waitinghere/Krea2T-Revamped",
+     "note": "gradio · ❤ 131",
+     "likes": 131,
      "tag": "gradio",
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:10:34-05:00",
+   "fetched": "2026-11-22T15:22:57-05:00",
    "history": false
   },
   {
@@ -1047,63 +1039,18 @@
    "type": "ranking",
    "items": [
     {
+     "id": "https://www.producthunt.com/products/yoroll",
+     "title": "Yoroll",
+     "url": "https://www.producthunt.com/products/yoroll",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
      "id": "https://www.producthunt.com/products/slotify-2",
      "title": "Slotify",
      "url": "https://www.producthunt.com/products/slotify-2",
-     "note": "",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "https://www.producthunt.com/products/copy-haste",
-     "title": "Copy Haste",
-     "url": "https://www.producthunt.com/products/copy-haste",
-     "note": "",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "https://www.producthunt.com/products/webless",
-     "title": "Webless Agents",
-     "url": "https://www.producthunt.com/products/webless",
-     "note": "",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "https://www.producthunt.com/products/creavit-studio",
-     "title": "Creavit Studio 4.0",
-     "url": "https://www.producthunt.com/products/creavit-studio",
-     "note": "",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "https://www.producthunt.com/products/pushback-flight-tracker",
-     "title": "Pushback: Flight Tracker",
-     "url": "https://www.producthunt.com/products/pushback-flight-tracker",
-     "note": "",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "https://www.producthunt.com/products/mockreel",
-     "title": "Mockreel",
-     "url": "https://www.producthunt.com/products/mockreel",
-     "note": "",
-     "mark": "new",
-     "streak": 1,
-     "firstSeen": "2026-11-22"
-    },
-    {
-     "id": "https://www.producthunt.com/products/denotch",
-     "title": "DeNotch",
-     "url": "https://www.producthunt.com/products/denotch",
      "note": "",
      "mark": "new",
      "streak": 1,
@@ -1128,6 +1075,15 @@
      "firstSeen": "2026-11-22"
     },
     {
+     "id": "https://www.producthunt.com/products/copy-haste",
+     "title": "Copy Haste",
+     "url": "https://www.producthunt.com/products/copy-haste",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
      "id": "https://www.producthunt.com/products/ulika",
      "title": "Ulika",
      "url": "https://www.producthunt.com/products/ulika",
@@ -1135,11 +1091,54 @@
      "mark": "new",
      "streak": 1,
      "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/creavit-studio",
+     "title": "Creavit Studio 4.0",
+     "url": "https://www.producthunt.com/products/creavit-studio",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/raccoon-kids",
+     "title": "Raccoon Kids",
+     "url": "https://www.producthunt.com/products/raccoon-kids",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/webless",
+     "title": "Webless Agents",
+     "url": "https://www.producthunt.com/products/webless",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/wispim-online-teleprompter",
+     "title": "Wispim",
+     "url": "https://www.producthunt.com/products/wispim-online-teleprompter",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:10:34-05:00",
+   "fetched": "2026-11-22T15:22:57-05:00",
    "history": false
   }
  ],
- "status": []
+ "status": [
+  {
+   "source": "linuxdo",
+   "name": "LINUX DO 今日热门",
+   "kind": "error",
+   "message": "HTTP 403, curl 也失败（exit 22），可能是 IP 被拦（榜单保留了今天 03:10 抓到的结果）"
+  }
+ ]
 }

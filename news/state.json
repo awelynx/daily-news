@@ -1,19 +1,17 @@
 {
  "openai": {
   "seen": [
+   "https://openai.com/index/perplexity-and-intelligence",
    "https://openai.com/index/combatting-adversarial-distillation",
    "https://openai.com/business/customer-stories/hebbia",
    "https://openai.com/index/introducing-medchembench",
    "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
-   "https://openai.com/business/learn/codex-security-plugin-demo",
+   "https://openai.com/business/learn/deploying-daybreak-red",
    "https://openai.com/business/learn/pr-scans-demo",
    "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
-   "https://openai.com/business/learn/deploying-daybreak-red"
+   "https://openai.com/business/learn/codex-security-plugin-demo"
   ],
-  "last_new": "2026-11-22",
-  "alerted": [
-   "https://openai.com/index/perplexity-and-intelligence"
-  ]
+  "last_new": "2026-11-22"
  },
  "anthropic": {
   "seen": [
@@ -26,8 +24,7 @@
    "/news/expanding-partnership-gsa",
    "/news/donating-agent-skills-to-the-agentic-ai-foundation"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "claude-blog": {
   "seen": [
@@ -40,8 +37,7 @@
    "https://claude.com/resources/articles/claude-meetings",
    "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "claude-dev": {
   "seen": [
@@ -54,8 +50,7 @@
    "/blog/claude-code-in-the-cloud/",
    "/blog/getting-started-with-claude-code-mods/"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "kexue": {
   "seen": [
@@ -133,6 +128,42 @@
     1
    ],
    "50595554": [
+    "2026-11-22",
+    1
+   ],
+   "50597612": [
+    "2026-11-22",
+    1
+   ],
+   "50601525": [
+    "2026-11-22",
+    1
+   ],
+   "50599762": [
+    "2026-11-22",
+    1
+   ],
+   "50596155": [
+    "2026-11-22",
+    1
+   ],
+   "50600511": [
+    "2026-11-22",
+    1
+   ],
+   "50594132": [
+    "2026-11-22",
+    1
+   ],
+   "50595537": [
+    "2026-11-22",
+    1
+   ],
+   "50593481": [
+    "2026-11-22",
+    1
+   ],
+   "50600677": [
     "2026-11-22",
     1
    ]
@@ -313,6 +344,10 @@
    "AtomicChat/Inkling-2-Mini-Uncensored-GGUF": [
     "2026-11-22",
     1
+   ],
+   "apple/DepthPro2": [
+    "2026-11-22",
+    1
    ]
   },
   "prev_run": null,
@@ -455,6 +490,10 @@
     1
    ],
    "https://www.producthunt.com/products/daymaker": [
+    "2026-11-22",
+    1
+   ],
+   "https://www.producthunt.com/products/raccoon-kids": [
     "2026-11-22",
     1
    ]
