@@ -1,14 +1,14 @@
 [
-  {"id": "openai", "name": "OpenAI News", "type": "feed", "fast": true, "cadence_days": 2, "kind": "rss", "url": "https://openai.com/news/rss.xml", "limit": 8},
-  {"id": "anthropic", "name": "Anthropic News", "type": "feed", "fast": true, "cadence_days": 4, "kind": "links", "url": "https://www.anthropic.com/news", "pattern": "href=\"(/news/[a-z0-9-]+)\"", "base": "https://www.anthropic.com", "skip": ["announcements", "features", "partnerships", "product", "policy", "societal-impacts", "economic-research"], "limit": 8},
-  {"id": "claude-blog", "name": "Claude Blog", "type": "feed", "fast": true, "cadence_days": 3, "kind": "rss", "url": "https://claude.com/blog/rss.xml", "limit": 8},
-  {"id": "claude-dev", "name": "Claude Developer Blog", "type": "feed", "fast": true, "cadence_days": 10, "kind": "links", "url": "https://claude.dev/blog/", "pattern": "href=\"(/blog/[a-z0-9-]+/?)\"", "base": "https://claude.dev", "limit": 8},
-  {"id": "kexue", "name": "科学空间（苏剑林）", "type": "feed", "cadence_days": 10, "kind": "rss", "url": "https://kexue.fm/feed", "limit": 5},
-  {"id": "weekly", "name": "玄离199 每周科技补全", "type": "feed", "cadence_days": 7, "kind": "links", "url": "https://xuanli199.github.io/weekly/", "pattern": "href=\"\\./(docs/[0-9]+\\.html)\"", "base": "https://xuanli199.github.io/weekly/", "limit": 2},
-  {"id": "hn", "name": "Hacker News 24 小时最高分", "type": "ranking", "kind": "hn_top", "min_points": 100, "limit": 15},
-  {"id": "github-trending", "name": "GitHub Trending（今日）", "type": "ranking", "kind": "github_trending", "url": "https://github.com/trending?since=daily", "limit": 15},
-  {"id": "linuxdo", "name": "LINUX DO 今日热门", "type": "ranking", "kind": "rss", "url": "https://linux.do/top.rss?period=daily", "limit": 15},
-  {"id": "hf-models", "name": "Hugging Face 热门模型", "type": "ranking", "kind": "hf", "url": "https://huggingface.co/api/models?sort=trendingScore&limit=10", "base": "https://huggingface.co/", "limit": 10},
-  {"id": "hf-spaces", "name": "Hugging Face 热门 Spaces", "type": "ranking", "kind": "hf", "url": "https://huggingface.co/api/spaces?sort=trendingScore&limit=6", "base": "https://huggingface.co/spaces/", "limit": 6},
-  {"id": "producthunt", "name": "Product Hunt", "type": "ranking", "kind": "rss", "url": "https://www.producthunt.com/feed", "limit": 10}
+  {"id": "openai", "name": "OpenAI News", "short": "OpenAI", "type": "feed", "fast": true, "cadence_days": 2, "kind": "rss", "url": "https://openai.com/news/rss.xml", "limit": 8},
+  {"id": "anthropic", "name": "Anthropic News", "short": "Anthropic", "type": "feed", "fast": true, "cadence_days": 4, "kind": "links", "url": "https://www.anthropic.com/news", "pattern": "href=\"(/news/[a-z0-9-]+)\"", "base": "https://www.anthropic.com", "skip": ["announcements", "features", "partnerships", "product", "policy", "societal-impacts", "economic-research"], "limit": 8},
+  {"id": "claude-blog", "name": "Claude Blog", "short": "Claude", "type": "feed", "fast": true, "cadence_days": 3, "kind": "rss", "url": "https://claude.com/blog/rss.xml", "limit": 8},
+  {"id": "claude-dev", "name": "Claude Developer Blog", "short": "claude.dev", "type": "feed", "fast": true, "cadence_days": 10, "kind": "links", "url": "https://claude.dev/blog/", "pattern": "href=\"(/blog/[a-z0-9-]+/?)\"", "base": "https://claude.dev", "limit": 8},
+  {"id": "kexue", "name": "科学空间（苏剑林）", "short": "科学空间", "type": "feed", "cadence_days": 10, "kind": "rss", "url": "https://kexue.fm/feed", "limit": 5},
+  {"id": "weekly", "name": "玄离199 每周科技补全", "short": "周刊", "type": "feed", "cadence_days": 7, "kind": "links", "url": "https://xuanli199.github.io/weekly/", "pattern": "href=\"\\./(docs/[0-9]+\\.html)\"", "base": "https://xuanli199.github.io/weekly/", "limit": 2},
+  {"id": "hn", "name": "Hacker News 24 小时最高分", "short": "HN", "type": "ranking", "kind": "hn_top", "min_points": 100, "limit": 15},
+  {"id": "github-trending", "name": "GitHub Trending（今日）", "short": "GitHub", "type": "ranking", "kind": "github_trending", "url": "https://github.com/trending?since=daily", "limit": 15},
+  {"id": "linuxdo", "name": "LINUX DO 今日热门", "short": "LINUX DO", "type": "ranking", "kind": "rss", "url": "https://linux.do/top.rss?period=daily", "limit": 15},
+  {"id": "hf-models", "name": "Hugging Face 热门模型", "short": "HF 模型", "type": "ranking", "kind": "hf", "url": "https://huggingface.co/api/models?sort=trendingScore&limit=10", "base": "https://huggingface.co/", "limit": 10},
+  {"id": "hf-spaces", "name": "Hugging Face 热门 Spaces", "short": "HF Spaces", "type": "ranking", "kind": "hf", "url": "https://huggingface.co/api/spaces?sort=trendingScore&limit=6", "base": "https://huggingface.co/spaces/", "limit": 6},
+  {"id": "producthunt", "name": "Product Hunt", "short": "Product Hunt", "type": "ranking", "kind": "rss", "url": "https://www.producthunt.com/feed", "limit": 10}
 ]

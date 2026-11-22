@@ -1,6 +1,6 @@
 {
  "date": "2026-11-22",
- "generated": "2026-11-22T03:06:36-05:00",
+ "generated": "2026-11-22T03:10:34-05:00",
  "feeds": [
   {
    "source": "openai",
@@ -289,13 +289,16 @@
      "id": "50589618",
      "title": "Lean verification of the Riemann Hypothesis",
      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-     "note": "982 points",
+     "note": "984 points",
      "discuss": {
       "label": "821 评论",
       "url": "https://news.ycombinator.com/item?id=50589618"
      },
+     "score": 984,
+     "comments": 821,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50588982",
@@ -306,8 +309,11 @@
       "label": "382 评论",
       "url": "https://news.ycombinator.com/item?id=50588982"
      },
+     "score": 599,
+     "comments": 382,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50587875",
@@ -318,32 +324,41 @@
       "label": "266 评论",
       "url": "https://news.ycombinator.com/item?id=50587875"
      },
+     "score": 561,
+     "comments": 266,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50591853",
      "title": "Inkling-2-Mini in 5.4 GB Memory",
      "url": "https://github.com/ShinMegamiBoson/lookatmyquant",
-     "note": "440 points",
+     "note": "441 points",
      "discuss": {
       "label": "109 评论",
       "url": "https://news.ycombinator.com/item?id=50591853"
      },
+     "score": 441,
+     "comments": 109,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50596133",
      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
-     "note": "359 points",
+     "note": "363 points",
      "discuss": {
-      "label": "172 评论",
+      "label": "177 评论",
       "url": "https://news.ycombinator.com/item?id=50596133"
      },
+     "score": 363,
+     "comments": 177,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50587208",
@@ -354,8 +369,11 @@
       "label": "98 评论",
       "url": "https://news.ycombinator.com/item?id=50587208"
      },
+     "score": 250,
+     "comments": 98,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50587859",
@@ -366,20 +384,26 @@
       "label": "90 评论",
       "url": "https://news.ycombinator.com/item?id=50587859"
      },
+     "score": 179,
+     "comments": 90,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50594911",
      "title": "Sandwich Simulator",
      "url": "https://stulle.app/",
-     "note": "176 points",
+     "note": "178 points",
      "discuss": {
-      "label": "62 评论",
+      "label": "63 评论",
       "url": "https://news.ycombinator.com/item?id=50594911"
      },
+     "score": 178,
+     "comments": 63,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50588916",
@@ -387,11 +411,14 @@
      "url": "https://simple-bench.com/",
      "note": "171 points",
      "discuss": {
-      "label": "161 评论",
+      "label": "162 评论",
       "url": "https://news.ycombinator.com/item?id=50588916"
      },
+     "score": 171,
+     "comments": 162,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50591835",
@@ -402,8 +429,11 @@
       "label": "356 评论",
       "url": "https://news.ycombinator.com/item?id=50591835"
      },
+     "score": 167,
+     "comments": 356,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50590279",
@@ -414,20 +444,26 @@
       "label": "106 评论",
       "url": "https://news.ycombinator.com/item?id=50590279"
      },
+     "score": 152,
+     "comments": 106,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50593737",
      "title": "Advice for the next 100 Rust GUIs",
      "url": "https://linebender.org/blog/next-100-guis/",
-     "note": "150 points",
+     "note": "151 points",
      "discuss": {
-      "label": "47 评论",
+      "label": "48 评论",
       "url": "https://news.ycombinator.com/item?id=50593737"
      },
+     "score": 151,
+     "comments": 48,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50591260",
@@ -438,35 +474,45 @@
       "label": "24 评论",
       "url": "https://news.ycombinator.com/item?id=50591260"
      },
+     "score": 140,
+     "comments": 24,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50595168",
      "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
      "url": "https://github.com/ItsNotRexed/Leonida",
-     "note": "138 points",
+     "note": "139 points",
      "discuss": {
       "label": "105 评论",
       "url": "https://news.ycombinator.com/item?id=50595168"
      },
+     "score": 139,
+     "comments": 105,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "50595554",
      "title": "Data Processing Incidents on Inference Providers",
      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
-     "note": "116 points",
+     "note": "117 points",
      "discuss": {
-      "label": "44 评论",
+      "label": "45 评论",
       "url": "https://news.ycombinator.com/item?id=50595554"
      },
+     "score": 117,
+     "comments": 45,
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:06:36-05:00"
+   "fetched": "2026-11-22T03:10:34-05:00",
+   "history": false
   },
   {
    "source": "github-trending",
@@ -478,123 +524,184 @@
      "title": "elementalsouls/Claude-BugHunter",
      "url": "https://github.com/elementalsouls/Claude-BugHunter",
      "note": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.  (Python · +1,803⭐ 今日)",
+     "stars": 1803,
+     "lang": "Python",
+     "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "obra/superpowers",
      "title": "obra/superpowers",
      "url": "https://github.com/obra/superpowers",
      "note": "An agentic skills framework & software development methodology that works.  (Shell · +883⭐ 今日)",
+     "stars": 883,
+     "lang": "Shell",
+     "desc": "An agentic skills framework & software development methodology that works.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "HKUDS/CLI-Anything",
      "title": "HKUDS/CLI-Anything",
      "url": "https://github.com/HKUDS/CLI-Anything",
      "note": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/  (Python · +769⭐ 今日)",
+     "stars": 769,
+     "lang": "Python",
+     "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "jingyaogong/minimind",
      "title": "jingyaogong/minimind",
      "url": "https://github.com/jingyaogong/minimind",
      "note": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.  (Python · +488⭐ 今日)",
+     "stars": 488,
+     "lang": "Python",
+     "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "cursor/plugins",
      "title": "cursor/plugins",
      "url": "https://github.com/cursor/plugins",
      "note": "Cursor plugin specification and official plugins  (TypeScript · +260⭐ 今日)",
+     "stars": 260,
+     "lang": "TypeScript",
+     "desc": "Cursor plugin specification and official plugins",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "firecrawl/firecrawl",
      "title": "firecrawl/firecrawl",
      "url": "https://github.com/firecrawl/firecrawl",
      "note": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.  (TypeScript · +1,006⭐ 今日)",
+     "stars": 1006,
+     "lang": "TypeScript",
+     "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "nginx/nginx",
      "title": "nginx/nginx",
      "url": "https://github.com/nginx/nginx",
      "note": "The official NGINX Open Source repository.  (C · +189⭐ 今日)",
+     "stars": 189,
+     "lang": "C",
+     "desc": "The official NGINX Open Source repository.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "openvinotoolkit/openvino",
      "title": "openvinotoolkit/openvino",
      "url": "https://github.com/openvinotoolkit/openvino",
      "note": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference  (C++ · +200⭐ 今日)",
+     "stars": 200,
+     "lang": "C++",
+     "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "cathrynlavery/diagram-design",
      "title": "cathrynlavery/diagram-design",
      "url": "https://github.com/cathrynlavery/diagram-design",
      "note": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.  (HTML · +583⭐ 今日)",
+     "stars": 583,
+     "lang": "HTML",
+     "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "mvanhorn/last30days-skill",
      "title": "mvanhorn/last30days-skill",
      "url": "https://github.com/mvanhorn/last30days-skill",
      "note": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary  (Python · +560⭐ 今日)",
+     "stars": 560,
+     "lang": "Python",
+     "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "google-labs-code/stitch-skills",
      "title": "google-labs-code/stitch-skills",
      "url": "https://github.com/google-labs-code/stitch-skills",
      "note": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.  (TypeScript · +326⭐ 今日)",
+     "stars": 326,
+     "lang": "TypeScript",
+     "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "mjmirza/app-store-compliance",
      "title": "mjmirza/app-store-compliance",
      "url": "https://github.com/mjmirza/app-store-compliance",
      "note": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 111 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.  (Shell · +720⭐ 今日)",
+     "stars": 720,
+     "lang": "Shell",
+     "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 111 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "Tracer-Cloud/opensre",
      "title": "Tracer-Cloud/opensre",
      "url": "https://github.com/Tracer-Cloud/opensre",
      "note": "The open-source agent for CI/CD reliability.  (Python · +450⭐ 今日)",
+     "stars": 450,
+     "lang": "Python",
+     "desc": "The open-source agent for CI/CD reliability.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "toeverything/AFFiNE",
      "title": "toeverything/AFFiNE",
      "url": "https://github.com/toeverything/AFFiNE",
      "note": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.  (TypeScript · +574⭐ 今日)",
+     "stars": 574,
+     "lang": "TypeScript",
+     "desc": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "XiaoYouChR/Ghost-Downloader-3",
      "title": "XiaoYouChR/Ghost-Downloader-3",
      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
      "note": "The only downloader you need. 下载器的集大成者。  (Python · +779⭐ 今日)",
+     "stars": 779,
+     "lang": "Python",
+     "desc": "The only downloader you need. 下载器的集大成者。",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:06:36-05:00"
+   "fetched": "2026-11-22T03:10:34-05:00",
+   "history": false
   },
   {
    "source": "linuxdo",
@@ -607,7 +714,8 @@
      "url": "https://linux.do/t/topic/3218803",
      "note": "自己用 AI 写的一个在线听歌与无损下载工具，打开浏览器即用，手机电脑全适配！ 核心功能 全网曲库畅听 ：一键检索 QQ音乐、网易云音乐（VIP 歌曲直接听 & 下）。 多音质自由选 ：支持 FLAC 无损 / 320K 高音质 MP3 等多音质选择，多线程极速直连下载。 歌单批量导入 ：支持一键导入外部歌单，轻松批量",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3216176",
@@ -615,7 +723,8 @@
      "url": "https://linux.do/t/topic/3216176",
      "note": "鉴于好像还是有不少佬对这个感兴趣，简单整理一期。 为什么+86不够用 不过在开始之前， 简单讲讲境外手机号有什么用 ，其实站内分享境外手机号的帖子是有不少的，但是很少佬讲 哪些场合是比较需要的 ，仅供参考，免得各位搞了以后发现没什么用： 注册TG，WhatsApp 其实+86是可以注册这两玩意儿的，但是一来接码并不稳定",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3219109",
@@ -623,7 +732,8 @@
      "url": "https://linux.do/t/topic/3219109",
      "note": "我是06年的，今年是20岁，23年高考，复读了半年，然后24年3月份因为学校里的一些因素然后实在是没法待下去了，趁着为数不多的每个月的两天假期，在Boos直聘上找了一个家附近的公司，开始进行华中华南一带出差的工作，也就是给一些儿童艺术培训学校做招生，在线下卖体验课，一般是卖美术、舞蹈、口才之类的课程。 现在想来，其实还",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3218478",
@@ -631,7 +741,8 @@
      "url": "https://linux.do/t/topic/3218478",
      "note": "RT，如果没有用过iPhone/没有iOS设备的话，真心推荐各位佬考虑入手一台外版无锁iPhone充当备用机。 目前来说iPhone差不多独占这几个优点： Apple Pay 基本上90%的卡都是可以绑定Apple Pay的，绑Apple Pay基本上可以杜绝大部分的盗刷。 在这里给安利一个冷知识： 为啥Apple P",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3218850",
@@ -639,7 +750,8 @@
      "url": "https://linux.do/t/topic/3218850",
      "note": "接上次继续聊， LLM科研写作模型怎么选？ 经过上次的初步分析和与各位佬友的充分讨论后，本次进行了更为深入的分析。 首先简单总结一下 上次核心结论 ： 谷歌家的4代模型最适合写作，但是有容易夸大结论的瑕疵。 GPT家族由于过度防御，使写出的文本可用性较差，不像人类的语言（不会说人话 ）。 Claude Opus在文本能",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3217242",
@@ -647,7 +759,8 @@
      "url": "https://linux.do/t/topic/3217242",
      "note": "再加上还不到一个星期经常重置，简直爽用了 一句话教程： 先用美国节点查看学生优惠页面有没有资格，有资格，就点击认证-》 提炼-》认证-》关闭页面 随后再切换日本节点，查看支付资料，若有资料直接关闭支付资料-》再新绑定填写日本支付资料顺便这个环节就可以绑卡（VISA等等） 依然日本节点打开学生优惠页面，显示720,128",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3217167",
@@ -655,7 +768,8 @@
      "url": "https://linux.do/t/topic/3217167",
      "note": "IT之家 11 月 21 日消息，Anthropic 公司技术团队成员 Tao Lin 于 11 月 15 日接受 Palisade Research 采访时，预测到 2027 年年底，在编程、电影制作等几乎所有领域，人工智能（AI）在发展大约还有 1.3 年后， 可以媲美或超过世界顶尖人类专家的水平 。 原文： “几",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3216650",
@@ -663,7 +777,8 @@
      "url": "https://linux.do/t/topic/3216650",
      "note": "首先声明，我不是数学领域的人，单纯有感而发吧。 从一开始接触到chatgpt，还是在高二高三的时候，想当年同学在学校一体机上去和chatgpt对话的时候，还觉得很好玩，完全没有想到它在未来会变成什么样子。 现如今，我也是从高中上到了大四，马上也要去读直博了。一直以来，我都很关注相关领域的发展。也是从大一开始，就使用gp",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3217511",
@@ -671,7 +786,8 @@
      "url": "https://linux.do/t/topic/3217511",
      "note": "难绷这也能上热搜吗？ 25 个帖子 - 23 位参与者 阅读完整话题",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3216270",
@@ -679,7 +795,8 @@
      "url": "https://linux.do/t/topic/3216270",
      "note": "我是国企的一名劳务工，工资到手大概再每月16k左右，就是累点。 自从8月开始接触AI之后，工作也辞了，在家玩了3个月.现在刚刚出来没多久，找的活也不想干，已经入职了还是不想干。一心想着玩电脑，玩手机，折腾AI啥的。不知道该怎么办好了。入职之后没什么心思干活，现在已经辞职了，估计明天回老家了。。。哎，我的性格可能有缺陷，",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3219076",
@@ -687,7 +804,8 @@
      "url": "https://linux.do/t/topic/3219076",
      "note": "2026 年 11 月 20 日，Levent Alpöge 发布黎曼猜想的 Lean 形式化证明，代码库约 1700 万行。11 月 21 日，Lean FRO 与 Mathlib Initiative 联合声明认证该命题与证明均正确：社区确认其命题与 Mathlib 的 RiemannHypothesis 一致、代",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3216134",
@@ -695,7 +813,8 @@
      "url": "https://linux.do/t/topic/3216134",
      "note": "是真的 但是只有资源文件 能看地图 视频 音频一类的 很多资源是加密的，密钥在主程序所以解密不了 引擎本体也在主程序里面 就算有ai也搞不来 视频似乎都是解密的可以播放 数量还不少 很多是游戏内电视频道的内容 还有竖屏短视频 是不是手机里的(有些NSFW) 剧透 贴图 map 简单渲染一下（贴图和模型没加） 加上原版光",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3217814",
@@ -703,7 +822,8 @@
      "url": "https://linux.do/t/topic/3217814",
      "note": "首先要说明一个事情，人的幸福是有窗口期的。 父母还有劳动能力，孩子也不需要大量时间养育，工作稳定。这个大概就是人生最幸福的窗口期。 大概10年左右，差不多也就是25岁-35岁之间。一旦过了这个窗口期，普通人的生活会变得非常的艰难。 今天看到了一个帖子。 为什么大人喝酒要喝这么多 先说明，我本人不抽烟不喝酒，也不喜欢抽烟",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3218628",
@@ -711,7 +831,8 @@
      "url": "https://linux.do/t/topic/3218628",
      "note": "Lean community blog – 21 Nov 26 Lean verification of the Riemann Hypothesis Lean verification of the Riemann Hypothesis Joint statement by the Lean and Mathlib ",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://linux.do/t/topic/3218234",
@@ -719,11 +840,12 @@
      "url": "https://linux.do/t/topic/3218234",
      "note": "30 个帖子 - 19 位参与者 阅读完整话题",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T02:59:11-05:00",
-   "stale": true
+   "fetched": "2026-11-22T03:10:34-05:00",
+   "history": false
   },
   {
    "source": "hf-models",
@@ -734,84 +856,115 @@
      "id": "thinkingmachines/Inkling-2-Mini",
      "title": "thinkingmachines/Inkling-2-Mini",
      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-     "note": "image-text-to-text · ❤ 3325",
+     "note": "image-text-to-text · ❤ 3326",
+     "likes": 3326,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "unsloth/Inkling-2-Mini-GGUF",
      "title": "unsloth/Inkling-2-Mini-GGUF",
      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-     "note": "image-text-to-text · ❤ 703",
+     "note": "image-text-to-text · ❤ 704",
+     "likes": 704,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "tencent/Hy4-flash",
      "title": "tencent/Hy4-flash",
      "url": "https://huggingface.co/tencent/Hy4-flash",
-     "note": "image-text-to-text · ❤ 560",
+     "note": "image-text-to-text · ❤ 562",
+     "likes": 562,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "inworld/voice-isolator",
      "title": "inworld/voice-isolator",
      "url": "https://huggingface.co/inworld/voice-isolator",
-     "note": "audio-to-audio · ❤ 537",
+     "note": "audio-to-audio · ❤ 539",
+     "likes": 539,
+     "tag": "audio-to-audio",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "apple/FastFrames-L",
      "title": "apple/FastFrames-L",
      "url": "https://huggingface.co/apple/FastFrames-L",
      "note": "text-to-video · ❤ 501",
+     "likes": 501,
+     "tag": "text-to-video",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "harness-hub/Qwen3.8-27B-pi-adapted",
      "title": "harness-hub/Qwen3.8-27B-pi-adapted",
      "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
      "note": "image-text-to-text · ❤ 945",
+     "likes": 945,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "higurashi-ai/Haru-4B",
      "title": "higurashi-ai/Haru-4B",
      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
      "note": "audio-to-audio · ❤ 846",
+     "likes": 846,
+     "tag": "audio-to-audio",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "Qwen/Qwen3.8-27B",
      "title": "Qwen/Qwen3.8-27B",
      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
      "note": "image-text-to-text · ❤ 20827",
+     "likes": 20827,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
      "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
      "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
      "note": "image-text-to-text · ❤ 304",
+     "likes": 304,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "sensenova/SenseNova-Loop-9B",
      "title": "sensenova/SenseNova-Loop-9B",
      "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
      "note": "image-text-to-text · ❤ 468",
+     "likes": 468,
+     "tag": "image-text-to-text",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:06:36-05:00"
+   "fetched": "2026-11-22T03:10:34-05:00",
+   "history": false
   },
   {
    "source": "hf-spaces",
@@ -823,51 +976,70 @@
      "title": "huggingface/moe-blogpost",
      "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
      "note": "docker · ❤ 813",
+     "likes": 813,
+     "tag": "docker",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "MiniMaxAI/minimax-h3-image",
      "title": "MiniMaxAI/minimax-h3-image",
      "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
      "note": "gradio · ❤ 254",
+     "likes": 254,
+     "tag": "gradio",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "JCisHERE/wan2-2-i2v-v3",
      "title": "JCisHERE/wan2-2-i2v-v3",
      "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
      "note": "gradio · ❤ 575",
+     "likes": 575,
+     "tag": "gradio",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "joelniklaus/harness-leaderboard",
      "title": "joelniklaus/harness-leaderboard",
      "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
      "note": "docker · ❤ 503",
+     "likes": 503,
+     "tag": "docker",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "waitinghere/Krea2T-Revamped",
      "title": "waitinghere/Krea2T-Revamped",
      "url": "https://huggingface.co/spaces/waitinghere/Krea2T-Revamped",
      "note": "gradio · ❤ 118",
+     "likes": 118,
+     "tag": "gradio",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "Lakonik/pi-H3",
      "title": "Lakonik/pi-H3",
      "url": "https://huggingface.co/spaces/Lakonik/pi-H3",
      "note": "gradio · ❤ 91",
+     "likes": 91,
+     "tag": "gradio",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:06:36-05:00"
+   "fetched": "2026-11-22T03:10:34-05:00",
+   "history": false
   },
   {
    "source": "producthunt",
@@ -880,63 +1052,8 @@
      "url": "https://www.producthunt.com/products/slotify-2",
      "note": "",
      "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/mockreel",
-     "title": "Mockreel",
-     "url": "https://www.producthunt.com/products/mockreel",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/resurf-2",
-     "title": "Resurf",
-     "url": "https://www.producthunt.com/products/resurf-2",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/oovi",
-     "title": "oovi",
-     "url": "https://www.producthunt.com/products/oovi",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/webless",
-     "title": "Webless Agents",
-     "url": "https://www.producthunt.com/products/webless",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/leapdeck",
-     "title": "Leapdeck",
-     "url": "https://www.producthunt.com/products/leapdeck",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/denotch",
-     "title": "DeNotch",
-     "url": "https://www.producthunt.com/products/denotch",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/pushback-flight-tracker",
-     "title": "Pushback: Flight Tracker",
-     "url": "https://www.producthunt.com/products/pushback-flight-tracker",
-     "note": "",
-     "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://www.producthunt.com/products/copy-haste",
@@ -944,7 +1061,71 @@
      "url": "https://www.producthunt.com/products/copy-haste",
      "note": "",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/webless",
+     "title": "Webless Agents",
+     "url": "https://www.producthunt.com/products/webless",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/creavit-studio",
+     "title": "Creavit Studio 4.0",
+     "url": "https://www.producthunt.com/products/creavit-studio",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/pushback-flight-tracker",
+     "title": "Pushback: Flight Tracker",
+     "url": "https://www.producthunt.com/products/pushback-flight-tracker",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/mockreel",
+     "title": "Mockreel",
+     "url": "https://www.producthunt.com/products/mockreel",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/denotch",
+     "title": "DeNotch",
+     "url": "https://www.producthunt.com/products/denotch",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/leapdeck",
+     "title": "Leapdeck",
+     "url": "https://www.producthunt.com/products/leapdeck",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "https://www.producthunt.com/products/daymaker",
+     "title": "Daymaker",
+     "url": "https://www.producthunt.com/products/daymaker",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     },
     {
      "id": "https://www.producthunt.com/products/ulika",
@@ -952,18 +1133,13 @@
      "url": "https://www.producthunt.com/products/ulika",
      "note": "",
      "mark": "new",
-     "streak": 1
+     "streak": 1,
+     "firstSeen": "2026-11-22"
     }
    ],
-   "fetched": "2026-11-22T03:06:36-05:00"
+   "fetched": "2026-11-22T03:10:34-05:00",
+   "history": false
   }
  ],
- "status": [
-  {
-   "source": "linuxdo",
-   "name": "LINUX DO 今日热门",
-   "kind": "error",
-   "message": "HTTP 403, curl 也失败（exit 22），可能是 IP 被拦（榜单保留了今天 02:59 抓到的结果）"
-  }
- ]
+ "status": []
 }

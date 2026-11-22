@@ -130,7 +130,9 @@
     "2026-11-22",
     1
    ]
-  }
+  },
+  "prev_run": null,
+  "last_run": "2026-11-22"
  },
  "github-trending": {
   "streak": {
@@ -194,7 +196,9 @@
     "2026-11-22",
     1
    ]
-  }
+  },
+  "prev_run": null,
+  "last_run": "2026-11-22"
  },
  "linuxdo": {
   "streak": {
@@ -258,7 +262,9 @@
     "2026-11-22",
     1
    ]
-  }
+  },
+  "prev_run": null,
+  "last_run": "2026-11-22"
  },
  "hf-models": {
   "streak": {
@@ -302,7 +308,9 @@
     "2026-11-22",
     1
    ]
-  }
+  },
+  "prev_run": null,
+  "last_run": "2026-11-22"
  },
  "hf-spaces": {
   "streak": {
@@ -330,7 +338,9 @@
     "2026-11-22",
     1
    ]
-  }
+  },
+  "prev_run": null,
+  "last_run": "2026-11-22"
  },
  "producthunt": {
   "streak": {
@@ -433,7 +443,17 @@
    "https://www.producthunt.com/products/copy-haste": [
     "2026-11-22",
     1
+   ],
+   "https://www.producthunt.com/products/creavit-studio": [
+    "2026-11-22",
+    1
+   ],
+   "https://www.producthunt.com/products/daymaker": [
+    "2026-11-22",
+    1
    ]
-  }
+  },
+  "prev_run": null,
+  "last_run": "2026-11-22"
  }
 }

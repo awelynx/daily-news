@@ -113,9 +113,11 @@ def github_trending(src):
         desc = re.search(r'<p class="col-9[^"]*">(.*?)</p>', block, re.S)
         lang = re.search(r'itemprop="programmingLanguage">([^<]+)<', block)
         today = re.search(r'([\d,]+) stars? today', block)
-        note = " · ".join(x for x in [lang and lang.group(1).strip(), today and f"+{today.group(1)}⭐ 今日"] if x)
+        lang, desc = lang and lang.group(1).strip(), desc and clean(desc.group(1))
+        note = " · ".join(x for x in [lang, today and f"+{today.group(1)}⭐ 今日"] if x)
         items.append({"id": repo, "title": repo, "url": "https://github.com/" + repo,
-                      "note": (clean(desc.group(1)) + ("  (" + note + ")" if note else "")) if desc else note, "when": ""})
+                      "note": (desc + ("  (" + note + ")" if note else "")) if desc else note, "when": "",
+                      "desc": desc or "", "lang": lang or "", "stars": int(today.group(1).replace(",", "")) if today else None})
     return items
 
 
@@ -124,7 +126,8 @@ def hf(src):
     for m in json.loads(get(src["url"])):
         mid = m.get("id") or m.get("modelId")
         note = " · ".join(x for x in [m.get("pipeline_tag") or m.get("sdk"), f"❤ {m.get('likes', 0)}"] if x)
-        items.append({"id": mid, "title": mid, "url": src["base"] + mid, "note": note, "when": ""})
+        items.append({"id": mid, "title": mid, "url": src["base"] + mid, "note": note, "when": "",
+                      "tag": m.get("pipeline_tag") or m.get("sdk") or "", "likes": m.get("likes", 0)})
     return items
 
 
@@ -135,7 +138,7 @@ def hn_top(src):
     hits = sorted(json.loads(get(url))["hits"], key=lambda h: -(h.get("points") or 0))
     return [{"id": h["objectID"], "title": h["title"],
              "url": h.get("url") or f"https://news.ycombinator.com/item?id={h['objectID']}",
-             "note": f"{h['points']} points", "when": "",
+             "note": f"{h['points']} points", "when": "", "score": h["points"], "comments": h["num_comments"],
              "discuss": {"label": f"{h['num_comments']} 评论", "url": f"https://news.ycombinator.com/item?id={h['objectID']}"}}
             for h in hits]
 
@@ -160,10 +163,14 @@ def mark_text(i):
     return {"": "", "new": " 🆕"}.get(i.get("mark", ""), f" ·（第 {i.get('streak')} 天）")
 
 
+# Optional per-kind fields kept apart from `note` so the site can align and sort them:
+# score/comments (HN), stars today/lang/desc (GitHub), likes/tag (Hugging Face).
+OPTIONAL = ("discuss", "score", "comments", "stars", "likes", "lang", "desc", "tag")
+
+
 def item_data(i, **extra):
     d = {k: i[k] for k in ("id", "title", "url", "note")}
-    if i.get("discuss"):
-        d["discuss"] = i["discuss"]
+    d |= {k: i[k] for k in OPTIONAL if i.get(k) not in (None, "")}
     return d | extra
 
 
@@ -247,13 +254,17 @@ def main():
         if ranking:
             # streak[id] = [last day on list, days in a row]
             prev, streak = (date.today() - timedelta(days=1)).isoformat(), st.get("streak", {})
+            if st.get("last_run") != today:
+                st["prev_run"], st["last_run"] = st.get("last_run"), today
             for i in items:
                 last, n = streak.get(i["id"], ["", 0])
                 n = n if last == today else (n + 1 if last == prev else 1)
                 streak[i["id"]] = [today, n]
-                sec["items"].append(item_data(i, mark="new" if n == 1 else "streak", streak=n))
+                first = (date.today() - timedelta(days=n - 1)).isoformat()
+                sec["items"].append(item_data(i, mark="new" if n == 1 else "streak", streak=n, firstSeen=first))
             st["streak"] = {k: v for k, v in streak.items() if v[0] >= prev}
-            rankings[src["id"]] = sec | {"fetched": now}
+            # history: yesterday's list exists, so "new" really means new rather than "first day collected".
+            rankings[src["id"]] = sec | {"fetched": now, "history": st["prev_run"] == prev}
             continue
         new = items if show_all else [i for i in items if i["id"] not in seen]
         st["seen"] = list(dict.fromkeys([i["id"] for i in items] + list(seen)))[:500]
