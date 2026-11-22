@@ -10,7 +10,10 @@
    "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
    "https://openai.com/business/learn/deploying-daybreak-red"
   ],
-  "last_new": "2026-11-22"
+  "last_new": "2026-11-22",
+  "alerted": [
+   "https://openai.com/index/perplexity-and-intelligence"
+  ]
  },
  "anthropic": {
   "seen": [
@@ -23,7 +26,8 @@
    "/news/expanding-partnership-gsa",
    "/news/donating-agent-skills-to-the-agentic-ai-foundation"
   ],
-  "last_new": "2026-11-22"
+  "last_new": "2026-11-22",
+  "alerted": []
  },
  "claude-blog": {
   "seen": [
@@ -36,7 +40,8 @@
    "https://claude.com/resources/articles/claude-meetings",
    "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work"
   ],
-  "last_new": "2026-11-22"
+  "last_new": "2026-11-22",
+  "alerted": []
  },
  "claude-dev": {
   "seen": [
@@ -49,7 +54,8 @@
    "/blog/claude-code-in-the-cloud/",
    "/blog/getting-started-with-claude-code-mods/"
   ],
-  "last_new": "2026-11-22"
+  "last_new": "2026-11-22",
+  "alerted": []
  },
  "kexue": {
   "seen": [
