@@ -1,19 +1,8 @@
 ---
-// One link from a digest. `source` adds a source label (used where items from many sources mix).
-const { item, source } = Astro.props;
+// One post on a source page (feeds and fast-check hits).
+const { item } = Astro.props;
 ---
 <li class="item">
-  <div>
-    {source && <span class="badge src">{source}</span>}
-    <a class="t" href={item.url} target="_blank" rel="noopener">{item.title}</a>
-    {item.mark === "new" && <span class="badge new">新上榜</span>}
-    {item.mark === "streak" && <span class="badge streak">第 {item.streak} 天</span>}
-    {(item.note || item.discuss) && (
-      <div class="note">
-        {item.note}
-        {item.note && item.discuss && " · "}
-        {item.discuss && <a href={item.discuss.url} target="_blank" rel="noopener">{item.discuss.label}</a>}
-      </div>
-    )}
-  </div>
+  <a class="t" href={item.url} target="_blank" rel="noopener">{item.title}</a>
+  {item.note && <div class="note clamp" style="--lines:2">{item.note}</div>}
 </li>

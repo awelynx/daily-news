@@ -1,0 +1,19 @@
+---
+// Collapsible list: a full-width <button aria-expanded> plus the hidden rows (slotted).
+// `label` is the closed text. A tail ("再看 N 条") puts the button after the rows and reads 收起
+// when open; a section header (`header`) stays above its rows and keeps its label.
+const { id, label, header = false } = Astro.props;
+---
+{header && (
+  <button class="more-btn quiet" type="button" aria-expanded="false" aria-controls={id}>
+    <span>{label}</span><span class="chev" aria-hidden="true">▾</span>
+  </button>
+)}
+<div class="more" id={id}>
+  <div class="more-clip"><slot /></div>
+</div>
+{!header && (
+  <button class="more-btn" type="button" aria-expanded="false" aria-controls={id} data-label={label}>
+    <span>{label}</span><span class="chev" aria-hidden="true">▾</span>
+  </button>
+)}

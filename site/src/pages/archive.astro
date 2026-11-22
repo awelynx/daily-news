@@ -1,8 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
-import { count, digests, url, weekday } from "../lib/data.js";
+import { count, digests, hasHistory, newCount, url, weekday } from "../lib/data.js";
 
 const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7)));
+// Preview: the day's highest-scoring ranking item (HN), else its first new post.
+const preview = (d) =>
+  d.rankings.flatMap((s) => s.items).filter((i) => i.score != null).sort((a, b) => b.score - a.score)[0] ?? d.feeds[0]?.items[0];
 ---
 <Base title="归档" active="archive">
   <h1>归档</h1>
@@ -12,12 +15,15 @@ const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7))
       <h2>{month.replace("-", " 年 ")} 月</h2>
       <ul class="card items">
         {ds.map((d) => (
-          <li class="item row">
-            <a class="t" href={url(`d/${d.date}/`)}>{d.date} <span class="wd">{weekday(d.date)}</span></a>
-            <span class="stats">
-              新文章 {count(d.feeds)} · 榜单 {count(d.rankings)}
-              {d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
-            </span>
+          <li class="item day">
+            <a class="t" href={url(`d/${d.date}/`)}>
+              <span class="date">{d.date.slice(5).replace("-", " 月 ")} 日 <span class="wd">{weekday(d.date)}</span></span>
+              <span class="stats">
+                文章 {count(d.feeds)} · {d.rankings.some(hasHistory) ? `新上榜 ${newCount(d.rankings)}` : `榜单 ${count(d.rankings)}`}
+                {d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
+              </span>
+            </a>
+            {preview(d) && <div class="note clamp">{preview(d).title}</div>}
           </li>
         ))}
       </ul>
@@ -26,8 +32,8 @@ const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7))
 </Base>
 
 <style>
-  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  .wd { color: var(--muted); font-weight: 400; font-size: 14px; margin-left: 4px; }
-  .stats { color: var(--muted); font-size: 14px; }
+  .day .t { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; padding: 4px 0; }
+  .wd { color: var(--muted); font-weight: 400; font-size: .875rem; margin-left: 4px; }
+  .stats { color: var(--muted); font-size: .8125rem; font-weight: 400; font-variant-numeric: tabular-nums; }
   .warn { color: var(--warn); }
 </style>

@@ -1,0 +1,36 @@
+---
+import More from "./More.astro";
+import { noteLines, url } from "../lib/data.js";
+
+const { sec } = Astro.props;
+// Three titles, then 再看 N 篇 — unless only one would be hidden.
+const show = sec.items.length <= 4 ? 4 : 3;
+const head = sec.items.slice(0, show);
+const rest = sec.items.slice(show);
+---
+<section class="card feed" id={`src-${sec.source}`} data-source={sec.source} style={`--lines:${noteLines(sec.source)}`}>
+  <div class="card-head">
+    <h3><a href={url(`sources/${sec.source}/`)}>{sec.name}</a></h3>
+    <span class="meta">{sec.items.length} 篇</span>
+  </div>
+  <ul class="items">
+    {head.map((i) => (
+      <li class="item">
+        <a class="t" href={i.url} target="_blank" rel="noopener">{i.title}</a>
+        {i.note && <div class="note clamp">{i.note}</div>}
+      </li>
+    ))}
+  </ul>
+  {rest.length > 0 && (
+    <More id={`more-${sec.source}`} label={`再看 ${rest.length} 篇`}>
+      <ul class="items">
+        {rest.map((i) => (
+          <li class="item">
+            <a class="t" href={i.url} target="_blank" rel="noopener">{i.title}</a>
+            {i.note && <div class="note clamp">{i.note}</div>}
+          </li>
+        ))}
+      </ul>
+    </More>
+  )}
+</section>

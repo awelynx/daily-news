@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Item from "../../components/Item.astro";
-import { digests, fastHits, homepage, sources, url } from "../../lib/data.js";
+import { digests, fastHits, homepage, sources, splitTitle, url } from "../../lib/data.js";
 
 export function getStaticPaths() {
   return sources.map((s) => ({ params: { id: s.id }, props: { s } }));
@@ -12,7 +12,24 @@ const days = digests
   .map((d) => ({ d, sec: [...d.feeds, ...d.rankings].find((x) => x.source === s.id), status: d.status.find((x) => x.source === s.id) }))
   .filter((x) => x.sec || x.status);
 const hits = fastHits.filter((h) => h.source === s.id);
-const List = ranking ? "ol" : "ul";
+
+// Rankings: one row per item, from the day it first made the list to the last day it was on it.
+const md = (day) => day.slice(5).replace("-", "/");
+const timeline = ranking
+  ? Object.values(
+      days.reduce((acc, { d, sec }) => {
+        for (const i of sec?.items ?? []) {
+          const first = i.firstSeen ?? d.date;
+          const e = (acc[i.id] ??= { item: i, sec, first, last: d.date, days: 0 });
+          if (first < e.first) e.first = first;
+          if (d.date > e.last) [e.last, e.item] = [d.date, i];
+          e.days = Math.max(e.days, i.streak ?? 1);
+        }
+        return acc;
+      }, {}),
+    ).sort((a, b) => (a.last !== b.last ? (a.last < b.last ? 1 : -1) : b.days - a.days))
+  : [];
+const byLast = Object.entries(Object.groupBy(timeline, (e) => e.last));
 ---
 <Base title={s.name} active="sources">
   <h1>{s.name}</h1>
@@ -20,6 +37,9 @@ const List = ranking ? "ol" : "ul";
     {ranking ? "每日榜单" : "博客与新闻"}{s.cadence_days && ` · 平时约每 ${s.cadence_days} 天更新`} ·
     <a href={homepage(s)} target="_blank" rel="noopener">原站</a>
   </p>
+  {days.filter((x) => x.status).slice(0, 1).map(({ d, status }) => (
+    <ul class="status"><li>{d.date}：{status.message}</li></ul>
+  ))}
   {hits.length > 0 && (
     <section class="card">
       <div class="card-head"><h3>快速检查发现的</h3><span class="meta">{hits.length} 条</span></div>
@@ -27,14 +47,39 @@ const List = ranking ? "ol" : "ul";
     </section>
   )}
   {days.length === 0 && <p class="empty">归档里还没有这个来源的内容。</p>}
-  {days.map(({ d, sec, status }) => (
+
+  {ranking ? byLast.map(([last, entries]) => (
+    <section class="card">
+      <div class="card-head">
+        <h3><a href={url(`d/${last}/`)}>最近在榜 {last}</a></h3>
+        <span class="meta">{entries.length} 条</span>
+      </div>
+      <ul class="items">
+        {entries.map((e) => {
+          const t = splitTitle(e.sec, e.item);
+          return (
+            <li class="item span">
+              <a class="t" href={e.item.url} target="_blank" rel="noopener">
+                {t.org && <span class="org">{t.org} / </span>}<span class:list={{ name: !!t.org }}>{t.name}</span>
+              </a>
+              <span class="range">{md(e.first)} → {md(e.last)}{e.days > 1 && ` · ${e.days} 天`}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )) : days.map(({ d, sec }) => sec && (
     <section class="card">
       <div class="card-head">
         <h3><a href={url(`d/${d.date}/`)}>{d.date}</a></h3>
-        <span class="meta">{sec ? `${sec.items.length} 条` : ""}</span>
+        <span class="meta">{sec.items.length} 篇</span>
       </div>
-      {status && <ul class="status"><li>{status.message}</li></ul>}
-      {sec && <List class="items">{sec.items.map((item) => <Item item={item} />)}</List>}
+      <ul class="items">{sec.items.map((item) => <Item item={item} />)}</ul>
     </section>
   ))}
 </Base>
+
+<style>
+  .span { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 12px; flex-wrap: wrap; }
+  .range { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; white-space: nowrap; margin-left: auto; }
+</style>

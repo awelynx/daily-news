@@ -1,0 +1,46 @@
+---
+import More from "./More.astro";
+import RankItem from "./RankItem.astro";
+import { fmtTime, hasHistory, isNew, url } from "../lib/data.js";
+
+const { sec } = Astro.props;
+const ranked = sec.items.map((item, n) => ({ item, rank: n + 1 }));
+const fresh = ranked.filter((r) => isNew(r.item));
+const staying = ranked.filter((r) => !isNew(r.item));
+// Marking everything marks nothing: split only when the list has history and some items stayed.
+const split = hasHistory(sec) && staying.length > 0;
+const allNew = hasHistory(sec) && staying.length === 0;
+const first = split ? fresh : ranked;
+// Five rows, then 再看 N 条 — unless only one would be hidden.
+const show = first.length <= 6 ? 6 : 5;
+const longest = Math.max(0, ...staying.map((r) => r.item.streak ?? 0));
+const caption = sec.stale ? `${fmtTime(sec.fetched)} 的快照` : !hasHistory(sec) ? "首日收录，明天起区分新上榜" : allNew ? "全部是新上榜" : "";
+---
+<section class="card rank-card" id={`src-${sec.source}`} data-source={sec.source}>
+  <div class="card-head">
+    <h3><a href={url(`sources/${sec.source}/`)}>{sec.name}</a></h3>
+    <span class="meta">{sec.items.length} 条</span>
+  </div>
+  {caption && <p class="caption">{caption}</p>}
+
+  {split && fresh.length > 0 && <div class="seg-label">新上榜 {fresh.length}</div>}
+  {split && fresh.length === 0 && <p class="caption">今天没有新上榜</p>}
+  <ol class="rows">
+    {first.slice(0, show).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} dot={split} />)}
+  </ol>
+  {first.length > show && (
+    <More id={`more-${sec.source}`} label={`再看 ${first.length - show} 条`}>
+      <ol class="rows">
+        {first.slice(show).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} dot={split} />)}
+      </ol>
+    </More>
+  )}
+
+  {split && (
+    <More id={`stay-${sec.source}`} label={`持续在榜 ${staying.length} 条 · 最长第 ${longest} 天`} header>
+      <ol class="rows">
+        {staying.map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} days />)}
+      </ol>
+    </More>
+  )}
+</section>

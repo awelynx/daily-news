@@ -1,0 +1,34 @@
+---
+import { rankMeta, splitTitle, value } from "../lib/data.js";
+
+// One ranking row. `dot` marks it as new on a list that has history; `days` shows the streak
+// in the right column instead of the item's number.
+const { sec, item, rank, dot = false, days = false } = Astro.props;
+const t = splitTitle(sec, item);
+const v = value(item);
+const meta = rankMeta(sec, item);
+const metaParts = [meta.text, meta.discuss && "discuss"].filter(Boolean);
+---
+<li class:list={["row", { dim: days }]}>
+  <span class="rank">{rank}</span>
+  <div class="body">
+    {dot && <span class="dot" role="img" aria-label="新上榜" />}
+    <a class="t" href={item.url} target="_blank" rel="noopener">
+      {t.org && <span class="org">{t.org} / </span>}<span class:list={{ name: !!t.org }}>{t.name}</span>
+    </a>
+    {metaParts.length > 0 && (
+      <div class="meta-line">
+        {meta.text}
+        {meta.text && meta.discuss && " · "}
+        {meta.discuss && <a href={meta.discuss.url} target="_blank" rel="noopener">{meta.discuss.label}</a>}
+      </div>
+    )}
+    {meta.summary && <div class="note clamp">{meta.summary}</div>}
+  </div>
+  {days ? (
+    <span class="val days">
+      第 {item.streak} 天
+      {item.streak >= 7 && <span class="streak-bar" style={`--w:${Math.min(item.streak, 14) / 14}`} aria-hidden="true" />}
+    </span>
+  ) : v && <span class="val" title={v.label}>{v.text}</span>}
+</li>

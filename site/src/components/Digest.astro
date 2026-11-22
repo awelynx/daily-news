@@ -1,45 +1,160 @@
 ---
-import Section from "./Section.astro";
-import { count, fmtTime, sections, weekday } from "../lib/data.js";
+import FeedCard from "./FeedCard.astro";
+import RankCard from "./RankCard.astro";
+import { count, fmtTime, hasHistory, isNew, newCount, short, weekday } from "../lib/data.js";
 
 const { d, heading } = Astro.props;
-const all = sections(d);
+const withHistory = d.rankings.filter(hasHistory);
+const newBySource = withHistory.map((s) => [s, s.items.filter(isNew).length]).filter(([, n]) => n > 0);
+const longest = d.rankings
+  .flatMap((s) => s.items.map((i) => ({ s, i })))
+  .reduce((best, x) => ((x.i.streak ?? 0) > (best?.i.streak ?? 1) ? x : best), null);
+const groups = [
+  { key: "feeds", label: "文章", secs: d.feeds, Card: FeedCard },
+  { key: "rank", label: "榜单", secs: d.rankings, Card: RankCard },
+];
 ---
 <h1>{heading ?? `${d.date} 要闻`}</h1>
-<p class="sub">{d.date} {weekday(d.date)} · {fmtTime(d.generated)} 生成 · 新文章 {count(d.feeds)} 篇 · 榜单 {count(d.rankings)} 条</p>
+<p class="sub">{d.date} {weekday(d.date)} · {fmtTime(d.generated)} 生成</p>
+
+{d.status.length > 0 && (
+  <details class="alert">
+    <summary>{d.status.length} 个来源异常：{d.status.map((s) => short(s.source)).join("、")}</summary>
+    <ul>{d.status.map((s) => <li><b>{s.name}</b>：{s.message}</li>)}</ul>
+  </details>
+)}
+
 <slot />
 
-<div class="chips" role="group" aria-label="按来源筛选">
-  <button class="chip" type="button" data-filter="" aria-pressed="true">全部</button>
-  {all.map((s) => <button class="chip" type="button" data-filter={s.source} aria-pressed="false">{s.name}</button>)}
+<div class="overview" id="overview">
+  <p>
+    <a href="#panel-feeds" data-go="feeds">新文章 <b>{count(d.feeds)}</b> 篇</a>
+    {d.feeds.map((s) => <> · <a href={`#src-${s.source}`} data-go="feeds">{short(s.source)} {s.items.length}</a></>)}
+  </p>
+  <p>
+    {withHistory.length > 0 ? (
+      <>
+        <a href="#panel-rank" data-go="rank">新上榜 <b>{newCount(d.rankings)}</b> 条</a>
+        {newBySource.map(([s, n]) => <> · <a href={`#src-${s.source}`} data-go="rank">{short(s.source)} {n}</a></>)}
+      </>
+    ) : (
+      <><a href="#panel-rank" data-go="rank">榜单 <b>{count(d.rankings)}</b> 条</a> · 首日收录，明天起区分新上榜</>
+    )}
+  </p>
+  {longest && (
+    <p>
+      <a href={`#src-${longest.s.source}`} data-go="rank">霸榜最久：{longest.i.title}</a> 第 <b>{longest.i.streak}</b> 天
+    </p>
+  )}
 </div>
 
-<h2 data-group>新文章 <span class="n">{count(d.feeds)}</span></h2>
-{d.feeds.length ? d.feeds.map((sec) => <Section sec={sec} />) : <p class="empty">今天各博客都没有新文章。</p>}
+<div class="bar">
+  <div class="tabs" role="tablist" aria-label="分组">
+    {groups.map((g) => (
+      <button type="button" role="tab" id={`tab-${g.key}`} aria-controls={`panel-${g.key}`} data-tab={g.key}>
+        {g.label}<span class="n">{count(g.secs)}</span>
+      </button>
+    ))}
+  </div>
+  {groups.map((g) => (
+    <nav class="jumps" data-for={g.key} aria-label={`${g.label}来源`}>
+      {g.secs.map((s) => <a href={`#src-${s.source}`} data-jump={s.source}>{short(s.source)}</a>)}
+    </nav>
+  ))}
+  <a class="to-top" href="#overview" data-top hidden>速览 ↑</a>
+</div>
 
-<h2 data-group>今日榜单 <span class="n">{count(d.rankings)}</span></h2>
-{d.rankings.map((sec) => <Section sec={sec} />)}
+{groups.map((g) => (
+  <div class="panel" id={`panel-${g.key}`} role="tabpanel" aria-labelledby={`tab-${g.key}`} data-panel={g.key}>
+    <h2 class="panel-title">{g.key === "feeds" ? "新文章" : "今日榜单"} <span class="n">{count(g.secs)}</span></h2>
+    {g.secs.length ? g.secs.map((sec) => <g.Card sec={sec} />) : <p class="empty">今天各博客都没有新文章。</p>}
+  </div>
+))}
 
-<h2 data-group>来源状态</h2>
-{d.status.length ? (
-  <ul class="status">
-    {d.status.map((s) => <li><b>{s.name}</b>：{s.message}</li>)}
-  </ul>
-) : <p class="ok">✓ 所有来源都正常抓到了。</p>}
+{d.status.length === 0 && <p class="all-ok">所有来源正常 · {fmtTime(d.generated)} 抓取</p>}
 
 <script is:inline>
   (() => {
-    const chips = [...document.querySelectorAll(".chip[data-filter]")];
-    const cards = [...document.querySelectorAll("section[data-source]")];
-    const apply = (id) => {
-      chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.filter === id)));
-      cards.forEach((c) => (c.hidden = !!id && c.dataset.source !== id));
-      const u = new URL(location.href);
-      id ? u.searchParams.set("source", id) : u.searchParams.delete("source");
-      history.replaceState(null, "", u);
+    const root = document.documentElement;
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+    const bar = document.querySelector(".bar");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const select = (key, focus) => {
+      root.dataset.tab = key;
+      tabs.forEach((t) => {
+        const on = t.dataset.tab === key;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        if (on && focus) t.focus();
+      });
+      try { localStorage.setItem("tab", key); } catch {}
     };
-    chips.forEach((c) => c.addEventListener("click", () => apply(c.getAttribute("aria-pressed") === "true" ? "" : c.dataset.filter)));
-    const start = new URL(location.href).searchParams.get("source");
-    if (start && chips.some((c) => c.dataset.filter === start)) apply(start);
+    select(root.dataset.tab === "rank" ? "rank" : "feeds");
+    tabs.forEach((t) => {
+      t.addEventListener("click", () => {
+        // If the bar is already stuck, start the newly selected group at its top.
+        const stuck = bar.getBoundingClientRect().top <= parseFloat(getComputedStyle(bar).top) + 1;
+        select(t.dataset.tab);
+        if (stuck) go("panel-" + t.dataset.tab, true);
+      });
+      t.addEventListener("keydown", (e) => {
+        const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+        if (e.key === "Home" || e.key === "End" || step) {
+          e.preventDefault();
+          const i = e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : (tabs.indexOf(t) + step + tabs.length) % tabs.length;
+          select(tabs[i].dataset.tab, true);
+        }
+      });
+    });
+
+    const flash = (card) => {
+      const head = card.querySelector(".card-head");
+      head.classList.remove("flash");
+      void head.offsetWidth;
+      head.classList.add("flash");
+      setTimeout(() => head.classList.remove("flash"), 600);
+    };
+    const go = (id, instant) => {
+      const card = document.getElementById(id);
+      if (!card) return;
+      const panel = card.closest("[data-panel]");
+      if (panel) select(panel.dataset.panel);
+      card.scrollIntoView({ behavior: reduce || instant ? "auto" : "smooth", block: "start" });
+      if (card.classList.contains("card")) flash(card);
+    };
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[data-jump], a[data-go], a[data-top]");
+      if (!a) return;
+      e.preventDefault();
+      if (a.dataset.go && a.hash.startsWith("#panel-")) {
+        select(a.dataset.go);
+        go(a.hash.slice(1));
+      } else go(a.hash.slice(1));
+    });
+
+    // Highlight the jump link for the card under the sticky bar, and keep it in view in the strip.
+    const links = Object.fromEntries([...document.querySelectorAll("a[data-jump]")].map((a) => [a.dataset.jump, a]));
+    const io = new IntersectionObserver((entries) => {
+      for (const en of entries) {
+        if (!en.isIntersecting) continue;
+        const a = links[en.target.dataset.source];
+        if (!a) continue;
+        a.parentElement.querySelectorAll("a").forEach((x) => x.removeAttribute("aria-current"));
+        a.setAttribute("aria-current", "true");
+        const strip = a.parentElement;
+        if (a.offsetLeft < strip.scrollLeft || a.offsetLeft + a.offsetWidth > strip.scrollLeft + strip.clientWidth * 0.85)
+          strip.scrollTo({ left: a.offsetLeft - 8, behavior: reduce ? "auto" : "smooth" });
+      }
+    }, { rootMargin: "-120px 0px -65% 0px" });
+    document.querySelectorAll("section.card[data-source]").forEach((c) => io.observe(c));
+
+    // Past two screens, offer a way back to the overview.
+    const top = document.querySelector("[data-top]");
+    addEventListener("scroll", () => (top.hidden = scrollY < innerHeight * 2), { passive: true });
+
+    // ?source=<id> (old links): open that card's group and scroll to it.
+    const src = new URL(location.href).searchParams.get("source");
+    if (src) requestAnimationFrame(() => go("src-" + src, true));
   })();
 </script>

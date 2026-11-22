@@ -9,7 +9,7 @@ export function GET() {
   };
   for (const d of digests) for (const sec of [...d.feeds, ...d.rankings]) for (const i of sec.items) add(sec.source, i, d.date);
   for (const h of fastHits) add(h.source, h, h.time.slice(0, 10));
-  const names = Object.fromEntries(Object.entries(sourceById).map(([id, s]) => [id, s.name]));
+  const names = Object.fromEntries(Object.entries(sourceById).map(([id, s]) => [id, s.short ?? s.name]));
   return new Response(JSON.stringify({ sources: names, items: [...seen.values()] }), {
     headers: { "Content-Type": "application/json; charset=utf-8" },
   });
