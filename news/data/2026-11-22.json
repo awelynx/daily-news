@@ -1,6 +1,6 @@
 {
  "date": "2026-11-22",
- "generated": "2026-11-22T03:04:58-05:00",
+ "generated": "2026-11-22T03:06:36-05:00",
  "feeds": [
   {
    "source": "openai",
@@ -289,7 +289,7 @@
      "id": "50589618",
      "title": "Lean verification of the Riemann Hypothesis",
      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-     "note": "979 points",
+     "note": "982 points",
      "discuss": {
       "label": "821 评论",
       "url": "https://news.ycombinator.com/item?id=50589618"
@@ -301,7 +301,7 @@
      "id": "50588982",
      "title": "Detonating a pile of lead azide",
      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
-     "note": "598 points",
+     "note": "599 points",
      "discuss": {
       "label": "382 评论",
       "url": "https://news.ycombinator.com/item?id=50588982"
@@ -337,9 +337,9 @@
      "id": "50596133",
      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/",
-     "note": "355 points",
+     "note": "359 points",
      "discuss": {
-      "label": "170 评论",
+      "label": "172 评论",
       "url": "https://news.ycombinator.com/item?id=50596133"
      },
      "mark": "new",
@@ -373,9 +373,9 @@
      "id": "50594911",
      "title": "Sandwich Simulator",
      "url": "https://stulle.app/",
-     "note": "174 points",
+     "note": "176 points",
      "discuss": {
-      "label": "61 评论",
+      "label": "62 评论",
       "url": "https://news.ycombinator.com/item?id=50594911"
      },
      "mark": "new",
@@ -423,7 +423,7 @@
      "url": "https://linebender.org/blog/next-100-guis/",
      "note": "150 points",
      "discuss": {
-      "label": "44 评论",
+      "label": "47 评论",
       "url": "https://news.ycombinator.com/item?id=50593737"
      },
      "mark": "new",
@@ -445,7 +445,7 @@
      "id": "50595168",
      "title": "Leonida – PC Recompilation of the Xbox Version of GTA 6",
      "url": "https://github.com/ItsNotRexed/Leonida",
-     "note": "137 points",
+     "note": "138 points",
      "discuss": {
       "label": "105 评论",
       "url": "https://news.ycombinator.com/item?id=50595168"
@@ -459,14 +459,14 @@
      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
      "note": "116 points",
      "discuss": {
-      "label": "42 评论",
+      "label": "44 评论",
       "url": "https://news.ycombinator.com/item?id=50595554"
      },
      "mark": "new",
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T03:04:58-05:00"
+   "fetched": "2026-11-22T03:06:36-05:00"
   },
   {
    "source": "github-trending",
@@ -594,7 +594,7 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T03:04:58-05:00"
+   "fetched": "2026-11-22T03:06:36-05:00"
   },
   {
    "source": "linuxdo",
@@ -734,7 +734,7 @@
      "id": "thinkingmachines/Inkling-2-Mini",
      "title": "thinkingmachines/Inkling-2-Mini",
      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-     "note": "image-text-to-text · ❤ 3321",
+     "note": "image-text-to-text · ❤ 3325",
      "mark": "new",
      "streak": 1
     },
@@ -742,7 +742,7 @@
      "id": "unsloth/Inkling-2-Mini-GGUF",
      "title": "unsloth/Inkling-2-Mini-GGUF",
      "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-     "note": "image-text-to-text · ❤ 702",
+     "note": "image-text-to-text · ❤ 703",
      "mark": "new",
      "streak": 1
     },
@@ -811,7 +811,7 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T03:04:58-05:00"
+   "fetched": "2026-11-22T03:06:36-05:00"
   },
   {
    "source": "hf-spaces",
@@ -867,7 +867,7 @@
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T03:04:58-05:00"
+   "fetched": "2026-11-22T03:06:36-05:00"
   },
   {
    "source": "producthunt",
@@ -891,17 +891,33 @@
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/ulika",
-     "title": "Ulika",
-     "url": "https://www.producthunt.com/products/ulika",
+     "id": "https://www.producthunt.com/products/resurf-2",
+     "title": "Resurf",
+     "url": "https://www.producthunt.com/products/resurf-2",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/resurf-2",
-     "title": "Resurf",
-     "url": "https://www.producthunt.com/products/resurf-2",
+     "id": "https://www.producthunt.com/products/oovi",
+     "title": "oovi",
+     "url": "https://www.producthunt.com/products/oovi",
+     "note": "",
+     "mark": "new",
+     "streak": 1
+    },
+    {
+     "id": "https://www.producthunt.com/products/webless",
+     "title": "Webless Agents",
+     "url": "https://www.producthunt.com/products/webless",
+     "note": "",
+     "mark": "new",
+     "streak": 1
+    },
+    {
+     "id": "https://www.producthunt.com/products/leapdeck",
+     "title": "Leapdeck",
+     "url": "https://www.producthunt.com/products/leapdeck",
      "note": "",
      "mark": "new",
      "streak": 1
@@ -923,39 +939,23 @@
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/yoroll",
-     "title": "Yoroll",
-     "url": "https://www.producthunt.com/products/yoroll",
+     "id": "https://www.producthunt.com/products/copy-haste",
+     "title": "Copy Haste",
+     "url": "https://www.producthunt.com/products/copy-haste",
      "note": "",
      "mark": "new",
      "streak": 1
     },
     {
-     "id": "https://www.producthunt.com/products/teaserkit",
-     "title": "TeaserKit",
-     "url": "https://www.producthunt.com/products/teaserkit",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/leapdeck",
-     "title": "Leapdeck",
-     "url": "https://www.producthunt.com/products/leapdeck",
-     "note": "",
-     "mark": "new",
-     "streak": 1
-    },
-    {
-     "id": "https://www.producthunt.com/products/wispim-online-teleprompter",
-     "title": "Wispim",
-     "url": "https://www.producthunt.com/products/wispim-online-teleprompter",
+     "id": "https://www.producthunt.com/products/ulika",
+     "title": "Ulika",
+     "url": "https://www.producthunt.com/products/ulika",
      "note": "",
      "mark": "new",
      "streak": 1
     }
    ],
-   "fetched": "2026-11-22T03:04:58-05:00"
+   "fetched": "2026-11-22T03:06:36-05:00"
   }
  ],
  "status": [
@@ -963,7 +963,7 @@
    "source": "linuxdo",
    "name": "LINUX DO 今日热门",
    "kind": "error",
-   "message": "RuntimeError: HTTP 403, curl 也失败（exit 22），可能是 IP 被拦（榜单保留了今天 02:59 抓到的结果）"
+   "message": "HTTP 403, curl 也失败（exit 22），可能是 IP 被拦（榜单保留了今天 02:59 抓到的结果）"
   }
  ]
 }
