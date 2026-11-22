@@ -2,7 +2,23 @@
 import Base from "../layouts/Base.astro";
 import { count, digests, headline, highlights, issueNo, url, weekdayEn } from "../lib/data.js";
 
+// Newest month first. Every month that has a digest is rendered in full (calendar + day list);
+// with JS only one shows at a time, picked by #YYYY-MM, else ?d=DATE, else the newest.
 const months = Object.entries(Object.groupBy(digests, (d) => d.date.slice(0, 7)));
+const byDate = Object.fromEntries(digests.map((d) => [d.date, d]));
+const WEEK = [["MON", "一"], ["TUE", "二"], ["WED", "三"], ["THU", "四"], ["FRI", "五"], ["SAT", "六"], ["SUN", "日"]];
+
+// Weeks of a month, Monday first; null pads the days outside it.
+function weeks(ym) {
+  const [y, m] = ym.split("-").map(Number);
+  const lead = (new Date(Date.UTC(y, m - 1, 1)).getUTCDay() + 6) % 7;
+  const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  const cells = [...Array(lead).fill(null), ...Array.from({ length: days }, (_, i) => `${ym}-${String(i + 1).padStart(2, "0")}`)];
+  while (cells.length % 7) cells.push(null);
+  return Array.from({ length: cells.length / 7 }, (_, i) => cells.slice(i * 7, i * 7 + 7));
+}
+const monthName = (ym) => `${ym.slice(0, 4)} 年 ${+ym.slice(5)} 月`;
+
 // Each day reads as one line: the report's first sentence; without a report, the top pick; before
 // picks existed, the highest-scoring ranking item (HN), else the first new post.
 const line = (d) => {
@@ -14,53 +30,230 @@ const tally = (d) => (highlights[d.date] ? `${highlights[d.date].items.length} �
 ---
 <Base title="归档" active="archive">
   <h1>归档</h1>
-  <p class="sub">共 {digests.length} 期日报</p>
-  {months.map(([month, ds]) => (
-    <section class="month" aria-labelledby={`m-${month}`}>
-      <h2 id={`m-${month}`}>{month.slice(0, 4)} 年 {+month.slice(5)} 月 <span class="n">{ds.length} 期</span></h2>
-      <ol class="days">
-        {ds.map((d) => (
-          <li>
-            <a class="day" href={url(`d/${d.date}/`)}>
-              <span class="when"><span class="md">{d.date.slice(5).replace("-", ".")}</span> {weekdayEn(d.date)}</span>
-              <span class="line">{line(d)}</span>
-              <span class="meta">
-                <span class="no">No. {issueNo(d)}</span>
-                {tally(d)}{d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
-              </span>
-            </a>
-          </li>
-        ))}
-      </ol>
-    </section>
-  ))}
+  <p class="sub">共 {digests.length} 期日报 · 点日历上有朱红点的日期打开那天</p>
+  <div class="months" data-latest={digests[0]?.date}>
+    {months.map(([ym, ds], i) => {
+      const newer = months[i - 1]?.[0];
+      const older = months[i + 1]?.[0];
+      return (
+        <section class="month" id={ym} data-month={ym} aria-labelledby={`t-${ym}`}>
+          <div class="cal-head">
+            {older ? <a class="step" href={`#${older}`} data-step={older} aria-label={`上一个月：${monthName(older)}`}>‹</a>
+                   : <span class="step" role="link" aria-disabled="true" aria-label="没有更早的日报">‹</span>}
+            <h2 id={`t-${ym}`} aria-live="polite">{monthName(ym)}</h2>
+            {newer ? <a class="step" href={`#${newer}`} data-step={newer} aria-label={`下一个月：${monthName(newer)}`}>›</a>
+                   : <span class="step" role="link" aria-disabled="true" aria-label="没有更晚的日报">›</span>}
+          </div>
+          <div class="cal-wrap">
+            <table class="cal" role="grid" aria-labelledby={`t-${ym}`}>
+              <thead>
+                <tr>{WEEK.map(([en, zh]) => <th scope="col" abbr={`星期${zh}`}><span class="wk-en">{en}</span><span class="wk-zh" aria-hidden="true">{zh}</span></th>)}</tr>
+              </thead>
+              <tbody>
+                {weeks(ym).map((week) => (
+                  <tr>
+                    {week.map((day) => (
+                      <td role="gridcell">
+                        {day && (byDate[day]
+                          ? <a class="day has" href={url(`d/${day}/`)} data-date={day} tabindex="-1" aria-label={`${+day.slice(5, 7)} 月 ${+day.slice(8)} 日，${tally(byDate[day])}`}>{+day.slice(8)}</a>
+                          : <span class="day" data-date={day} tabindex="-1" aria-disabled="true" aria-label={`${+day.slice(5, 7)} 月 ${+day.slice(8)} 日，无日报`}>{+day.slice(8)}</span>)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <ol class="days" aria-label={`${monthName(ym)}的日报`}>
+            {ds.map((d) => (
+              <li>
+                <a class="row" href={url(`d/${d.date}/`)}>
+                  <span class="when"><span class="md">{d.date.slice(5).replace("-", ".")}</span> {weekdayEn(d.date)}</span>
+                  <span class="line">{line(d)}</span>
+                  <span class="meta">
+                    <span class="no">No. {issueNo(d)}</span>
+                    {tally(d)}{d.status.length > 0 && <span class="warn"> · {d.status.length} 个来源异常</span>}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      );
+    })}
+  </div>
 </Base>
 
+<script is:inline>
+  // One month at a time. The month comes from #YYYY-MM, else ?d=DATE, else the newest; the day
+  // being viewed (?d=, else the newest digest) is filled vermilion, today gets a ring.
+  (() => {
+    const box = document.querySelector(".months");
+    const sections = [...box.querySelectorAll(".month")];
+    if (!sections.length) return;
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const params = new URL(location.href).searchParams;
+    const viewing = /^\d{4}-\d{2}-\d{2}$/.test(params.get("d") || "") ? params.get("d") : box.dataset.latest;
+    const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+    box.querySelector(`[data-date="${viewing}"]`)?.classList.add("viewing");
+    box.querySelector(`[data-date="${viewing}"]`)?.setAttribute("aria-current", "date");
+    box.querySelector(`[data-date="${today}"]`)?.classList.add("today");
+    box.classList.add("one");
+
+    const find = (ym) => sections.find((s) => s.dataset.month === ym);
+    // The cell that takes Tab: the viewed day, else today, else the first day with a digest.
+    const anchor = (sec) =>
+      sec.querySelector(".day.viewing") ?? sec.querySelector(".day.today") ?? sec.querySelector(".day.has") ?? sec.querySelector(".day");
+    const rove = (el) => {
+      el.closest(".cal").querySelectorAll(".day").forEach((d) => (d.tabIndex = -1));
+      el.tabIndex = 0;
+    };
+    let shown;
+    const show = (ym, { push = true, focus = null } = {}) => {
+      const sec = find(ym) ?? sections[0];
+      if (sec !== shown) {
+        sections.forEach((s) => (s.hidden = s !== sec));
+        if (shown && !reduce) {
+          sec.classList.remove("enter");
+          void sec.offsetWidth;
+          sec.classList.add("enter");
+        }
+        shown = sec;
+      }
+      const target = focus ?? anchor(sec);
+      rove(target);
+      if (focus) focus.focus();
+      if (push) history.replaceState(null, "", location.pathname + location.search + "#" + sec.dataset.month);
+    };
+    const start = location.hash.slice(1) || viewing?.slice(0, 7);
+    show(find(start) ? start : sections[0].dataset.month, { push: false });
+
+    box.addEventListener("click", (e) => {
+      const a = e.target.closest("a[data-step]");
+      if (!a) return;
+      e.preventDefault();
+      show(a.dataset.step);
+    });
+    addEventListener("hashchange", () => find(location.hash.slice(1)) && show(location.hash.slice(1), { push: false }));
+
+    // Grid keys: arrows by day / week, Home / End to the week's ends, PageUp / PageDown by month.
+    const ymd = (t) => new Date(t).toISOString().slice(0, 10);
+    const shift = (date, days) => ymd(Date.parse(date + "T12:00:00Z") + days * 864e5);
+    box.addEventListener("keydown", (e) => {
+      const cell = e.target.closest(".day");
+      if (!cell) return;
+      const date = cell.dataset.date;
+      const dow = (new Date(date + "T12:00:00Z").getUTCDay() + 6) % 7;
+      let to;
+      if (e.key === "ArrowLeft") to = shift(date, -1);
+      else if (e.key === "ArrowRight") to = shift(date, 1);
+      else if (e.key === "ArrowUp") to = shift(date, -7);
+      else if (e.key === "ArrowDown") to = shift(date, 7);
+      else if (e.key === "Home") to = shift(date, -dow);
+      else if (e.key === "End") to = shift(date, 6 - dow);
+      else if (e.key === "PageUp" || e.key === "PageDown") {
+        const step = shown.querySelector(`.cal-head a.step:${e.key === "PageUp" ? "first-child" : "last-child"}`);
+        e.preventDefault();
+        if (!step) return;
+        const sec = find(step.dataset.step);
+        const same = sec.querySelector(`[data-date="${step.dataset.step}-${date.slice(8)}"]`);
+        show(step.dataset.step, { focus: same ?? anchor(sec) });
+        return;
+      } else return; // Enter follows the link natively; days without a digest have none
+
+      e.preventDefault();
+      const el = box.querySelector(`[data-date="${to}"]`);
+      if (!el) return; // past the months that have digests
+      const sec = el.closest(".month");
+      if (sec !== shown) show(sec.dataset.month, { focus: el });
+      else { rove(el); el.focus(); }
+    });
+  })();
+</script>
+
 <style>
-  .month h2 { border-bottom: 1px solid var(--ink); padding-bottom: 8px; margin-bottom: 0; }
-  .days { list-style: none; margin: 0; padding: 0; }
+  .months { max-width: 680px; }
+  .month { padding-bottom: 8px; }
+  .month + .month { margin-top: 40px; }
+  :global(.js) .months.one .month + .month { margin-top: 0; }
+  .month[hidden] { display: none; }
+  .month.enter { animation: fade .12s linear; }
+  @keyframes fade { from { opacity: 0; } }
+
+  /* Month title with ‹ › on either side. */
+  .cal-head { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; border-bottom: 1px solid var(--ink); padding-bottom: 6px; }
+  .cal-head h2 { margin: 0; justify-content: center; text-align: center; font-size: 1.25rem; }
+  .step {
+    display: grid; place-items: center; width: 44px; height: 44px; border-radius: 2px;
+    font: 400 1.5rem/1 var(--serif); color: var(--ink); text-decoration: none;
+    transition: background .1s var(--ease), transform .1s var(--ease);
+  }
+  a.step:hover { background: color-mix(in srgb, var(--rule) 45%, transparent); }
+  a.step:active { transform: scale(.98); }
+  .step[aria-disabled="true"] { color: color-mix(in srgb, var(--ink-2) 45%, transparent); cursor: default; }
+
+  /* The month grid: 7 equal columns, every cell at least 44×44. */
+  .cal-wrap { container-type: inline-size; }
+  .cal { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 6px 0 4px; }
+  .cal th { padding: 10px 0 6px; font: 500 .6875rem/1.2 var(--mono); letter-spacing: .08em; color: var(--ink-2); text-align: center; }
+  .cal th:nth-child(n + 6) { color: var(--seal); }
+  .wk-zh { display: none; font-family: var(--sans); letter-spacing: 0; }
+  .cal td { padding: 2px; text-align: center; }
   .day {
+    position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-width: 44px; min-height: 44px; width: min(100%, 3.5rem); aspect-ratio: 1; margin: 0 auto; border-radius: 2px;
+    font: 400 1.0625rem/1 var(--serif); font-variant-numeric: tabular-nums; color: var(--ink-2); text-decoration: none;
+    outline-offset: -2px;
+  }
+  .day:not(.has) { color: color-mix(in srgb, var(--ink-2) 70%, transparent); cursor: default; }
+  .day.has { color: var(--ink); font-weight: 600; transition: background .1s var(--ease); }
+  .day.has::after { content: ""; width: 4px; height: 4px; margin-top: 5px; border-radius: 50%; background: var(--seal); }
+  .day.has:hover { background: color-mix(in srgb, var(--rule) 45%, transparent); }
+  .day.has:active { background: color-mix(in srgb, var(--rule) 70%, transparent); }
+  .day.today { box-shadow: inset 0 0 0 1px var(--seal); border-radius: 50%; }
+  .day.viewing { background: var(--seal); color: #fff; border-radius: 2px; }
+  .day.viewing::after { background: currentColor; }
+  /* On the brighter night vermilion, white is too faint; dark ink reads at 5:1. */
+  :global(:root[data-theme="dark"]) .day.viewing { color: var(--paper); }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme="light"])) .day.viewing { color: var(--paper); } }
+  .day.viewing:hover { background: var(--seal); }
+  .day:focus-visible { outline: 2px solid var(--seal); outline-offset: 2px; }
+  .day.viewing:focus-visible { outline-offset: 2px; }
+  /* Large text (about 150% and up on a phone): one-character weekday heads. */
+  @container (max-width: 17em) {
+    .wk-en { display: none; }
+    .wk-zh { display: inline; }
+    .cal th { font-size: .8125rem; }
+  }
+
+  /* The month's days, one line each. */
+  .days { list-style: none; margin: 18px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+  .row {
     display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); grid-template-areas: "when line" ". meta";
     column-gap: 14px; row-gap: 2px; align-items: baseline;
     padding: 14px 0 13px; border-bottom: 1px solid var(--rule); text-decoration: none; color: var(--ink);
     transition: background .1s var(--ease);
   }
-  .day:active { background: color-mix(in srgb, var(--rule) 30%, transparent); }
+  .row:active { background: color-mix(in srgb, var(--rule) 30%, transparent); }
   .when { grid-area: when; font: 500 .75rem var(--mono); letter-spacing: .06em; color: var(--ink-2); font-variant-numeric: tabular-nums; }
   .md { color: var(--seal); }
   .line { grid-area: line; font: 600 1.0625rem/1.45 var(--serif); text-wrap: pretty; }
-  .day:hover .line { text-decoration: underline; text-decoration-color: var(--seal); text-underline-offset: .25em; }
+  .row:hover .line { text-decoration: underline; text-decoration-color: var(--seal); text-underline-offset: .25em; }
   .meta { grid-area: meta; font: .6875rem var(--mono); letter-spacing: .06em; color: var(--ink-2); }
   .no { margin-right: 10px; }
   .warn { color: var(--seal); }
   @media (max-width: 480px) {
-    .day { grid-template-columns: 1fr; grid-template-areas: "when" "line" "meta"; }
-  }
-  @media (min-width: 768px) {
-    .month { max-width: 680px; }
+    .row { grid-template-columns: 1fr; grid-template-areas: "when" "line" "meta"; }
   }
   @media (min-width: 1024px) {
-    .month, h1, .sub { max-width: 680px; margin-left: auto; margin-right: auto; }
+    .months, h1, .sub { max-width: 680px; margin-left: auto; margin-right: auto; }
+    .day { font-size: 1.1875rem; }
   }
-  @media (prefers-reduced-motion: reduce) { .day { transition: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .month.enter { animation: none; }
+    .row, .day, .step { transition: none; }
+  }
+  @media (forced-colors: active) {
+    .day.viewing { forced-color-adjust: none; background: Highlight; color: HighlightText; }
+  }
 </style>

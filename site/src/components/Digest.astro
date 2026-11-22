@@ -2,7 +2,7 @@
 import FeedCard from "./FeedCard.astro";
 import Highlights from "./Highlights.astro";
 import RankCard from "./RankCard.astro";
-import { count, dateline, fmtTime, hasHistory, headline, highlights, isNew, issueNo, lanes, newCount, short } from "../lib/data.js";
+import { count, dateline, fmtTime, hasHistory, headline, highlights, isNew, issueNo, lanes, newCount, short, url } from "../lib/data.js";
 
 const { d, heading } = Astro.props;
 // With a 今日重点 list, the full digest starts folded behind 查看全部 N 条.
@@ -11,6 +11,8 @@ const total = count(d.feeds) + count(d.rankings);
 const hasSummary = !!hl?.summary?.trim();
 // The one big line on the page: the report's first sentence, else the page's own heading.
 const title = headline(hl) ?? heading ?? `${+d.date.slice(5, 7)} 月 ${+d.date.slice(8)} 日要闻`;
+// The date half of the dateline links to that month in the archive calendar.
+const [day, time] = dateline(d).split(" · ");
 const tally = [`${count(d.feeds)} 篇新文章`, `${count(d.rankings)} 条榜单`, hl && `${hl.items.length} 条重点`].filter(Boolean).join(" · ");
 const withHistory = d.rankings.filter(hasHistory);
 const newBySource = withHistory.map((s) => [s, s.items.filter(isNew).length]).filter(([, n]) => n > 0);
@@ -25,7 +27,10 @@ const groups = [
 <div class:list={["front", { "has-side": hl && hasSummary }]}>
   <div class="lead">
     <header class="masthead">
-      <p class="folio label"><span>No. {issueNo(d)}</span><time datetime={d.generated}>{dateline(d)}</time></p>
+      <p class="folio label">
+        <span>No. {issueNo(d)}</span>
+        <span class="when"><a href={url(`archive/?d=${d.date}#${d.date.slice(0, 7)}`)} title="在归档日历里查看">{day}</a> · <time datetime={d.generated}>{time}</time></span>
+      </p>
       <h1 class="headline">{title}</h1>
       <p class="tally label">{tally}</p>
       <div class="masthead-rule" aria-hidden="true"></div>
@@ -358,7 +363,9 @@ const groups = [
     display: flex; justify-content: space-between; gap: 4px 12px; flex-wrap: wrap;
     margin: 0; padding: 6px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule);
   }
-  .folio span { color: var(--seal); }
+  .folio > span:first-child { color: var(--seal); }
+  .folio a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: .3em; padding: 6px 0; }
+  .folio a:hover { color: var(--ink); text-decoration-color: var(--seal); }
   .headline { font: 700 1.75rem/1.2143 var(--serif); letter-spacing: .005em; margin: 18px 0 12px; text-wrap: balance; }
   .tally { margin: 0 0 14px; }
   .masthead-rule { height: 1px; background: var(--ink); transform-origin: 0 50%; }
