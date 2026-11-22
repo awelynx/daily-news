@@ -10,8 +10,7 @@
    "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
    "https://openai.com/business/learn/deploying-daybreak-red"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "anthropic": {
   "seen": [
@@ -24,8 +23,7 @@
    "/news/expanding-partnership-gsa",
    "/news/donating-agent-skills-to-the-agentic-ai-foundation"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "claude-blog": {
   "seen": [
@@ -38,8 +36,7 @@
    "https://claude.com/resources/articles/claude-meetings",
    "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "claude-dev": {
   "seen": [
@@ -52,8 +49,7 @@
    "/blog/claude-code-in-the-cloud/",
    "/blog/getting-started-with-claude-code-mods/"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "kexue": {
   "seen": [
@@ -375,6 +371,14 @@
     1
    ],
    "https://www.producthunt.com/products/gitroots": [
+    "2026-11-22",
+    1
+   ],
+   "https://www.producthunt.com/products/codemany": [
+    "2026-11-22",
+    1
+   ],
+   "https://www.producthunt.com/products/shipyard": [
     "2026-11-22",
     1
    ]
