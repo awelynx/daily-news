@@ -147,7 +147,7 @@ def fetch(src):
     try:
         return src, KINDS[src["kind"]](src)[: src.get("limit", 10)], None
     except Exception as e:  # one bad source must not sink the digest
-        return src, [], f"{type(e).__name__}: {e}"
+        return src, [], str(e) if isinstance(e, RuntimeError) else f"{type(e).__name__}: {e}"
 
 
 def line(i, mark=""):
