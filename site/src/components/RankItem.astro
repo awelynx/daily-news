@@ -12,11 +12,15 @@ const metaParts = [meta.text, meta.discuss && "discuss"].filter(Boolean);
 <li class:list={["row", { dim: days }]}>
   <span class="rank">{rank}</span>
   <div class="body">
-    {dot && <span class="dot" role="img" aria-label="新上榜" />}
-    <a class="t" href={item.url} target="_blank" rel="noopener">
-      {t.org && <span class="org">{t.org} / </span>}<span class:list={{ name: !!t.org }}>{t.name}</span>
-    </a>
-    {meta.inline && <span class="inline-meta"> · {meta.inline}</span>}
+    <div class="title-line">
+      <span class="tt">
+        {dot && <span class="dot" role="img" aria-label="新上榜" />}
+        <a class="t" href={item.url} target="_blank" rel="noopener">
+          {t.org && <span class="org">{t.org} / </span>}<span class:list={{ name: !!t.org }}>{t.name}</span>
+        </a>
+      </span>
+      {meta.inline && <span class="tag">{meta.inline}</span>}
+    </div>
     {metaParts.length > 0 && (
       <div class="meta-line">
         {meta.text}

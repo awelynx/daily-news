@@ -52,7 +52,7 @@ const num = (n) => n.toLocaleString("en-US");
 // The number shown right-aligned on a ranking row, with what it means.
 export const value = (i) =>
   i.score != null ? { text: num(i.score), label: `${i.score} 分` }
-  : i.stars != null ? { text: "今日 ★ +" + num(i.stars), label: `今日 +${i.stars} star` }
+  : i.stars != null ? { text: "★ +" + num(i.stars), label: `今日新增 ${i.stars} star` }
   : i.likes != null ? { text: "❤ " + num(i.likes), label: `累计 ${i.likes} 个赞` }
   : i.votes != null ? { text: num(i.votes), label: `${i.votes} 票` }
   : null;

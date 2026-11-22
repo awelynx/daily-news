@@ -309,12 +309,16 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   .rows > .row:first-child { border-top: 0; }
   .rank { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; }
   .body { min-width: 0; }
+  /* Title, then a small tag (language / task type) that wraps as a unit, no separator needed. */
+  .title-line { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
+  .title-line .tt { min-width: 0; }
   .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--new); margin-right: 7px; vertical-align: .2em; }
+  .tag { color: var(--muted); font-size: .8125rem; white-space: nowrap; }
   .org { color: var(--muted); font-weight: 400; font-size: .8125rem; }
-  .name { font-weight: 600; }
+  /* Repo/model names break after "org /" rather than at a hyphen inside the name. */
+  .name { font-weight: 600; display: inline-block; max-width: 100%; overflow-wrap: anywhere; hyphens: none; }
   .row.dim .t { color: var(--muted); font-weight: 400; }
   .row.dim .name { font-weight: 500; }
-  .inline-meta { color: var(--muted); font-size: .8125rem; white-space: nowrap; }
   .meta-line { color: var(--muted); font-size: .8125rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .meta-line a { color: var(--muted); }
   .val { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }

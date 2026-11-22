@@ -1,7 +1,7 @@
 ---
 import More from "./More.astro";
 import RankItem from "./RankItem.astro";
-import { fmtTime, hasHistory, isNew, url } from "../lib/data.js";
+import { fmtTime, hasHistory, isNew, sourceById, url } from "../lib/data.js";
 
 const { sec } = Astro.props;
 const ranked = sec.items.map((item, n) => ({ item, rank: n + 1 }));
@@ -15,7 +15,9 @@ const first = split ? fresh : ranked;
 const show = first.length <= 6 ? 6 : 5;
 const longest = Math.max(0, ...staying.map((r) => r.item.streak ?? 0));
 // First-day lists get no caption: the overview already says 首日收录 once.
-const caption = sec.stale ? `${fmtTime(sec.fetched)} 的快照` : allNew ? "全部是新上榜" : "";
+// GitHub's number column is today's new stars; say so once here instead of on every row.
+const unit = sourceById[sec.source]?.kind === "github_trending" ? "右列为今日新增 star" : "";
+const caption = [sec.stale ? `${fmtTime(sec.fetched)} 的快照` : allNew ? "全部是新上榜" : "", unit].filter(Boolean).join(" · ");
 ---
 <section class="card rank-card" id={`src-${sec.source}`} data-source={sec.source}>
   <div class="card-head">
