@@ -363,17 +363,22 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
   .lanes { display: flex; flex-direction: column; }
   .lane { display: contents; }
   .col-strip { display: none; }
-  @container (min-width: 720px) {
+  @container (min-width: 900px) {
     .lanes { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; align-items: start; }
     .lane { display: block; min-width: 0; }
   }
 
+  /* 768–1023: still one 680px column (two lanes would be ~350px, too narrow to scan). */
   @media (min-width: 768px) {
     :root { --gutter: 24px; }
-    .wrap { max-width: 1140px; }
+    .wrap { max-width: calc(680px + 2 * var(--gutter)); }
     .split-list { columns: 440px; column-gap: 32px; }
     .split-list > li { break-inside: avoid; }
     .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); column-gap: 16px; align-items: start; }
+  }
+
+  @media (min-width: 1024px) {
+    .wrap { max-width: 1140px; }
   }
 
   /* Articles and rankings side by side; the 文章|榜单 switch and its bar give way to one sticky
@@ -396,7 +401,7 @@ const fullTitle = title ? `${title} · Joe 每日要闻` : "Joe 每日要闻";
     .strip-label .n { font-weight: 400; color: var(--muted); font-size: .75rem; margin-left: 3px; }
     .card, .panel { scroll-margin-top: calc(var(--nav-real, var(--nav-h)) + var(--bar-h) + 8px); }
     .nav-up .card, .nav-up .panel { scroll-margin-top: calc(var(--bar-h) + 8px); }
-    @container (min-width: 720px) {
+    @container (min-width: 900px) {
       .col-strip.whole { display: none; }
       .lane-strip { display: flex; }
     }
