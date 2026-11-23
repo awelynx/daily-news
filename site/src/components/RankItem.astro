@@ -1,8 +1,8 @@
 ---
 import { rankMeta, splitTitle, value } from "../lib/data.js";
 
-// One ranking row. `dot` marks it as new on a list that has history; `days` shows the streak
-// in the right column instead of the item's number.
+// One ranking row. `dot` marks it as new on a list that has history; `days` (a row that stayed
+// on the list) adds 第 N 天 after the title and keeps its summary to one line.
 const { sec, item, rank, dot = false, days = false } = Astro.props;
 const t = splitTitle(sec, item);
 const v = value(item);
@@ -20,6 +20,7 @@ const metaParts = [meta.text, meta.discuss && "discuss"].filter(Boolean);
         </a>
       </span>
       {meta.inline && <span class="tag">{meta.inline}</span>}
+      {days && item.streak && <span class="tag streak">第 {item.streak} 天</span>}
     </div>
     {metaParts.length > 0 && (
       <div class="meta-line">
@@ -30,10 +31,5 @@ const metaParts = [meta.text, meta.discuss && "discuss"].filter(Boolean);
     )}
     {meta.summary && <div class="note clamp">{meta.summary}</div>}
   </div>
-  {days ? (
-    <span class="val days">
-      第 {item.streak} 天
-      {item.streak >= 7 && <span class="streak-bar" style={`--w:${Math.min(item.streak, 14) / 14}`} aria-hidden="true" />}
-    </span>
-  ) : v && <span class="val" title={v.label}>{v.text}</span>}
+  {v && <span class="val" title={v.label}>{v.text}</span>}
 </li>

@@ -15,6 +15,9 @@ const first = split ? fresh : ranked;
 // Five rows, then 再看 N 条 — unless only one would be hidden.
 const show = first.length <= 6 ? 6 : 5;
 const longest = Math.max(0, ...staying.map((r) => r.item.streak ?? 0));
+const stayLabel = `持续在榜 ${staying.length} 条 · 最长第 ${longest} 天`;
+// With nothing new today the staying list is all there is: it opens with its first rows.
+const stayShow = staying.length <= 6 ? 6 : 5;
 // First-day lists get no caption: the overview already says 首日收录 once.
 // GitHub's number column is today's new stars; say so once here instead of on every row.
 const unit = sourceById[sec.source]?.kind === "github_trending" ? "右列为今日新增 star" : "";
@@ -28,20 +31,37 @@ const caption = [sec.stale ? `${fmtTime(sec.fetched)} 的快照` : allNew ? "全
   {caption && <p class="caption">{caption}</p>}
 
   {split && fresh.length > 0 && <div class="seg-label">新上榜 {fresh.length}</div>}
-  {split && fresh.length === 0 && <p class="caption">今天没有新上榜</p>}
-  <ol class="rows">
-    {first.slice(0, show).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} dot={split} />)}
-  </ol>
-  {first.length > show && (
-    <More id={`more-${sec.source}`} label={`再看 ${first.length - show} 条`}>
+  {fresh.length > 0 || !split ? (
+    <>
       <ol class="rows">
-        {first.slice(show).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} dot={split} />)}
+        {first.slice(0, show).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} dot={split} />)}
       </ol>
-    </More>
+      {first.length > show && (
+        <More id={`more-${sec.source}`} label={`再看 ${first.length - show} 条`}>
+          <ol class="rows">
+            {first.slice(show).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} dot={split} />)}
+          </ol>
+        </More>
+      )}
+    </>
+  ) : (
+    <>
+      <div class="seg-label quiet">{stayLabel} · 今天无新上榜</div>
+      <ol class="rows">
+        {staying.slice(0, stayShow).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} days />)}
+      </ol>
+      {staying.length > stayShow && (
+        <More id={`stay-${sec.source}`} label={`再看 ${staying.length - stayShow} 条`}>
+          <ol class="rows">
+            {staying.slice(stayShow).map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} days />)}
+          </ol>
+        </More>
+      )}
+    </>
   )}
 
-  {split && (
-    <More id={`stay-${sec.source}`} label={`持续在榜 ${staying.length} 条 · 最长第 ${longest} 天`} header>
+  {split && fresh.length > 0 && (
+    <More id={`stay-${sec.source}`} label={stayLabel} header>
       <ol class="rows">
         {staying.map((r) => <RankItem sec={sec} item={r.item} rank={r.rank} days />)}
       </ol>
