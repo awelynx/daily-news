@@ -1,0 +1,881 @@
+{
+ "date": "2026-11-23",
+ "generated": "2026-11-23T08:22:15-05:00",
+ "feeds": [
+  {
+   "source": "kexue",
+   "name": "科学空间（苏剑林）",
+   "type": "feed",
+   "items": [
+    {
+     "id": "https://kexue.fm/archives/12014",
+     "title": "Muon背后的优化理论：1. 全量、随机与动量",
+     "url": "https://kexue.fm/archives/12014",
+     "note": "关于优化器，我们可以找到很多经典的收敛结论，比如“炼丹”系列文章介绍的基于凸假设和遗憾界的一系列结果。除此之外，还有很多从不同角度切入、基于不同假设的分析，这些假设有强有弱，所得结论适用范围也有..."
+    }
+   ]
+  }
+ ],
+ "rankings": [
+  {
+   "source": "hn",
+   "name": "Hacker News 24 小时最高分",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "50602947",
+     "title": "What Happened to Silicon Valley?",
+     "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+     "note": "737 points",
+     "discuss": {
+      "label": "396 评论",
+      "url": "https://news.ycombinator.com/item?id=50602947"
+     },
+     "score": 737,
+     "comments": 396,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50606192",
+     "title": "Free alternative TV network built from the Internet Archive's forgotten videos",
+     "url": "https://spelunkr.tv",
+     "note": "643 points",
+     "discuss": {
+      "label": "118 评论",
+      "url": "https://news.ycombinator.com/item?id=50606192"
+     },
+     "score": 643,
+     "comments": 118,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50601525",
+     "title": "Perplexity and Intelligence",
+     "url": "https://openai.com/index/perplexity-and-intelligence/",
+     "note": "624 points",
+     "discuss": {
+      "label": "409 评论",
+      "url": "https://news.ycombinator.com/item?id=50601525"
+     },
+     "score": 624,
+     "comments": 409,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50603845",
+     "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+     "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+     "note": "587 points",
+     "discuss": {
+      "label": "243 评论",
+      "url": "https://news.ycombinator.com/item?id=50603845"
+     },
+     "score": 587,
+     "comments": 243,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50602843",
+     "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+     "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife",
+     "note": "549 points",
+     "discuss": {
+      "label": "295 评论",
+      "url": "https://news.ycombinator.com/item?id=50602843"
+     },
+     "score": 549,
+     "comments": 295,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50607261",
+     "title": "XNU Linux: Full OS X GUI Userspace on Linux",
+     "url": "https://github.com/AFK-surf/xnulinux",
+     "note": "419 points",
+     "discuss": {
+      "label": "191 评论",
+      "url": "https://news.ycombinator.com/item?id=50607261"
+     },
+     "score": 419,
+     "comments": 191,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50599762",
+     "title": "Show HN: I built a game where you are an LLM's subagent",
+     "url": "https://github.com/gulivan/worker755",
+     "note": "338 points",
+     "discuss": {
+      "label": "79 评论",
+      "url": "https://news.ycombinator.com/item?id=50599762"
+     },
+     "score": 338,
+     "comments": 79,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50609685",
+     "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+     "url": "https://z.ai/blog/glm-5.4",
+     "note": "317 points",
+     "discuss": {
+      "label": "142 评论",
+      "url": "https://news.ycombinator.com/item?id=50609685"
+     },
+     "score": 317,
+     "comments": 142,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50603589",
+     "title": "A miniature San Francisco with live buses, planes and boats",
+     "url": "https://smallsf.com/",
+     "note": "303 points",
+     "discuss": {
+      "label": "99 评论",
+      "url": "https://news.ycombinator.com/item?id=50603589"
+     },
+     "score": 303,
+     "comments": 99,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50600511",
+     "title": "Open Social Web Alliance",
+     "url": "https://osw-alliance.net/en/",
+     "note": "246 points",
+     "discuss": {
+      "label": "236 评论",
+      "url": "https://news.ycombinator.com/item?id=50600511"
+     },
+     "score": 246,
+     "comments": 236,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "50605045",
+     "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
+     "url": "https://claude.ai/artifact/CtQyX8qfYAF822bgHJHHE3",
+     "note": "244 points",
+     "discuss": {
+      "label": "182 评论",
+      "url": "https://news.ycombinator.com/item?id=50605045"
+     },
+     "score": 244,
+     "comments": 182,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50603143",
+     "title": "Assume People Are Not Interested in Your Blog Post",
+     "url": "https://danielsada.tech/blog/assume-people-are-not-interested-in-your-blog-post/",
+     "note": "243 points",
+     "discuss": {
+      "label": "122 评论",
+      "url": "https://news.ycombinator.com/item?id=50603143"
+     },
+     "score": 243,
+     "comments": 122,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50604988",
+     "title": "GL.iNet Security Notice 2026-11-20",
+     "url": "https://www.gl-inet.com/en-us/blogs/blog/glinet-security-notice-2026-11-20",
+     "note": "228 points",
+     "discuss": {
+      "label": "105 评论",
+      "url": "https://news.ycombinator.com/item?id=50604988"
+     },
+     "score": 228,
+     "comments": 105,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50600435",
+     "title": "Backblaze customers worried of personal data sale/sharing after policy update",
+     "url": "https://www.neowin.net/news/backblaze-customers-worried-of-personal-data-salesharing-after-policy-update/",
+     "note": "170 points",
+     "discuss": {
+      "label": "63 评论",
+      "url": "https://news.ycombinator.com/item?id=50600435"
+     },
+     "score": 170,
+     "comments": 63,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "50600677",
+     "title": "Europe weakens chemical rules as science links them to 'lifestyle diseases'",
+     "url": "https://www.lemonde.fr/en/opinion/article/2026/11/22/as-science-increasingly-shows-the-role-chemical-substances-play-in-lifestyle-diseases-europe-weakens-its-regulations_6786595_23.html",
+     "note": "167 points",
+     "discuss": {
+      "label": "151 评论",
+      "url": "https://news.ycombinator.com/item?id=50600677"
+     },
+     "score": 167,
+     "comments": 151,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    }
+   ],
+   "fetched": "2026-11-23T08:22:15-05:00",
+   "history": true
+  },
+  {
+   "source": "github-trending",
+   "name": "GitHub Trending（今日）",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "note": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.  (Python · +2,037⭐ 今日)",
+     "stars": 2037,
+     "lang": "Python",
+     "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "obra/superpowers",
+     "title": "obra/superpowers",
+     "url": "https://github.com/obra/superpowers",
+     "note": "An agentic skills framework & software development methodology that works.  (Shell · +838⭐ 今日)",
+     "stars": 838,
+     "lang": "Shell",
+     "desc": "An agentic skills framework & software development methodology that works.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "HKUDS/CLI-Anything",
+     "title": "HKUDS/CLI-Anything",
+     "url": "https://github.com/HKUDS/CLI-Anything",
+     "note": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/  (Python · +783⭐ 今日)",
+     "stars": 783,
+     "lang": "Python",
+     "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "jingyaogong/minimind",
+     "title": "jingyaogong/minimind",
+     "url": "https://github.com/jingyaogong/minimind",
+     "note": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.  (Python · +828⭐ 今日)",
+     "stars": 828,
+     "lang": "Python",
+     "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "cursor/plugins",
+     "title": "cursor/plugins",
+     "url": "https://github.com/cursor/plugins",
+     "note": "Cursor plugin specification and official plugins  (TypeScript · +395⭐ 今日)",
+     "stars": 395,
+     "lang": "TypeScript",
+     "desc": "Cursor plugin specification and official plugins",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "firecrawl/firecrawl",
+     "title": "firecrawl/firecrawl",
+     "url": "https://github.com/firecrawl/firecrawl",
+     "note": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.  (TypeScript · +920⭐ 今日)",
+     "stars": 920,
+     "lang": "TypeScript",
+     "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "nginx/nginx",
+     "title": "nginx/nginx",
+     "url": "https://github.com/nginx/nginx",
+     "note": "The official NGINX Open Source repository.  (C · +174⭐ 今日)",
+     "stars": 174,
+     "lang": "C",
+     "desc": "The official NGINX Open Source repository.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "openvinotoolkit/openvino",
+     "title": "openvinotoolkit/openvino",
+     "url": "https://github.com/openvinotoolkit/openvino",
+     "note": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference  (C++ · +183⭐ 今日)",
+     "stars": 183,
+     "lang": "C++",
+     "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "cathrynlavery/diagram-design",
+     "title": "cathrynlavery/diagram-design",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "note": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.  (HTML · +624⭐ 今日)",
+     "stars": 624,
+     "lang": "HTML",
+     "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "mvanhorn/last30days-skill",
+     "title": "mvanhorn/last30days-skill",
+     "url": "https://github.com/mvanhorn/last30days-skill",
+     "note": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary  (Python · +790⭐ 今日)",
+     "stars": 790,
+     "lang": "Python",
+     "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "google-labs-code/stitch-skills",
+     "title": "google-labs-code/stitch-skills",
+     "url": "https://github.com/google-labs-code/stitch-skills",
+     "note": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.  (TypeScript · +425⭐ 今日)",
+     "stars": 425,
+     "lang": "TypeScript",
+     "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "mjmirza/app-store-compliance",
+     "title": "mjmirza/app-store-compliance",
+     "url": "https://github.com/mjmirza/app-store-compliance",
+     "note": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.  (Shell · +755⭐ 今日)",
+     "stars": 755,
+     "lang": "Shell",
+     "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Tracer-Cloud/opensre",
+     "title": "Tracer-Cloud/opensre",
+     "url": "https://github.com/Tracer-Cloud/opensre",
+     "note": "The open-source agent for CI/CD reliability.  (Python · +438⭐ 今日)",
+     "stars": 438,
+     "lang": "Python",
+     "desc": "The open-source agent for CI/CD reliability.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "toeverything/AFFiNE",
+     "title": "toeverything/AFFiNE",
+     "url": "https://github.com/toeverything/AFFiNE",
+     "note": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.  (TypeScript · +593⭐ 今日)",
+     "stars": 593,
+     "lang": "TypeScript",
+     "desc": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "XiaoYouChR/Ghost-Downloader-3",
+     "title": "XiaoYouChR/Ghost-Downloader-3",
+     "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+     "note": "The only downloader you need. 下载器的集大成者。  (Python · +1,078⭐ 今日)",
+     "stars": 1078,
+     "lang": "Python",
+     "desc": "The only downloader you need. 下载器的集大成者。",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    }
+   ],
+   "fetched": "2026-11-23T08:22:15-05:00",
+   "history": true
+  },
+  {
+   "source": "linuxdo",
+   "name": "LINUX DO 今日热门",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "https://linux.do/t/topic/3223310",
+     "title": "有佬友蹲过监狱吗？我蹲过！囹圄往事（一）—— 佬友久等了",
+     "url": "https://linux.do/t/topic/3223310",
+     "note": "前情回顾 来L站已经有半年了，看得多发的少，在这里给我的印象最深的就是活人感，逐渐这里也成为我的一个寄托。 前两天好不容易早睡，但是没想到凌晨3点也就醒了，看着日期发现自己竟然出来也快一年了，不管是迷茫的排解还是无聊的慰籍，总想找人倾诉一下。 成年人的世界，有时候孤单可能是主旋律，踌躇许久，迷迷糊糊，晃晃悠悠发了个帖子",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3223667",
+     "title": "老实写作业，很枯燥吧？| Panache 开源全平台手写生成工具",
+     "url": "https://linux.do/t/topic/3223667",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是 ",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3223919",
+     "title": "（暂停注册 正在征集意见 ）全新公益api站 无付费 请看最新帖子的意见征求",
+     "url": "https://linux.do/t/topic/3223919",
+     "note": "请看最新帖子 十分重要！ 现在注册的佬凭用户中心截图 重新开放注册时可获取补偿 意见征集稿22:00结束。届时我会进行重置用户 本帖使用社区公益推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的项目是免费使用的，无收费（变相收费、赞助）部分： 是 我的帖子已经打上 公益推广 标签： 是 我的项目属于个人项目，与",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3222944",
+     "title": "【开源推广】一个比较好的公司尽调 Skill",
+     "url": "https://linux.do/t/topic/3222944",
+     "note": "开源声明 （点击了解更多详细信息） 最近在反省自己，实在是没有什么水文意识。 平常用得很顺手的东西拿出来水篇文章，岂不美哉？ 翻箱倒柜翻出还算叫公司尽调的 skills ，原本还没有什么没打算发出来的。 一方面写出来只是自己看公司、看机会、看合作方时顺手在用；另一方面，一直觉得这就是个自用工具。 直到前阵子拿它帮朋友跑",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3227195",
+     "title": "相亲了一个女的，每次见面都要花500左右，压力很大，还要继续吗？",
+     "url": "https://linux.do/t/topic/3227195",
+     "note": "30岁了，之前听了佬们的建议，搞数量，搞形象，相亲了一个女的，接触了一段时间，每次出去都要吃很贵的饭，每次基本花费在500左右，随叫随到，有时还得请假过去，到现在还没牵个手，人一直拒绝，好累啊，也不想回复消息了，但又舍不得，我真的好难受啊，做啥都没心力了，提不起兴趣，还有没有必要继续？ 387 个帖子 - 342 位参",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3223323",
+     "title": "NSFW生图渠道汇总",
+     "url": "https://linux.do/t/topic/3223323",
+     "note": "近期经常看到有人问这个话题，也回答了不少这个话题，在评论区也看到了不少没见过的渠道，写一个帖子来汇总一下 关于nsfw生图 直接生图类的： 1.站内有公益站，叫皮皮智绘，可以nsfw生图 2.wavespeed的seedream没有甲，注册有一刀的赠金 3.evolink的seedream也没有甲，同样有一刀的赠金，个",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3222848",
+     "title": "【开源自荐】借着 AI 搓了 4 个月：用 C++20 + Rust 把 6 个 Windows 托盘工具合成 1 个（附不到 2MB Rust 复刻 Picasa 看图器）",
+     "url": "https://linux.do/t/topic/3222848",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 #开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3226626",
+     "title": "【无门槛】永久免费二级域名 ，共19种域名，其中三个可托管cf，大量三位数优质前缀可注册",
+     "url": "https://linux.do/t/topic/3226626",
+     "note": "注册地址： https://ipv64.net/ 一个账号3个免费二级域名额度，不限邮箱，可无限注册 共19个二级域名，其中三个能托管cloudflare的域名： xxx.ipv64.net xxx.ipv64.de xxx.home64.de 实测还有大量三位数优质前缀，轻点薅，别改等级 59 个帖子 - 48 位参",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3224080",
+     "title": "我的每月AI使用投入是不是太大了？",
+     "url": "https://linux.do/t/topic/3224080",
+     "note": "本人做一点科研相关的工作，偏打杂；从最开始白嫖chatgpt和claude的free，到充值plus/pro，越来越离不开AI. 有段时间觉得一个月要花300+买一个gpt plus和claude pro，感觉花费太多了，于是在在L站天天签到各种公益站； 但使用过程中越来越离不开claude，公益站也没有claude可",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3224244",
+     "title": "本来想给朋友装个逼，顺便拉他进L站，结果翻车了",
+     "url": "https://linux.do/t/topic/3224244",
+     "note": "高中的同学来深圳面试，周日晚上去见了一面，一边走一边聊，他说是一家跨境电商，搞的FDE，面试的要求是会使用gpt和n8n，说到使用ai就不得不提我们L站了，我说里面的佬说话又好听还能学到很多知识，还给展示了一下手机上的L站，想着他没5年的github账号，想邀请他，结果查看信任等级发现从三级掉下来了，这下邀不了，装逼翻",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3225598",
+     "title": "我敬佩任何一位敢于长时间接触GPT 6.2 Astra的人",
+     "url": "https://linux.do/t/topic/3225598",
+     "note": "使用GPT 6.2 Astra进行创作简直是酷刑 93 个帖子 - 86 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3224478",
+     "title": "放个免费福利看谁需要",
+     "url": "https://linux.do/t/topic/3224478",
+     "note": "放个免费福利gpt-6.1-sol模型 https://hub.linux.do #26606 看谁需要进去用吧 43 个帖子 - 34 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3228409",
+     "title": "雪花公益的意见征求（10点截止 10:30我会进行操作 开放时间待定）",
+     "url": "https://linux.do/t/topic/3228409",
+     "note": "亲爱的佬友们… 雪花公益现在遇见一个难题 由于我初期想的太过于美好 导致现在用户量过多 服务器的数据库吃不消了 所以我想踢出所有用户 然后拜托佬友们重新注册一下 同时提高限制 以防有人拿去恶意操纵 所以我在这里征求一下意见 十分对不起佬友们 122 个帖子 - 76 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3223468",
+     "title": "开源一个医疗JEV模型（4b）",
+     "url": "https://linux.do/t/topic/3223468",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是 ",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://linux.do/t/topic/3224337",
+     "title": "人生第一次炸的萝卜丸子",
+     "url": "https://linux.do/t/topic/3224337",
+     "note": "这几天突然刷到炸丸子的视频看着挺简单，就去超市买了一袋一次性手套（方便用来挤丸子，事后避雷）、一袋面包糠和两根胡萝卜。 萝卜刨成丝后网上有两种处理方法，一是用盐杀水，一是焯水，我用的第二种，不管用哪种方法，都需要事后把萝卜挤干水分再切碎。由于是第一次尝试，不敢弄多，搞了四根跟黄瓜差不多粗细的小青萝卜和一个正常大的青萝卜",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    }
+   ],
+   "fetched": "2026-11-23T08:22:15-05:00",
+   "history": true
+  },
+  {
+   "source": "hf-models",
+   "name": "Hugging Face 热门模型",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "thinkingmachines/Inkling-2-Mini",
+     "title": "thinkingmachines/Inkling-2-Mini",
+     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+     "note": "image-text-to-text · ❤ 5280",
+     "likes": 5280,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "unsloth/Inkling-2-Mini-GGUF",
+     "title": "unsloth/Inkling-2-Mini-GGUF",
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "note": "image-text-to-text · ❤ 999",
+     "likes": 999,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "inworld/voice-isolator",
+     "title": "inworld/voice-isolator",
+     "url": "https://huggingface.co/inworld/voice-isolator",
+     "note": "audio-to-audio · ❤ 690",
+     "likes": 690,
+     "tag": "audio-to-audio",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "note": "image-text-to-text · ❤ 580",
+     "likes": 580,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "harness-hub/Qwen3.8-27B-pi-adapted",
+     "title": "harness-hub/Qwen3.8-27B-pi-adapted",
+     "url": "https://huggingface.co/harness-hub/Qwen3.8-27B-pi-adapted",
+     "note": "image-text-to-text · ❤ 1013",
+     "likes": 1013,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "higurashi-ai/Haru-4B",
+     "title": "higurashi-ai/Haru-4B",
+     "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+     "note": "audio-to-audio · ❤ 914",
+     "likes": 914,
+     "tag": "audio-to-audio",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "tencent/Hy4-flash",
+     "title": "tencent/Hy4-flash",
+     "url": "https://huggingface.co/tencent/Hy4-flash",
+     "note": "image-text-to-text · ❤ 633",
+     "likes": 633,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "sensenova/SenseNova-Loop-9B",
+     "title": "sensenova/SenseNova-Loop-9B",
+     "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B",
+     "note": "image-text-to-text · ❤ 612",
+     "likes": 612,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Qwen/Qwen3.8-27B",
+     "title": "Qwen/Qwen3.8-27B",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+     "note": "image-text-to-text · ❤ 21640",
+     "likes": 21640,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "SulphurAI/Sulphur-3",
+     "title": "SulphurAI/Sulphur-3",
+     "url": "https://huggingface.co/SulphurAI/Sulphur-3",
+     "note": "❤ 823",
+     "likes": 823,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    }
+   ],
+   "fetched": "2026-11-23T08:22:15-05:00",
+   "history": true
+  },
+  {
+   "source": "hf-spaces",
+   "name": "Hugging Face 热门 Spaces",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "JCisHERE/wan2-2-i2v-v3",
+     "title": "JCisHERE/wan2-2-i2v-v3",
+     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+     "note": "gradio · ❤ 635",
+     "likes": 635,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "MiniMaxAI/minimax-h3-image",
+     "title": "MiniMaxAI/minimax-h3-image",
+     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+     "note": "gradio · ❤ 295",
+     "likes": 295,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "huggingface/moe-blogpost",
+     "title": "huggingface/moe-blogpost",
+     "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
+     "note": "docker · ❤ 832",
+     "likes": 832,
+     "tag": "docker",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "joelniklaus/harness-leaderboard",
+     "title": "joelniklaus/harness-leaderboard",
+     "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+     "note": "docker · ❤ 529",
+     "likes": 529,
+     "tag": "docker",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Lakonik/pi-H3",
+     "title": "Lakonik/pi-H3",
+     "url": "https://huggingface.co/spaces/Lakonik/pi-H3",
+     "note": "gradio · ❤ 129",
+     "likes": 129,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "waitinghere/Krea2T-Revamped",
+     "title": "waitinghere/Krea2T-Revamped",
+     "url": "https://huggingface.co/spaces/waitinghere/Krea2T-Revamped",
+     "note": "gradio · ❤ 143",
+     "likes": 143,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-22"
+    }
+   ],
+   "fetched": "2026-11-23T08:22:15-05:00",
+   "history": true
+  },
+  {
+   "source": "producthunt",
+   "name": "Product Hunt",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "https://www.producthunt.com/products/gauth-ai-course",
+     "title": "Gauth Personal Study Agent",
+     "url": "https://www.producthunt.com/products/gauth-ai-course",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/mai-image-2-3",
+     "title": "MAI Image 2.7",
+     "url": "https://www.producthunt.com/products/mai-image-2-3",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/orpheus-2",
+     "title": "Orpheus",
+     "url": "https://www.producthunt.com/products/orpheus-2",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/motionflare",
+     "title": "Motionflare",
+     "url": "https://www.producthunt.com/products/motionflare",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/ashwa",
+     "title": "Ashwa",
+     "url": "https://www.producthunt.com/products/ashwa",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/replit",
+     "title": "Replit Missions",
+     "url": "https://www.producthunt.com/products/replit",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/tesla",
+     "title": "Tesla Self-Driving V15",
+     "url": "https://www.producthunt.com/products/tesla",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/branchery",
+     "title": "Branchery",
+     "url": "https://www.producthunt.com/products/branchery",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/modem",
+     "title": "Modem",
+     "url": "https://www.producthunt.com/products/modem",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "https://www.producthunt.com/products/hydrilla",
+     "title": "Hydrilla",
+     "url": "https://www.producthunt.com/products/hydrilla",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-23"
+    }
+   ],
+   "fetched": "2026-11-23T08:22:15-05:00",
+   "history": true
+  }
+ ],
+ "status": []
+}

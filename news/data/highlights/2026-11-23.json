@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-23",
+ "generated": "2026-11-23T08:20:00-05:00",
+ "by": "joe",
+ "summary": "今天最值得关注的是**智谱发布 GLM-5.4**，这是他们首个 Loop Transformer 编码模型，主打「通用编码能力」（[博文](https://z.ai/blog/glm-5.4)），HN 上拿到 317 分。Loop Transformer 是一种允许隐层迭代推理的架构，和传统 chain-of-thought 的思路不同，值得关注它在 agent 场景下的编码表现。\n\nO'Reilly 的 Tim O'Reilly 发了一篇长文 [What Happened to Silicon Valley?](https://www.oreilly.com/radar/what-happened-to-silicon-valley/)（HN 737 分，今日第 1），反思硅谷从创新引擎变成资本游戏的转变。OpenAI 也发了技术博客 [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence/)，讨论困惑度作为模型能力评估指标的价值，试图建立统一的 eval 框架。\n\n开源方面，Inkling-2-Mini 热度不减（❤5280，昨天 3326），继续占据 HF 热门第 1；新上榜的 [SulphurAI/Sulphur-3](https://huggingface.co/SulphurAI/Sulphur-3)（❤823）值得留意。GitHub Trending 依然被 agent 工具霸榜：[Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) 连续两天第 1（★2037），[last30days-skill](https://github.com/mvanhorn/last30days-skill)（★790）和 [Cursor plugins](https://github.com/cursor/plugins)（★395）都和 agent skills 生态直接相关。\n\n科学空间苏剑林发了新文 [Muon 背后的优化理论：1. 全量、随机与动量](https://kexue.fm/archives/12014)，是 Muon 优化器系列的第一篇理论推导，接上之前的学习率调度工作。和你的方向最相关的是 agent skills 生态的快速扩张——Claude-BugHunter、last30days-skill、Cursor plugins 和 stitch-skills 同时在 Trending，说明围绕 coding agent 的 skill/plugin 市场正在快速成型。",
+ "items": [
+  {
+   "title_zh": "智谱 GLM-5.4：首个 Loop Transformer 编码模型",
+   "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+   "url": "https://z.ai/blog/glm-5.4",
+   "why": "智谱用 Loop Transformer 架构做编码模型，隐层迭代推理取代显式 chain-of-thought，HN 317 分。",
+   "tag": "官方",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://z.ai/blog/glm-5.4",
+     "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+     "rank": 8,
+     "score": 317,
+     "score_kind": "score"
+    }
+   ]
+  },
+  {
+   "title_zh": "O'Reilly 长文：硅谷怎么了？",
+   "title": "What Happened to Silicon Valley?",
+   "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+   "why": "Tim O'Reilly 反思硅谷从创新引擎到资本游戏的转变，HN 今日第 1（737 分）。",
+   "tag": "社区",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+     "title": "What Happened to Silicon Valley?",
+     "rank": 1,
+     "score": 737,
+     "score_kind": "score"
+    }
+   ]
+  },
+  {
+   "title_zh": "OpenAI：困惑度与智能——用 perplexity 统一评估框架",
+   "title": "Perplexity and Intelligence",
+   "url": "https://openai.com/index/perplexity-and-intelligence/",
+   "why": "OpenAI 技术博客讨论困惑度作为模型能力的统一评估指标，试图建立共享的 eval 方法论。",
+   "tag": "官方",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://openai.com/index/perplexity-and-intelligence/",
+     "title": "Perplexity and Intelligence",
+     "rank": 3,
+     "score": 624,
+     "score_kind": "score"
+    }
+   ]
+  },
+  {
+   "title_zh": "Agent Skills 生态爆发：Claude-BugHunter、last30days-skill、Cursor plugins 同时上榜",
+   "title": "GitHub Trending: Claude-BugHunter, last30days-skill, Cursor plugins, stitch-skills",
+   "url": "https://github.com/elementalsouls/Claude-BugHunter",
+   "why": "Claude-BugHunter 连续两天 GitHub 第 1（★2037），last30days-skill（★790）和 Cursor plugins（★395）同时上榜，coding agent 的 skill/plugin 市场正在快速成型。",
+   "tag": "开源",
+   "sources": [
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "rank": 1,
+     "score": 2037,
+     "score_kind": "stars"
+    },
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/mvanhorn/last30days-skill",
+     "title": "mvanhorn/last30days-skill",
+     "rank": 10,
+     "score": 790,
+     "score_kind": "stars"
+    },
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/cursor/plugins",
+     "title": "cursor/plugins",
+     "rank": 5,
+     "score": 395,
+     "score_kind": "stars"
+    },
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/google-labs-code/stitch-skills",
+     "title": "google-labs-code/stitch-skills",
+     "rank": 11,
+     "score": 425,
+     "score_kind": "stars"
+    }
+   ]
+  },
+  {
+   "title_zh": "科学空间：Muon 背后的优化理论（系列第一篇）",
+   "title": "Muon背后的优化理论：1. 全量、随机与动量",
+   "url": "https://kexue.fm/archives/12014",
+   "why": "苏剑林新系列，从理论推导 Muon 优化器，接上之前的学习率调度工作。",
+   "tag": "论文",
+   "sources": [
+    {
+     "source": "kexue",
+     "name": "科学空间（苏剑林）",
+     "url": "https://kexue.fm/archives/12014",
+     "title": "Muon背后的优化理论：1. 全量、随机与动量"
+    }
+   ]
+  },
+  {
+   "title_zh": "XNU Linux：在 Linux 上运行完整 OS X GUI 用户空间",
+   "title": "XNU Linux: Full OS X GUI Userspace on Linux",
+   "url": "https://github.com/AFK-surf/xnulinux",
+   "why": "把完整 macOS GUI 用户空间搬到 Linux 内核上运行，HN 419 分，系统级 hack。",
+   "tag": "社区",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://github.com/AFK-surf/xnulinux",
+     "title": "XNU Linux: Full OS X GUI Userspace on Linux",
+     "rank": 6,
+     "score": 419,
+     "score_kind": "score"
+    }
+   ]
+  }
+ ]
+}
