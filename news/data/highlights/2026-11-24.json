@@ -1,0 +1,121 @@
+{
+ "date": "2026-11-24",
+ "generated": "2026-11-24T16:58:46-05:00",
+ "by": "rules",
+ "summary": "",
+ "items": [
+  {
+   "title_zh": "Searching for distant planets with Astra",
+   "title": "Searching for distant planets with Astra",
+   "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+   "why": "See how two amateur astronomers used Codex and Astra to find…",
+   "tag": "官方",
+   "sources": [
+    {
+     "source": "openai",
+     "name": "OpenAI News",
+     "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+     "title": "Searching for distant planets with Astra"
+    }
+   ]
+  },
+  {
+   "title_zh": "A practical guide to shipping with Claude Code",
+   "title": "A practical guide to shipping with Claude Code",
+   "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+   "why": "Claude Developer Blog 新文章",
+   "tag": "官方",
+   "sources": [
+    {
+     "source": "claude-dev",
+     "name": "Claude Developer Blog",
+     "url": "https://claude.dev/blog/the-work-after-you-open-a-pr/",
+     "title": "A practical guide to shipping with Claude Code"
+    }
+   ]
+  },
+  {
+   "title_zh": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+   "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+   "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+   "why": "Claude Blog 新文章",
+   "tag": "官方",
+   "sources": [
+    {
+     "source": "claude-blog",
+     "name": "Claude Blog",
+     "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+     "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta"
+    }
+   ]
+  },
+  {
+   "title_zh": "LLM agents work for their parent companies, not for you",
+   "title": "LLM agents work for their parent companies, not for you",
+   "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+   "why": "HN 第 2、830 分",
+   "tag": "社区",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+     "title": "LLM agents work for their parent companies, not for you",
+     "rank": 2,
+     "score": 830,
+     "score_kind": "score"
+    }
+   ]
+  },
+  {
+   "title_zh": "elementalsouls/Claude-BugHunter",
+   "title": "elementalsouls/Claude-BugHunter",
+   "url": "https://github.com/elementalsouls/Claude-BugHunter",
+   "why": "GitHub 第 1、今日 +1833★；A Claude Code skill bundle for bug hunting and external red-…",
+   "tag": "开源",
+   "sources": [
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "rank": 1,
+     "score": 1833,
+     "score_kind": "stars"
+    }
+   ]
+  },
+  {
+   "title_zh": "t3code 被实锤了，上传遥感数据包括 auth 等账号信息（理性看待、吃瓜中。。。）",
+   "title": "t3code 被实锤了，上传遥感数据包括 auth 等账号信息（理性看待、吃瓜中。。。）",
+   "url": "https://linux.do/t/topic/3235311",
+   "why": "LINUX DO 第 1；s 244 个帖子 - 190 位参与者 阅读完整话题",
+   "tag": "社区",
+   "sources": [
+    {
+     "source": "linuxdo",
+     "name": "LINUX DO 今日热门",
+     "url": "https://linux.do/t/topic/3235311",
+     "title": "t3code 被实锤了，上传遥感数据包括 auth 等账号信息（理性看待、吃瓜中。。。）",
+     "rank": 1
+    }
+   ]
+  },
+  {
+   "title_zh": "Claude Ship",
+   "title": "Claude Ship",
+   "url": "https://www.producthunt.com/products/claude-code",
+   "why": "Product Hunt 第 1",
+   "tag": "产品",
+   "sources": [
+    {
+     "source": "producthunt",
+     "name": "Product Hunt",
+     "url": "https://www.producthunt.com/products/claude-code",
+     "title": "Claude Ship",
+     "rank": 1
+    }
+   ]
+  }
+ ]
+}
