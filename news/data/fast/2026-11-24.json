@@ -1,0 +1,38 @@
+[
+ {
+  "id": "https://claude.com/resources/articles/introducing-claude-ship",
+  "title": "Introducing Claude Ship",
+  "url": "https://claude.com/resources/articles/introducing-claude-ship",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-24T05:37:41-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+  "title": "KPMG's Todd Lohr on AI when your data is also your clients' data",
+  "url": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-24T05:37:41-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+  "title": "The enterprise guide to securing coding agents",
+  "url": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-24T05:37:41-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+  "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+  "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-24T05:37:41-05:00"
+ }
+]

@@ -45,6 +45,10 @@
   ],
   "last_new": "2026-11-22",
   "alerted": [
+   "https://claude.com/resources/articles/introducing-claude-ship",
+   "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+   "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+   "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
    "https://claude.com/resources/articles/interactive-connectors-full-tool",
    "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude"
   ]
