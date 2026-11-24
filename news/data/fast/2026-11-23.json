@@ -1,0 +1,47 @@
+[
+ {
+  "id": "https://openai.com/index/introducing-shirudo",
+  "title": "OpenAI and Cisco introduce Shirudo",
+  "url": "https://openai.com/index/introducing-shirudo",
+  "note": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
+  "source": "openai",
+  "name": "OpenAI News",
+  "time": "2026-11-23T19:32:23-05:00"
+ },
+ {
+  "id": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+  "title": "Connected intelligence for in-house legal",
+  "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+  "note": "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can help in-house legal teams connect business co",
+  "source": "openai",
+  "name": "OpenAI News",
+  "time": "2026-11-23T19:32:23-05:00"
+ },
+ {
+  "id": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+  "title": "Richpanel helps companies automate 50% of support in 30 days",
+  "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+  "note": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
+  "source": "openai",
+  "name": "OpenAI News",
+  "time": "2026-11-23T19:32:23-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/interactive-connectors-full-tool",
+  "title": "Your apps can now open in Claude, and Claude can work in them",
+  "url": "https://claude.com/resources/articles/interactive-connectors-full-tool",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-23T19:32:23-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+  "title": "How Curative is building a national provider network with agents on Claude",
+  "url": "https://claude.com/resources/articles/how-curative-is-building-a-national-provider-network-with-agents-on-claude",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-23T19:32:23-05:00"
+ }
+]
