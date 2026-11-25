@@ -18,7 +18,10 @@
    "https://openai.com/index/combatting-adversarial-distillation",
    "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
   ],
-  "last_new": "2026-11-24"
+  "last_new": "2026-11-24",
+  "alerted": [
+   "https://openai.com/business/customer-stories/clay-plugins-openai"
+  ]
  },
  "anthropic": {
   "seen": [
@@ -31,7 +34,8 @@
    "/news/expanding-partnership-gsa",
    "/news/donating-agent-skills-to-the-agentic-ai-foundation"
   ],
-  "last_new": "2026-11-22"
+  "last_new": "2026-11-22",
+  "alerted": []
  },
  "claude-blog": {
   "seen": [
@@ -45,7 +49,11 @@
    "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
    "https://claude.com/resources/articles/building-always-on-agents"
   ],
-  "last_new": "2026-11-24"
+  "last_new": "2026-11-24",
+  "alerted": [
+   "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+   "https://claude.com/resources/articles/introducing-claude-ship"
+  ]
  },
  "claude-dev": {
   "seen": [
@@ -59,7 +67,8 @@
    "/blog/claude-code-in-the-cloud/",
    "/blog/getting-started-with-claude-code-mods/"
   ],
-  "last_new": "2026-11-24"
+  "last_new": "2026-11-24",
+  "alerted": []
  },
  "kexue": {
   "seen": [

@@ -1,0 +1,29 @@
+[
+ {
+  "id": "https://openai.com/business/customer-stories/clay-plugins-openai",
+  "title": "Clay helps sales teams win with Codex and ChatGPT",
+  "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+  "note": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
+  "source": "openai",
+  "name": "OpenAI News",
+  "time": "2026-11-25T00:12:05-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+  "title": "KPMG's Todd Lohr on AI when your data is also your clients' data",
+  "url": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-25T00:12:05-05:00"
+ },
+ {
+  "id": "https://claude.com/resources/articles/introducing-claude-ship",
+  "title": "Introducing Claude Ship",
+  "url": "https://claude.com/resources/articles/introducing-claude-ship",
+  "note": "",
+  "source": "claude-blog",
+  "name": "Claude Blog",
+  "time": "2026-11-25T00:12:05-05:00"
+ }
+]
