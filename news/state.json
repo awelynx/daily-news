@@ -5,23 +5,21 @@
    "https://openai.com/index/searching-for-distant-planets-with-astra",
    "https://openai.com/business/customer-stories/intentful-dots",
    "https://openai.com/business/customer-stories/ifood",
+   "https://openai.com/business/customer-stories/clay-plugins-openai",
    "https://openai.com/index/introducing-shirudo",
    "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
    "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
-   "https://openai.com/index/perplexity-and-intelligence",
    "https://openai.com/business/customer-stories/hebbia",
    "https://openai.com/index/introducing-medchembench",
    "https://openai.com/business/learn/deploying-daybreak-red",
-   "https://openai.com/business/learn/codex-security-plugin-demo",
    "https://openai.com/business/learn/pr-scans-demo",
-   "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
    "https://openai.com/index/combatting-adversarial-distillation",
-   "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
+   "https://openai.com/business/learn/codex-security-plugin-demo",
+   "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+   "https://openai.com/index/perplexity-and-intelligence"
   ],
-  "last_new": "2026-11-24",
-  "alerted": [
-   "https://openai.com/business/customer-stories/clay-plugins-openai"
-  ]
+  "last_new": "2026-11-25"
  },
  "anthropic": {
   "seen": [
@@ -34,26 +32,26 @@
    "/news/expanding-partnership-gsa",
    "/news/donating-agent-skills-to-the-agentic-ai-foundation"
   ],
-  "last_new": "2026-11-22",
-  "alerted": []
+  "last_new": "2026-11-22"
  },
  "claude-blog": {
   "seen": [
+   "https://claude.com/resources/articles/install-as-app",
+   "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
    "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+   "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+   "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+   "https://claude.com/resources/articles/introducing-claude-ship",
    "https://claude.com/resources/articles/linked-billing-on-claude-platform",
    "https://claude.com/resources/articles/claude-tag-guide-for-startups",
    "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
    "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
-   "https://claude.com/resources/articles/claude-for-manufacturing",
-   "https://claude.com/resources/articles/claude-meetings",
    "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
-   "https://claude.com/resources/articles/building-always-on-agents"
+   "https://claude.com/resources/articles/claude-meetings",
+   "https://claude.com/resources/articles/building-always-on-agents",
+   "https://claude.com/resources/articles/claude-for-manufacturing"
   ],
-  "last_new": "2026-11-24",
-  "alerted": [
-   "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
-   "https://claude.com/resources/articles/introducing-claude-ship"
-  ]
+  "last_new": "2026-11-25"
  },
  "claude-dev": {
   "seen": [
@@ -67,8 +65,7 @@
    "/blog/claude-code-in-the-cloud/",
    "/blog/getting-started-with-claude-code-mods/"
   ],
-  "last_new": "2026-11-24",
-  "alerted": []
+  "last_new": "2026-11-24"
  },
  "kexue": {
   "seen": [
@@ -90,66 +87,6 @@
  },
  "hn": {
   "streak": {
-   "50601525": [
-    "2026-11-23",
-    2
-   ],
-   "50599762": [
-    "2026-11-23",
-    2
-   ],
-   "50600511": [
-    "2026-11-23",
-    2
-   ],
-   "50600677": [
-    "2026-11-23",
-    2
-   ],
-   "50602947": [
-    "2026-11-23",
-    1
-   ],
-   "50606192": [
-    "2026-11-23",
-    1
-   ],
-   "50603845": [
-    "2026-11-23",
-    1
-   ],
-   "50602843": [
-    "2026-11-23",
-    1
-   ],
-   "50607261": [
-    "2026-11-23",
-    1
-   ],
-   "50609685": [
-    "2026-11-23",
-    1
-   ],
-   "50603589": [
-    "2026-11-23",
-    1
-   ],
-   "50605045": [
-    "2026-11-23",
-    1
-   ],
-   "50603143": [
-    "2026-11-23",
-    1
-   ],
-   "50604988": [
-    "2026-11-23",
-    1
-   ],
-   "50600435": [
-    "2026-11-23",
-    1
-   ],
    "50624497": [
     "2026-11-24",
     1
@@ -183,8 +120,8 @@
     1
    ],
    "50630309": [
-    "2026-11-24",
-    1
+    "2026-11-25",
+    2
    ],
    "50625384": [
     "2026-11-24",
@@ -199,149 +136,137 @@
     1
    ],
    "50630594": [
-    "2026-11-24",
-    1
+    "2026-11-25",
+    2
    ],
    "50624487": [
     "2026-11-24",
     1
    ],
    "50630462": [
-    "2026-11-24",
+    "2026-11-25",
+    2
+   ],
+   "50637220": [
+    "2026-11-25",
+    1
+   ],
+   "50638032": [
+    "2026-11-25",
+    1
+   ],
+   "50633922": [
+    "2026-11-25",
+    1
+   ],
+   "50630809": [
+    "2026-11-25",
+    1
+   ],
+   "50637686": [
+    "2026-11-25",
+    1
+   ],
+   "50637056": [
+    "2026-11-25",
+    1
+   ],
+   "50634658": [
+    "2026-11-25",
+    1
+   ],
+   "50637890": [
+    "2026-11-25",
+    1
+   ],
+   "50631157": [
+    "2026-11-25",
+    1
+   ],
+   "50635271": [
+    "2026-11-25",
+    1
+   ],
+   "50637874": [
+    "2026-11-25",
+    1
+   ],
+   "50629231": [
+    "2026-11-25",
     1
    ]
   },
-  "prev_run": "2026-11-23",
-  "last_run": "2026-11-24"
+  "prev_run": "2026-11-24",
+  "last_run": "2026-11-25"
  },
  "github-trending": {
   "streak": {
    "elementalsouls/Claude-BugHunter": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "obra/superpowers": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "HKUDS/CLI-Anything": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "jingyaogong/minimind": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "cursor/plugins": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "firecrawl/firecrawl": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "nginx/nginx": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "openvinotoolkit/openvino": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "cathrynlavery/diagram-design": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "mvanhorn/last30days-skill": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "google-labs-code/stitch-skills": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "mjmirza/app-store-compliance": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "Tracer-Cloud/opensre": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "toeverything/AFFiNE": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "XiaoYouChR/Ghost-Downloader-3": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ]
   },
-  "prev_run": "2026-11-23",
-  "last_run": "2026-11-24"
+  "prev_run": "2026-11-24",
+  "last_run": "2026-11-25"
  },
  "linuxdo": {
   "streak": {
-   "https://linux.do/t/topic/3223310": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3223667": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3223919": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3222944": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3227195": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3223323": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3222848": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3226626": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3224080": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3224244": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3225598": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3224478": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3228409": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3223468": [
-    "2026-11-23",
-    1
-   ],
-   "https://linux.do/t/topic/3224337": [
-    "2026-11-23",
-    1
-   ],
    "https://linux.do/t/topic/3235311": [
     "2026-11-24",
     1
@@ -351,12 +276,12 @@
     1
    ],
    "https://linux.do/t/topic/3236664": [
-    "2026-11-24",
-    1
+    "2026-11-25",
+    2
    ],
    "https://linux.do/t/topic/3236499": [
-    "2026-11-24",
-    1
+    "2026-11-25",
+    2
    ],
    "https://linux.do/t/topic/3233905": [
     "2026-11-24",
@@ -395,143 +320,151 @@
     1
    ],
    "https://linux.do/t/topic/3237177": [
-    "2026-11-24",
-    1
+    "2026-11-25",
+    2
    ],
    "https://linux.do/t/topic/3234963": [
     "2026-11-24",
     1
+   ],
+   "https://linux.do/t/topic/3239327": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3237517": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3240060": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3240364": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3239519": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3236449": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3241931": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3241799": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3239764": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3238167": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3241666": [
+    "2026-11-25",
+    1
+   ],
+   "https://linux.do/t/topic/3240153": [
+    "2026-11-25",
+    1
    ]
   },
-  "prev_run": "2026-11-23",
-  "last_run": "2026-11-24"
+  "prev_run": "2026-11-24",
+  "last_run": "2026-11-25"
  },
  "hf-models": {
   "streak": {
    "thinkingmachines/Inkling-2-Mini": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "unsloth/Inkling-2-Mini-GGUF": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "tencent/Hy4-flash": [
     "2026-11-24",
     3
    ],
    "inworld/voice-isolator": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "apple/FastFrames-L": [
     "2026-11-24",
     1
    ],
    "harness-hub/Qwen3.8-27B-pi-adapted": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "higurashi-ai/Haru-4B": [
-    "2026-11-24",
-    3
-   ],
-   "Qwen/Qwen3.8-27B": [
-    "2026-11-23",
-    2
-   ],
-   "sensenova/SenseNova-Loop-9B": [
-    "2026-11-23",
-    2
+    "2026-11-25",
+    4
    ],
    "AtomicChat/Inkling-2-Mini-Uncensored-GGUF": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "apple/DepthPro2": [
-    "2026-11-24",
-    1
+    "2026-11-25",
+    2
    ],
    "SulphurAI/Sulphur-3": [
-    "2026-11-24",
-    2
+    "2026-11-25",
+    3
+   ],
+   "prism-ml/Ternary-Bonsai-2.5-27B-GGUF": [
+    "2026-11-25",
+    1
+   ],
+   "llamaindex/OCRia-nano-1": [
+    "2026-11-25",
+    1
    ]
   },
-  "prev_run": "2026-11-23",
-  "last_run": "2026-11-24"
+  "prev_run": "2026-11-24",
+  "last_run": "2026-11-25"
  },
  "hf-spaces": {
   "streak": {
    "huggingface/moe-blogpost": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "JCisHERE/wan2-2-i2v-v3": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "MiniMaxAI/minimax-h3-image": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "joelniklaus/harness-leaderboard": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "waitinghere/Krea2T-Revamped": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ],
    "Lakonik/pi-H3": [
-    "2026-11-24",
-    3
+    "2026-11-25",
+    4
    ]
   },
-  "prev_run": "2026-11-23",
-  "last_run": "2026-11-24"
+  "prev_run": "2026-11-24",
+  "last_run": "2026-11-25"
  },
  "producthunt": {
   "streak": {
-   "https://www.producthunt.com/products/gauth-ai-course": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/mai-image-2-3": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/orpheus-2": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/motionflare": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/ashwa": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/replit": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/tesla": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/branchery": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/modem": [
-    "2026-11-23",
-    1
-   ],
-   "https://www.producthunt.com/products/hydrilla": [
-    "2026-11-23",
-    1
-   ],
    "https://www.producthunt.com/products/claude-code": [
     "2026-11-24",
     1
@@ -571,9 +504,49 @@
    "https://www.producthunt.com/products/tday": [
     "2026-11-24",
     1
+   ],
+   "https://www.producthunt.com/products/eluna": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/myclaw-3-0": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/airbots": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/tray-2": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/hai-4": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/truastra": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/vybe-4": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/magi-1": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/3way-social": [
+    "2026-11-25",
+    1
+   ],
+   "https://www.producthunt.com/products/relayrunner": [
+    "2026-11-25",
+    1
    ]
   },
-  "prev_run": "2026-11-23",
-  "last_run": "2026-11-24"
+  "prev_run": "2026-11-24",
+  "last_run": "2026-11-25"
  }
 }

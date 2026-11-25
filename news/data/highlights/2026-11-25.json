@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-25",
+  "generated": "2026-11-25T09:20:00-05:00",
+  "by": "joe",
+  "summary": "今天最炸的是 HN 榜首（790 分）的一篇预印本：OpenAI 的 math 仓库放出[《矩阵乘法指数是 9/4》](https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf)，声称 ω 恰好等于 2.25，上下界同时给出，同批还有另外 8 个结果。若成立，是复杂度理论几十年来最大的一步，但目前仍是预印本，评论区还在核对，先当待验证看。OpenAI 同日还发了 [GPT-6 蛋白质设计研究](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/)：模型只靠推理和写代码、不调用专门的生物模型，就能设计蛋白结构和序列，并做了湿实验验证。\n\n和你的 agent 方向最相关的是 Anthropic 的 [MCP 更新](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more)：MCP 服务器现在能连同工具一起分发 skills（Skills over MCP 公测，Claude 和 Claude Code 默认开启），Tasks 和 Elicitation 正式可用，文件上传即将上线。skills 随服务器更新、按需加载，「工具 + 用法」可以打包成一个服务发出去，你写的 skills 多了一条分发渠道。昨天提过的 Claude Ship 也出了[正式介绍](https://claude.com/resources/articles/introducing-claude-ship)：Claude 审 PR、修 PR，并按团队策略自动批准。\n\n本地模型方面，[Ternary Bonsai 2.5 27B](https://prismml.com/news/bonsai-2-5-27b) 基于 Qwen3.8 27B，三值量化后只占 5.9 GB，主打多轮工具调用和 agent 编码（HN 491 分，GGUF 版新上 HF 热门）。安全面两条可以一起看：LessWrong 的实验显示[沙箱里的模型能借推理服务器互相传信](https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being)；HN 上有人称[被 Anthropic 指控蒸馏](https://news.ycombinator.com/item?id=50630809)，疑因跑了自动化回归评测，用 API 批量做 eval 要留意。",
+  "items": [
+    {
+      "title_zh": "矩阵乘法指数恰为 9/4（OpenAI 数学预印本）",
+      "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+      "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+      "why": "声称 ω=2.25 且上下界都给出，若成立是复杂度理论的大突破；HN 今日第 1（790 分），仍待同行核对。",
+      "tag": "论文",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://github.com/openai/math/blob/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+          "title": "Matrix Multiplication is Θ(n^2.25) [pdf]",
+          "rank": 1,
+          "score": 790,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "MCP 服务器可分发 skills，Tasks 与 Elicitation 正式可用",
+      "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "why": "skills 随 MCP 服务器下发、按需加载，Claude Code 默认开启，直接影响你写 skills 和编排 agent 的方式。",
+      "tag": "官方",
+      "sources": [
+        {
+          "source": "claude-blog",
+          "name": "Claude Blog",
+          "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+          "title": "MCP servers can now ship skills, run tasks, and more with Claude"
+        }
+      ]
+    },
+    {
+      "title_zh": "GPT-6 模型具备内生的蛋白质设计能力",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "why": "不调用专用生物模型、只靠推理和代码设计蛋白并经湿实验验证，是「通用模型做科学」的又一例；HN 303 分。",
+      "tag": "官方",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+          "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+          "rank": 9,
+          "score": 303,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "Ternary Bonsai 2.5 27B：5.9 GB 的本地 agent 编码模型",
+      "title": "Ternary Bonsai 2.5 27B",
+      "url": "https://prismml.com/news/bonsai-2-5-27b",
+      "why": "基于 Qwen3.8 27B 的三值量化模型，强化多轮工具调用，适合在本机跑私有 agent；HN 491 分，GGUF 新上 HF 热门。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://prismml.com/news/bonsai-2-5-27b",
+          "title": "Ternary Bonsai 2.5 27B",
+          "rank": 3,
+          "score": 491,
+          "score_kind": "score"
+        },
+        {
+          "source": "hf-models",
+          "name": "Hugging Face 热门模型",
+          "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+          "title": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+          "rank": 7,
+          "score": 234,
+          "score_kind": "likes"
+        }
+      ]
+    },
+    {
+      "title_zh": "被沙箱隔离的模型仍能借推理服务器互相通信",
+      "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "why": "多 agent 共用推理服务时存在隐蔽信道，做 agent 隔离和安全设计时值得参考；HN 317 分。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+          "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+          "rank": 6,
+          "score": 317,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "Claude Ship 正式介绍 + 企业版编码 agent 安全指南",
+      "title": "Introducing Claude Ship",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "why": "Claude 审 PR、修 PR 并按策略自动批准；同日的安全指南讲怎么给编码 agent 上权限边界，两篇配合看。",
+      "tag": "官方",
+      "sources": [
+        {
+          "source": "claude-blog",
+          "name": "Claude Blog",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship",
+          "title": "Introducing Claude Ship"
+        },
+        {
+          "source": "claude-blog",
+          "name": "Claude Blog",
+          "url": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+          "title": "The enterprise guide to securing coding agents"
+        }
+      ]
+    },
+    {
+      "title_zh": "Ask HN：被 Anthropic 指控蒸馏，如何自证？",
+      "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
+      "url": "https://news.ycombinator.com/item?id=50630809",
+      "why": "发帖者称只是跑自动化回归评测就被要求 24 小时内自证，用 Claude API 批量跑 eval 的人要注意风控；286 条评论。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://news.ycombinator.com/item?id=50630809",
+          "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?",
+          "rank": 4,
+          "score": 365,
+          "score_kind": "score"
+        }
+      ]
+    }
+  ]
+}
