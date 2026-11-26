@@ -1,0 +1,114 @@
+{
+ "date": "2026-11-26",
+ "generated": "2026-11-26T15:59:40-05:00",
+ "by": "rules",
+ "summary": "",
+ "items": [
+  {
+   "title_zh": "elementalsouls/Claude-BugHunter",
+   "title": "elementalsouls/Claude-BugHunter",
+   "url": "https://github.com/elementalsouls/Claude-BugHunter",
+   "why": "GitHub 第 1、今日 +1600★；A Claude Code skill bundle for bug hunting and external red-…",
+   "tag": "开源",
+   "sources": [
+    {
+     "source": "github-trending",
+     "name": "GitHub Trending（今日）",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "rank": 1,
+     "score": 1600,
+     "score_kind": "stars"
+    }
+   ]
+  },
+  {
+   "title_zh": "The New York Times warns photographers not to update Photoshop over AI features",
+   "title": "The New York Times warns photographers not to update Photoshop over AI features",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+   "why": "HN 第 1、633 分",
+   "tag": "社区",
+   "sources": [
+    {
+     "source": "hn",
+     "name": "Hacker News 24 小时最高分",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+     "title": "The New York Times warns photographers not to update Photoshop over AI features",
+     "rank": 1,
+     "score": 633,
+     "score_kind": "score"
+    }
+   ]
+  },
+  {
+   "title_zh": "thinkingmachines/Inkling-2-Mini",
+   "title": "thinkingmachines/Inkling-2-Mini",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+   "why": "HF 模型 第 1、❤6222",
+   "tag": "开源",
+   "sources": [
+    {
+     "source": "hf-models",
+     "name": "Hugging Face 热门模型",
+     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+     "title": "thinkingmachines/Inkling-2-Mini",
+     "rank": 1,
+     "score": 6222,
+     "score_kind": "likes"
+    },
+    {
+     "source": "hf-models",
+     "name": "Hugging Face 热门模型",
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "title": "unsloth/Inkling-2-Mini-GGUF",
+     "rank": 2,
+     "score": 1484,
+     "score_kind": "likes"
+    },
+    {
+     "source": "hf-models",
+     "name": "Hugging Face 热门模型",
+     "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "rank": 4,
+     "score": 923,
+     "score_kind": "likes"
+    }
+   ]
+  },
+  {
+   "title_zh": "JCisHERE/wan2-2-i2v-v3",
+   "title": "JCisHERE/wan2-2-i2v-v3",
+   "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+   "why": "HF Spaces 第 1、❤812",
+   "tag": "开源",
+   "sources": [
+    {
+     "source": "hf-spaces",
+     "name": "Hugging Face 热门 Spaces",
+     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+     "title": "JCisHERE/wan2-2-i2v-v3",
+     "rank": 1,
+     "score": 812,
+     "score_kind": "likes"
+    }
+   ]
+  },
+  {
+   "title_zh": "Mime",
+   "title": "Mime",
+   "url": "https://www.producthunt.com/products/mime",
+   "why": "Product Hunt 第 1",
+   "tag": "产品",
+   "sources": [
+    {
+     "source": "producthunt",
+     "name": "Product Hunt",
+     "url": "https://www.producthunt.com/products/mime",
+     "title": "Mime",
+     "rank": 1
+    }
+   ]
+  }
+ ]
+}
