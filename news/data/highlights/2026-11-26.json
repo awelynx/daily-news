@@ -1,114 +1,134 @@
 {
- "date": "2026-11-26",
- "generated": "2026-11-26T15:59:40-05:00",
- "by": "rules",
- "summary": "",
- "items": [
-  {
-   "title_zh": "elementalsouls/Claude-BugHunter",
-   "title": "elementalsouls/Claude-BugHunter",
-   "url": "https://github.com/elementalsouls/Claude-BugHunter",
-   "why": "GitHub 第 1、今日 +1600★；A Claude Code skill bundle for bug hunting and external red-…",
-   "tag": "开源",
-   "sources": [
+  "date": "2026-11-26",
+  "generated": "2026-11-26T22:16:00-05:00",
+  "by": "joe",
+  "summary": "今天适逢美国感恩节，官方博客均无更新，焦点落在形式化证明与算力配额上。HN 第 2（536 分）是 Anthropic 团队与 Claude 合作开源的[精简版广义黎曼猜想 Lean 4 证明](https://github.com/lsernau/grh-lean)，仅依赖 Mathlib 标准公理，压缩出约 30 万行可读版与 7.6 万行紧凑版，但目前仅通过机器校验，尚未经数学家审读。另一条热议是 [OpenAI 收紧 GPT-6.2 配额](https://twitter.com/thsottiaux/status/2125784147889393806)（HN 445 分），Astra 触顶快 40%、Sol 快 25%，社区普遍认为高额订阅补贴正在退坡。\n\n算力趋紧也带火了替代路由：主打「$5/月批发价、无限额」的 OpenRouter 替代品 [Moat](https://commandcode.ai/moat) 登上 HN（214 分），但评论区对其节点透明度和数据安全质疑较多——编码 agent 携带源码与工具权限，低价难以抵消路由信任成本。应用侧的阻力同样明显，[《纽约时报》警告摄影师勿更新 Photoshop](https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features) 登顶 HN（633 分），凸显新闻机构对软件内置 AI 模糊真实性边界的担忧。\n\n和你的方向最贴合的是开源视觉生成与设计资源。NVIDIA 开源的 [Nemotron-Labs-Image-30B-A3B](https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B) 属于其「Pixel as Code」agentic 视觉创作框架，将离散视觉 token 与 SVG/HTML/图表代码打通，横跨 agent 编排与前端视觉。开源扩散方面，[Lightricks/LTX-2.5](https://huggingface.co/Lightricks/LTX-2.5)（❤13,571）新进 HF 热门，支持音视频联合生成；交互设计方面，[80 份经典 UI 设计规范归档](https://aresluna.org/ui-style-guides/)（HN 381 分）横跨 1980 年代至今，适合留作参考。",
+  "items": [
     {
-     "source": "github-trending",
-     "name": "GitHub Trending（今日）",
-     "url": "https://github.com/elementalsouls/Claude-BugHunter",
-     "title": "elementalsouls/Claude-BugHunter",
-     "rank": 1,
-     "score": 1600,
-     "score_kind": "stars"
-    }
-   ]
-  },
-  {
-   "title_zh": "The New York Times warns photographers not to update Photoshop over AI features",
-   "title": "The New York Times warns photographers not to update Photoshop over AI features",
-   "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
-   "why": "HN 第 1、633 分",
-   "tag": "社区",
-   "sources": [
-    {
-     "source": "hn",
-     "name": "Hacker News 24 小时最高分",
-     "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
-     "title": "The New York Times warns photographers not to update Photoshop over AI features",
-     "rank": 1,
-     "score": 633,
-     "score_kind": "score"
-    }
-   ]
-  },
-  {
-   "title_zh": "thinkingmachines/Inkling-2-Mini",
-   "title": "thinkingmachines/Inkling-2-Mini",
-   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-   "why": "HF 模型 第 1、❤6222",
-   "tag": "开源",
-   "sources": [
-    {
-     "source": "hf-models",
-     "name": "Hugging Face 热门模型",
-     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
-     "title": "thinkingmachines/Inkling-2-Mini",
-     "rank": 1,
-     "score": 6222,
-     "score_kind": "likes"
+      "title_zh": "Anthropic 团队开源精简版广义黎曼猜想 Lean 4 证明",
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "url": "https://github.com/lsernau/grh-lean",
+      "why": "基于 Mathlib 标准公理的 Lean 4 形式化证明，提供 30 万行可读版与 7.6 万行紧凑版（仅机器校验，尚未经人工审读）；HN 第 2（536 分）。",
+      "tag": "论文",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://github.com/lsernau/grh-lean",
+          "title": "Much shorter version of GRH Lean verification from Anthropic",
+          "rank": 2,
+          "score": 536,
+          "score_kind": "score"
+        }
+      ]
     },
     {
-     "source": "hf-models",
-     "name": "Hugging Face 热门模型",
-     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
-     "title": "unsloth/Inkling-2-Mini-GGUF",
-     "rank": 2,
-     "score": 1484,
-     "score_kind": "likes"
+      "title_zh": "OpenAI 收紧 GPT-6.2 用量配额：Astra 触顶快 40%、Sol 快 25%",
+      "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "why": "直接影响重度使用 OpenAI 编码与推理模型的配额消耗节奏，引发订阅补贴见顶的讨论；HN 第 4（445 分）。",
+      "tag": "官方",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+          "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+          "rank": 4,
+          "score": 445,
+          "score_kind": "score"
+        }
+      ]
     },
     {
-     "source": "hf-models",
-     "name": "Hugging Face 热门模型",
-     "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-     "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
-     "rank": 4,
-     "score": 923,
-     "score_kind": "likes"
-    }
-   ]
-  },
-  {
-   "title_zh": "JCisHERE/wan2-2-i2v-v3",
-   "title": "JCisHERE/wan2-2-i2v-v3",
-   "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
-   "why": "HF Spaces 第 1、❤812",
-   "tag": "开源",
-   "sources": [
+      "title_zh": "NVIDIA 开源 Nemotron-Labs-Image-30B-A3B：面向 Agent 视觉创作的 MoE 模型",
+      "title": "nvidia/Nemotron-Labs-Image-30B-A3B",
+      "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+      "why": "隶属 NVIDIA「Pixel as Code」agentic 视觉创作框架，将光栅图像生成与 SVG/HTML/图表代码打通，新进 HF 热门（❤268）。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "hf-models",
+          "name": "Hugging Face 热门模型",
+          "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+          "title": "nvidia/Nemotron-Labs-Image-30B-A3B",
+          "rank": 10,
+          "score": 268,
+          "score_kind": "likes"
+        }
+      ]
+    },
     {
-     "source": "hf-spaces",
-     "name": "Hugging Face 热门 Spaces",
-     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
-     "title": "JCisHERE/wan2-2-i2v-v3",
-     "rank": 1,
-     "score": 812,
-     "score_kind": "likes"
-    }
-   ]
-  },
-  {
-   "title_zh": "Mime",
-   "title": "Mime",
-   "url": "https://www.producthunt.com/products/mime",
-   "why": "Product Hunt 第 1",
-   "tag": "产品",
-   "sources": [
+      "title_zh": "Lightricks/LTX-2.5：开源音视频扩散生成模型",
+      "title": "Lightricks/LTX-2.5",
+      "url": "https://huggingface.co/Lightricks/LTX-2.5",
+      "why": "支持图生视频与音视频联合生成并适配 ComfyUI，新进 HF 热门第 7（❤13,571）。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "hf-models",
+          "name": "Hugging Face 热门模型",
+          "url": "https://huggingface.co/Lightricks/LTX-2.5",
+          "title": "Lightricks/LTX-2.5",
+          "rank": 7,
+          "score": 13571,
+          "score_kind": "likes"
+        }
+      ]
+    },
     {
-     "source": "producthunt",
-     "name": "Product Hunt",
-     "url": "https://www.producthunt.com/products/mime",
-     "title": "Mime",
-     "rank": 1
+      "title_zh": "《纽约时报》警告摄影师勿更新 Photoshop 以规避内置 AI 功能",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "why": "HN 今日第 1（633 分、501 评论），折射出专业内容机构对创意工具内置 AI 模糊真实性边界的警惕。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+          "title": "The New York Times warns photographers not to update Photoshop over AI features",
+          "rank": 1,
+          "score": 633,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "Moat：主打「批发价、无限额」的 OpenRouter 替代路由",
+      "title": "Moat: OpenRouter replacement",
+      "url": "https://commandcode.ai/moat",
+      "why": "月费 $5 会员制提供批发价模型调用且不设周期限额，但 HN 评论普遍关注第三方路由的数据隐私与 tool calling 信任风险（214 分）。",
+      "tag": "产品",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://commandcode.ai/moat",
+          "title": "Moat: OpenRouter replacement",
+          "rank": 15,
+          "score": 214,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "80 份历史 UI 设计规范归档（1980 年代至今）",
+      "title": "Collection of preserved UI style guides",
+      "url": "https://aresluna.org/ui-style-guides/",
+      "why": "Marcin Wichary 整理的跨时代界面指南合集，按主题与年代分组，适合作为前端与交互设计参考；HN 第 7（381 分）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://aresluna.org/ui-style-guides/",
+          "title": "Collection of preserved UI style guides",
+          "rank": 7,
+          "score": 381,
+          "score_kind": "score"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
