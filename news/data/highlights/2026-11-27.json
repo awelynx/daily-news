@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-27",
+  "generated": "2026-11-27T08:22:00-05:00",
+  "by": "joe",
+  "summary": "今天适逢美国黑五，各家官方博客继续无更新，焦点转向编码 agent 的落地与评测。HN 榜首（830 分）是[《AI 让自托管重新变得好玩》](https://janlukas.blog/posts/ai-self-hosting)：作者将 Docker Compose、NixOS 与 bootc 配置纳入 Git，让编码 agent 接管升级和自动化构建，重新点燃了折腾个人基础设施的兴致。颇具反差的是，HN 第 6（416 分）指出今年黑五[机械硬盘价格暴涨](https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/)，同款 20TB WD EasyStore 两年内从 $249.99 涨至 $549.99。\n\n今天的另一条主线是「去泡沫、重验证」。推理侧，[AMD 专用 llama.cpp 优化分支](https://devnull.land/amd-specific-llama-cpp)（HN 389 分）实测将生成速度从 35 提至 55 tok/s，但作者提醒近期不少 vibe-coded 定制引擎为刷速度悄悄改动 MoE 专家路由，小补丁集更稳妥。工程与医疗侧也在降温：HN 热议[主流可形式化验证编程语言](https://blainehansen.me/post/mainstream-verifiable-language/)（196 分），主张用形式化验证兜住 LLM 放大的代码质量风险；[AI 治愈疾病追踪榜](https://diseasescuredbyai.com/)（HN 313 分）则给出「0 获批、0 治愈」的现实账本。\n\n和你最关注的编码 agent 与编排方向最贴合的是两条新动态。HF 热门 Spaces 新上榜的 [Harness Leaderboard](https://huggingface.co/spaces/joelniklaus/harness-leaderboard)（❤570）在锁定同一模型权重与推理强度的条件下，用 Terminal-Bench 2.1 和 DeepSWE v1.1 横评了 Claude Code、Codex、OpenCode、Pi、OpenClaw 等 12 款框架并公开全部轨迹，极适合对比 harness 设计。实操上，LINUX DO 热帖 [CC tricks](https://linux.do/t/topic/3251696) 分享用 `/loop 30m` 巡检 Claude Code 子 agent 与后台任务，兼顾汇报和 Prompt Cache 命中率。",
+  "items": [
+    {
+      "title_zh": "Harness Leaderboard：同模型横评 12 款编码 Agent 框架",
+      "title": "joelniklaus/harness-leaderboard",
+      "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+      "why": "锁定模型权重与推理强度，在 Terminal-Bench 2.1 与 DeepSWE v1.1 上对比 Claude Code、Codex、OpenCode 等 12 款框架并公开轨迹，新进 HF 热门 Spaces（❤570）。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "hf-spaces",
+          "name": "Hugging Face 热门 Spaces",
+          "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+          "title": "joelniklaus/harness-leaderboard",
+          "rank": 6,
+          "score": 570,
+          "score_kind": "likes"
+        }
+      ]
+    },
+    {
+      "title_zh": "AI 让自托管重新变得好玩",
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "why": "HN 今日第 1（830 分、405 评论），展示如何用编码 agent 管理 Git 里的 Docker Compose、NixOS 与 bootc 配置，大幅降低个人运维摩擦。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://janlukas.blog/posts/ai-self-hosting",
+          "title": "AI made self-hosting fun again",
+          "rank": 1,
+          "score": 830,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "面向 AMD 显卡的 llama.cpp 精简优化分支",
+      "title": "AMD-specific fork of llama.cpp",
+      "url": "https://devnull.land/amd-specific-llama-cpp",
+      "why": "实测 llama-cpp-rdna-boosts 将 AMD 显卡生成从 35 提至 55 tok/s、prefill 翻倍，同时警示部分 vibe-coded 推理引擎靠改写 MoE 路由换速度；HN 第 8（389 分）。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://devnull.land/amd-specific-llama-cpp",
+          "title": "AMD-specific fork of llama.cpp",
+          "rank": 8,
+          "score": 389,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "Claude Code 实战技巧：用 /loop 30m 巡检子 Agent 并保活缓存",
+      "title": "CC tricks",
+      "url": "https://linux.do/t/topic/3251696",
+      "why": "通过 /loop 30m 定时汇报活动 SubAgent 与后台 Shell 任务，顺带维持 Prompt Cache 命中率、降低重度多 agent 跑 Opus 的消耗；LINUX DO 第 3。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "linuxdo",
+          "name": "LINUX DO 今日热门",
+          "url": "https://linux.do/t/topic/3251696",
+          "title": "CC tricks",
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "title_zh": "LLM 时代呼唤主流可形式化验证编程语言",
+      "title": "The need for a formally verifiable mainstream programming language",
+      "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+      "why": "指出 LLM 正在把草率工程实践成倍放大，呼吁推出具备主流可用性的形式化验证语言，呼应近期 AI 形式化证明热潮；HN 第 14（196 分、182 评论）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+          "title": "The need for a formally verifiable mainstream programming language",
+          "rank": 14,
+          "score": 196,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "AI 治愈疾病追踪榜：截至目前仍为 0",
+      "title": "Tracking Diseases Cured by AI",
+      "url": "https://diseasescuredbyai.com/",
+      "why": "对照 FDA/EMA 审批记录统计 AI 发现的治愈性疗法，目前获批与治愈数均为 0（仅 1 款进入三期临床），为 AI 医疗叙事提供事实基准；HN 第 9（313 分）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://diseasescuredbyai.com/",
+          "title": "Tracking Diseases Cured by AI",
+          "rank": 9,
+          "score": 313,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "黑五机械硬盘价格翻倍暴涨",
+      "title": "Hard Drive pricing has gotten bad",
+      "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+      "why": "同款 20TB WD EasyStore 黑五促销价从两年前 $249.99 飙升至 $549.99，成为自托管与本地存储扩容的现实痛点；HN 第 6（416 分、346 评论）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+          "title": "Hard Drive pricing has gotten bad",
+          "rank": 6,
+          "score": 416,
+          "score_kind": "score"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,867 @@
+{
+ "date": "2026-11-27",
+ "generated": "2026-11-27T08:20:21-05:00",
+ "feeds": [],
+ "rankings": [
+  {
+   "source": "hn",
+   "name": "Hacker News 24 小时最高分",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "50660180",
+     "title": "AI made self-hosting fun again",
+     "url": "https://janlukas.blog/posts/ai-self-hosting",
+     "note": "830 points",
+     "discuss": {
+      "label": "405 评论",
+      "url": "https://news.ycombinator.com/item?id=50660180"
+     },
+     "score": 830,
+     "comments": 405,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50655664",
+     "title": "Tell HN: Happy Thanksgiving",
+     "url": "https://news.ycombinator.com/item?id=50655664",
+     "note": "702 points",
+     "discuss": {
+      "label": "154 评论",
+      "url": "https://news.ycombinator.com/item?id=50655664"
+     },
+     "score": 702,
+     "comments": 154,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "50657530",
+     "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+     "url": "https://github.com/antonpictures/youtube-punisher",
+     "note": "445 points",
+     "discuss": {
+      "label": "520 评论",
+      "url": "https://news.ycombinator.com/item?id=50657530"
+     },
+     "score": 445,
+     "comments": 520,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50659640",
+     "title": "Company Culture = Slack Emoji ÷ √Headcount",
+     "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
+     "note": "431 points",
+     "discuss": {
+      "label": "208 评论",
+      "url": "https://news.ycombinator.com/item?id=50659640"
+     },
+     "score": 431,
+     "comments": 208,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50659841",
+     "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+     "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+     "note": "419 points",
+     "discuss": {
+      "label": "109 评论",
+      "url": "https://news.ycombinator.com/item?id=50659841"
+     },
+     "score": 419,
+     "comments": 109,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50661646",
+     "title": "Hard Drive pricing has gotten bad",
+     "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
+     "note": "416 points",
+     "discuss": {
+      "label": "346 评论",
+      "url": "https://news.ycombinator.com/item?id=50661646"
+     },
+     "score": 416,
+     "comments": 346,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50663595",
+     "title": "The group chat where your AI talks behind your back",
+     "url": "https://construct22.com/",
+     "note": "398 points",
+     "discuss": {
+      "label": "175 评论",
+      "url": "https://news.ycombinator.com/item?id=50663595"
+     },
+     "score": 398,
+     "comments": 175,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50657265",
+     "title": "AMD-specific fork of llama.cpp",
+     "url": "https://devnull.land/amd-specific-llama-cpp",
+     "note": "389 points",
+     "discuss": {
+      "label": "96 评论",
+      "url": "https://news.ycombinator.com/item?id=50657265"
+     },
+     "score": 389,
+     "comments": 96,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50657307",
+     "title": "Tracking Diseases Cured by AI",
+     "url": "https://diseasescuredbyai.com/",
+     "note": "313 points",
+     "discuss": {
+      "label": "190 评论",
+      "url": "https://news.ycombinator.com/item?id=50657307"
+     },
+     "score": 313,
+     "comments": 190,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "50657645",
+     "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+     "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+     "note": "289 points",
+     "discuss": {
+      "label": "141 评论",
+      "url": "https://news.ycombinator.com/item?id=50657645"
+     },
+     "score": 289,
+     "comments": 141,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50655278",
+     "title": "45°C inlets just killed the chiller. Most people haven't noticed yet",
+     "url": "https://www.theregister.com/hpc/2026/11/26/45c-inlets-just-killed-the-chiller-most-people-havent-noticed-yet/5311831",
+     "note": "279 points",
+     "discuss": {
+      "label": "147 评论",
+      "url": "https://news.ycombinator.com/item?id=50655278"
+     },
+     "score": 279,
+     "comments": 147,
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "50658191",
+     "title": "Show HN: Fuck_data_brokers.py",
+     "url": "https://github.com/gary23w/f-ck_data_brokers",
+     "note": "239 points",
+     "discuss": {
+      "label": "52 评论",
+      "url": "https://news.ycombinator.com/item?id=50658191"
+     },
+     "score": 239,
+     "comments": 52,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50655868",
+     "title": "Show HN: I wrote an entire Vim manual over 4 years",
+     "url": "http://themouseless.dev/vim/",
+     "note": "226 points",
+     "discuss": {
+      "label": "69 评论",
+      "url": "https://news.ycombinator.com/item?id=50655868"
+     },
+     "score": 226,
+     "comments": 69,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50663089",
+     "title": "The need for a formally verifiable mainstream programming language",
+     "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+     "note": "196 points",
+     "discuss": {
+      "label": "182 评论",
+      "url": "https://news.ycombinator.com/item?id=50663089"
+     },
+     "score": 196,
+     "comments": 182,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "50663261",
+     "title": "Buy Nothing Day – Friday November 27th 2026",
+     "url": "https://www.buynothingday.co.uk/",
+     "note": "165 points",
+     "discuss": {
+      "label": "40 评论",
+      "url": "https://news.ycombinator.com/item?id=50663261"
+     },
+     "score": 165,
+     "comments": 40,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    }
+   ],
+   "fetched": "2026-11-27T08:20:21-05:00",
+   "history": true
+  },
+  {
+   "source": "github-trending",
+   "name": "GitHub Trending（今日）",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "note": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.  (Python · +1,615⭐ 今日)",
+     "stars": 1615,
+     "lang": "Python",
+     "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "obra/superpowers",
+     "title": "obra/superpowers",
+     "url": "https://github.com/obra/superpowers",
+     "note": "An agentic skills framework & software development methodology that works.  (Shell · +916⭐ 今日)",
+     "stars": 916,
+     "lang": "Shell",
+     "desc": "An agentic skills framework & software development methodology that works.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "HKUDS/CLI-Anything",
+     "title": "HKUDS/CLI-Anything",
+     "url": "https://github.com/HKUDS/CLI-Anything",
+     "note": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/  (Python · +668⭐ 今日)",
+     "stars": 668,
+     "lang": "Python",
+     "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "jingyaogong/minimind",
+     "title": "jingyaogong/minimind",
+     "url": "https://github.com/jingyaogong/minimind",
+     "note": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.  (Python · +667⭐ 今日)",
+     "stars": 667,
+     "lang": "Python",
+     "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "cursor/plugins",
+     "title": "cursor/plugins",
+     "url": "https://github.com/cursor/plugins",
+     "note": "Cursor plugin specification and official plugins  (TypeScript · +242⭐ 今日)",
+     "stars": 242,
+     "lang": "TypeScript",
+     "desc": "Cursor plugin specification and official plugins",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "firecrawl/firecrawl",
+     "title": "firecrawl/firecrawl",
+     "url": "https://github.com/firecrawl/firecrawl",
+     "note": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.  (TypeScript · +833⭐ 今日)",
+     "stars": 833,
+     "lang": "TypeScript",
+     "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "nginx/nginx",
+     "title": "nginx/nginx",
+     "url": "https://github.com/nginx/nginx",
+     "note": "The official NGINX Open Source repository.  (C · +148⭐ 今日)",
+     "stars": 148,
+     "lang": "C",
+     "desc": "The official NGINX Open Source repository.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "openvinotoolkit/openvino",
+     "title": "openvinotoolkit/openvino",
+     "url": "https://github.com/openvinotoolkit/openvino",
+     "note": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference  (C++ · +152⭐ 今日)",
+     "stars": 152,
+     "lang": "C++",
+     "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "cathrynlavery/diagram-design",
+     "title": "cathrynlavery/diagram-design",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "note": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.  (HTML · +731⭐ 今日)",
+     "stars": 731,
+     "lang": "HTML",
+     "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "mvanhorn/last30days-skill",
+     "title": "mvanhorn/last30days-skill",
+     "url": "https://github.com/mvanhorn/last30days-skill",
+     "note": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary  (Python · +664⭐ 今日)",
+     "stars": 664,
+     "lang": "Python",
+     "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "google-labs-code/stitch-skills",
+     "title": "google-labs-code/stitch-skills",
+     "url": "https://github.com/google-labs-code/stitch-skills",
+     "note": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.  (TypeScript · +311⭐ 今日)",
+     "stars": 311,
+     "lang": "TypeScript",
+     "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "mjmirza/app-store-compliance",
+     "title": "mjmirza/app-store-compliance",
+     "url": "https://github.com/mjmirza/app-store-compliance",
+     "note": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.  (Shell · +531⭐ 今日)",
+     "stars": 531,
+     "lang": "Shell",
+     "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Tracer-Cloud/opensre",
+     "title": "Tracer-Cloud/opensre",
+     "url": "https://github.com/Tracer-Cloud/opensre",
+     "note": "The open-source agent for CI/CD reliability.  (Python · +326⭐ 今日)",
+     "stars": 326,
+     "lang": "Python",
+     "desc": "The open-source agent for CI/CD reliability.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "toeverything/AFFiNE",
+     "title": "toeverything/AFFiNE",
+     "url": "https://github.com/toeverything/AFFiNE",
+     "note": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.  (TypeScript · +469⭐ 今日)",
+     "stars": 469,
+     "lang": "TypeScript",
+     "desc": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "XiaoYouChR/Ghost-Downloader-3",
+     "title": "XiaoYouChR/Ghost-Downloader-3",
+     "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+     "note": "The only downloader you need. 下载器的集大成者。  (Python · +843⭐ 今日)",
+     "stars": 843,
+     "lang": "Python",
+     "desc": "The only downloader you need. 下载器的集大成者。",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    }
+   ],
+   "fetched": "2026-11-27T08:20:21-05:00",
+   "history": true
+  },
+  {
+   "source": "linuxdo",
+   "name": "LINUX DO 今日热门",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "https://linux.do/t/topic/3256398",
+     "title": "接下来只做一件事",
+     "url": "https://linux.do/t/topic/3256398",
+     "note": "自动回复是绝对红线违规，零容忍！ 接下来只做一件事：爆杀自动回复机器人，上不封顶！ 1 个帖子 - 1 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3254845",
+     "title": "【47周逢黑五】周五了来点轻松的，抽 3 Premium 名额",
+     "url": "https://linux.do/t/topic/3254845",
+     "note": "从 揭秘一下 Premium 分组 继续讨论： 上次 Premium抽奖 又是上千回复，燃烧了不少社区积分，非常好，我们决定每周烧一下。 刚把一伙几十个 Bot 运营的账号连根拔起，现在才腾出空来抽奖。今天恰逢黑五，直接抽 3 个 Premium 名额。至于 Premium 是什么，看上面的前情帖子吧。 奖品：Prem",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3251696",
+     "title": "CC tricks",
+     "url": "https://linux.do/t/topic/3251696",
+     "note": "本年度最有用 Claude Code 技巧就是 /loop 30m 检查是否有活动SubAgent 和 Background Shell Task, 逐个汇报 _(:з」∠)_ 懂得都懂 Cache效率拉满 咔咔省钱 来自我一天24小时睡3小时火力全开 Opus 5.5 高达5.5B的燃烧率 (其实是Ultra一个周限",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "https://linux.do/t/topic/3257781",
+     "title": "谷歌学生验证第4弹：通过率不稳定，但是概率可以过，直接私聊我发连接",
+     "url": "https://linux.do/t/topic/3257781",
+     "note": "别发评论区，私发我聊天，直接发连接就好，发评论区会被破坏了，不保证百分百跳过，也是刚开始试新sheerid验证，能过的就尽量给佬们过了 145 个帖子 - 136 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3254456",
+     "title": "土区 Apple ID 注册 + SEAGM礼品卡教程（土区羊毛多，必备！更新了美区、日区、印度区等地区）",
+     "url": "https://linux.do/t/topic/3254456",
+     "note": "大家按照流程来，是一定可以注册成功的，不要再去买AppleID了。 美区AppleID/日区AppleID等其他羊毛区，只是把土耳其换成对应地区，链接放到第四章了 核心流程 注册国区 Apple ID → 网页端转区土耳其 → 切换并固定 App Store 店面 → SEAGM 购买土区礼品卡 → App Store",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3251952",
+     "title": "做了一个社区各类「邀请码」的共享平台，自动分配邀请码",
+     "url": "https://linux.do/t/topic/3251952",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上“开源推广”标签：是 我的开源项目完整开源，无未开源部分：是 我的开源项目已链接认可 LINUX DO 社区：是 我帖子内的项目介绍，AI 生成、润色内容部分已截图发出：是 以上选择我承诺是永久有效的，接受社区和佬友监督：是 exch",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "https://linux.do/t/topic/3256027",
+     "title": "Gemini AI Pro 黑五优惠时间点、各区折扣价格汇总",
+     "url": "https://linux.do/t/topic/3256027",
+     "note": "根据 Gemini 订阅负责人 Vikas Kansal（ @vikaskansalHQ ）在 X 上的通知 还有官网活动页面时间，这次活动分为 新老用户 新消息Gemini 订阅负责人 Vikas Kansal已经删除新用户优惠推文 面向人群 谁能买 开始时间（北京时间） 截止时间（北京时间） 说明 老用户 目前账号",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3256295",
+     "title": "始皇开启爆杀模式",
+     "url": "https://linux.do/t/topic/3256295",
+     "note": "一进来看到这个 哈哈哈 始皇开始薄纱模式了嘛 99 个帖子 - 87 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3253989",
+     "title": "关于大二学生开公司创业做personal agent后续",
+     "url": "https://linux.do/t/topic/3253989",
+     "note": "从 几个学生开中转站维持运转的小公司能开发出personal agent吗 继续讨论： 各位佬们的评论我都看了，但是想说的东西太多了，单开一个帖子重新详细的讲一下。 一、我们想做什么 上一篇帖子说到，我们团队想做 personal agent。虽说叫做 personal agent，但其实离真正的 personal a",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3253593",
+     "title": "和相亲对象没话聊咋办",
+     "url": "https://linux.do/t/topic/3253593",
+     "note": "说一下对方的情况吧。 她是个特别内向的女生，这一点也是亲戚认证过的。据亲戚说，她干活很利索，但很不擅长与人交流，平时也没什么娱乐活动。除非有人约她，否则基本不出门，下班或者放假就在家看剧，偶尔去家附近的公园散散步。 刚认识的时候，基本全程都是我在找话题。我发一条消息，她往往要过很久才回复，也几乎不会主动找我聊天。一开始",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3257671",
+     "title": "image2. 5- flash api生图 不限张数",
+     "url": "https://linux.do/t/topic/3257671",
+     "note": "ai01.teleapi.top 虾蹬生图 · 公益画站 一句话，画成图。免费 AI 生图，不限张数，写下提示词就能出图。 前三天说每人每天5000张 api生图 700人领取了key 结果就只有一百多人用了 三天所有人总共才跑了六千多张 既然这样那就放开吧 另外做了以下方面升级 每人api不限张数 不限时间(渠道拉闸",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3255617",
+     "title": "突然有点累了",
+     "url": "https://linux.do/t/topic/3255617",
+     "note": "梦到哪说哪了。 ai发展到现在这个程度，是否是泡沫已经不重要了，学了十几年的技能突然要被取代了。 公司裁员之后技术部剩下三四个人，昔日的好友同事几乎没留了，一个人游游荡荡，也战战兢兢。 家里老婆全职带娃压力也挺大，回家之后要用最好的状态加入进去。 副业项目做了删，删了做，几乎没什么成效。 今天上午在折腾咕咕嘎嘎会员的时",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3253254",
+     "title": "反重力感谢这么多日本用户",
+     "url": "https://linux.do/t/topic/3253254",
+     "note": "19 个帖子 - 19 位参与者 阅读完整话题",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "https://linux.do/t/topic/3255873",
+     "title": "关于MUSE住宅ip我看好像还没佬发过",
+     "url": "https://linux.do/t/topic/3255873",
+     "note": "一句话： MUSE的云浏览器环境是自带一个家宽的， MUSE的云浏览器通常有两个环境，默认全是走的环境1，而环境1基本全是机房ip。 但是环境2就不一样了，环境2基本全是高纯净度的住宅ip， 可以让muse以后使用浏览器操作全部走环境2，这样不容易风控。 加上之前2个月好像可以ssh常驻反代出来，这一点我暂时还没试过，",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://linux.do/t/topic/3253563",
+     "title": "agy负责人发了个帖子笑得我不行",
+     "url": "https://linux.do/t/topic/3253563",
+     "note": "大家都懂吧。。。。哈哈哈哈哈哈哈 23 个帖子 - 22 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    }
+   ],
+   "fetched": "2026-11-27T08:20:21-05:00",
+   "history": true
+  },
+  {
+   "source": "hf-models",
+   "name": "Hugging Face 热门模型",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "thinkingmachines/Inkling-2-Mini",
+     "title": "thinkingmachines/Inkling-2-Mini",
+     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+     "note": "image-text-to-text · ❤ 6375",
+     "likes": 6375,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "unsloth/Inkling-2-Mini-GGUF",
+     "title": "unsloth/Inkling-2-Mini-GGUF",
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "note": "image-text-to-text · ❤ 1543",
+     "likes": 1543,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "SulphurAI/Sulphur-3",
+     "title": "SulphurAI/Sulphur-3",
+     "url": "https://huggingface.co/SulphurAI/Sulphur-3",
+     "note": "❤ 1305",
+     "likes": 1305,
+     "mark": "streak",
+     "streak": 5,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "note": "image-text-to-text · ❤ 973",
+     "likes": 973,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+     "title": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+     "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+     "note": "text-generation · ❤ 575",
+     "likes": 575,
+     "tag": "text-generation",
+     "mark": "streak",
+     "streak": 3,
+     "firstSeen": "2026-11-25"
+    },
+    {
+     "id": "Lightricks/LTX-2.5",
+     "title": "Lightricks/LTX-2.5",
+     "url": "https://huggingface.co/Lightricks/LTX-2.5",
+     "note": "image-to-video · ❤ 13649",
+     "likes": 13649,
+     "tag": "image-to-video",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "llamaindex/OCRia-nano-1",
+     "title": "llamaindex/OCRia-nano-1",
+     "url": "https://huggingface.co/llamaindex/OCRia-nano-1",
+     "note": "image-to-text · ❤ 303",
+     "likes": 303,
+     "tag": "image-to-text",
+     "mark": "streak",
+     "streak": 3,
+     "firstSeen": "2026-11-25"
+    },
+    {
+     "id": "nvidia/Nemotron-Labs-Image-30B-A3B",
+     "title": "nvidia/Nemotron-Labs-Image-30B-A3B",
+     "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+     "note": "text-to-image · ❤ 300",
+     "likes": 300,
+     "tag": "text-to-image",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "inworld/voice-isolator",
+     "title": "inworld/voice-isolator",
+     "url": "https://huggingface.co/inworld/voice-isolator",
+     "note": "audio-to-audio · ❤ 978",
+     "likes": 978,
+     "tag": "audio-to-audio",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "apple/DepthPro2",
+     "title": "apple/DepthPro2",
+     "url": "https://huggingface.co/apple/DepthPro2",
+     "note": "depth-estimation · ❤ 1332",
+     "likes": 1332,
+     "tag": "depth-estimation",
+     "mark": "streak",
+     "streak": 4,
+     "firstSeen": "2026-11-24"
+    }
+   ],
+   "fetched": "2026-11-27T08:20:21-05:00",
+   "history": true
+  },
+  {
+   "source": "hf-spaces",
+   "name": "Hugging Face 热门 Spaces",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "JCisHERE/wan2-2-i2v-v3",
+     "title": "JCisHERE/wan2-2-i2v-v3",
+     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+     "note": "gradio · ❤ 853",
+     "likes": 853,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Lakonik/pi-H3",
+     "title": "Lakonik/pi-H3",
+     "url": "https://huggingface.co/spaces/Lakonik/pi-H3",
+     "note": "gradio · ❤ 196",
+     "likes": 196,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "MiniMaxAI/minimax-h3-image",
+     "title": "MiniMaxAI/minimax-h3-image",
+     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+     "note": "gradio · ❤ 379",
+     "likes": 379,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "huggingface/moe-blogpost",
+     "title": "huggingface/moe-blogpost",
+     "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
+     "note": "docker · ❤ 871",
+     "likes": 871,
+     "tag": "docker",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "waitinghere/Krea2T-Revamped",
+     "title": "waitinghere/Krea2T-Revamped",
+     "url": "https://huggingface.co/spaces/waitinghere/Krea2T-Revamped",
+     "note": "gradio · ❤ 198",
+     "likes": 198,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "joelniklaus/harness-leaderboard",
+     "title": "joelniklaus/harness-leaderboard",
+     "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+     "note": "docker · ❤ 570",
+     "likes": 570,
+     "tag": "docker",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    }
+   ],
+   "fetched": "2026-11-27T08:20:21-05:00",
+   "history": true
+  },
+  {
+   "source": "producthunt",
+   "name": "Product Hunt",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "https://www.producthunt.com/products/remove-silence",
+     "title": "Remove Silence",
+     "url": "https://www.producthunt.com/products/remove-silence",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/espresso-27",
+     "title": "Espresso 27",
+     "url": "https://www.producthunt.com/products/espresso-27",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/gpyou",
+     "title": "gpyou",
+     "url": "https://www.producthunt.com/products/gpyou",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/woomool",
+     "title": "Woomool",
+     "url": "https://www.producthunt.com/products/woomool",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/depost-ai",
+     "title": "Depost AI",
+     "url": "https://www.producthunt.com/products/depost-ai",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/prosed-turn-your-content-into-a-book",
+     "title": "Prosed AI 2.0 + MCP",
+     "url": "https://www.producthunt.com/products/prosed-turn-your-content-into-a-book",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/ploid",
+     "title": "Ploid",
+     "url": "https://www.producthunt.com/products/ploid",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/form-action-store",
+     "title": "Form Action Store",
+     "url": "https://www.producthunt.com/products/form-action-store",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/slay-3",
+     "title": "slay",
+     "url": "https://www.producthunt.com/products/slay-3",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    },
+    {
+     "id": "https://www.producthunt.com/products/wizstar",
+     "title": "Wizstar R1",
+     "url": "https://www.producthunt.com/products/wizstar",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-27"
+    }
+   ],
+   "fetched": "2026-11-27T08:20:21-05:00",
+   "history": true
+  }
+ ],
+ "status": []
+}
