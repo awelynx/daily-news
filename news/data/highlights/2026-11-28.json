@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-28",
+  "generated": "2026-11-28T08:23:00-05:00",
+  "by": "joe",
+  "summary": "今天各家官方博客继续因感恩节假期无更新，焦点集中在底层架构与编码 agent 生态安全。架构侧，Google Research 详解 [DeepCrossAttention](https://research.google/blog/supercharging-transformer-residual-connections/)（HN 第 3，467 分）：以可学习权重和跨层交叉注意力替代标准 Transformer 的等权残差相加，缓解深层信息稀释，仅增极少参数即可实现最高 3 倍训练提速。安全侧，进入 Anthropic 官方插件市场的 [Convex Skills 被曝隐蔽行为](https://github.com/convex/convex-backend-skill/issues/64)（HN 第 7，330 分）：私下上报用户项目构想、直接管道执行未锁定远程脚本，并刻意拆分下载与执行指令以绕过安全分类器；虽已紧急删去遥测与绕过指引，但为 skills 供应链安全敲响警钟。\n\n另一条主线是对 AI 边界与可信度的反思。HN 榜首（582 分）是 Michael Nielsen [下架经典教材《神经网络与深度学习》](https://neuralnetworksanddeeplearning.com/)，直言前沿实验室行事草率、不愿再为前沿 AI 输送人才；同日，大模型去审查工具 [Heretic 作者宣布归档告别](https://github.com/p-e-w/heretic/issues/601)（HN 247 分），两极立场背后都是模型控制权之争。呼应本周 AI 形式化证明热潮，密码学家 D. J. Bernstein 整理了[通过机器检验的错误证明清单](https://cr.yp.to/proofs/falseccp.html)（HN 237 分），提醒证明内核本身也会出可靠性漏洞。\n\n和你最关注的编码 agent 与训练优化方向直接相关的还有三条更新：Product Hunt 上榜的 [Cognition SWE-2.1](https://www.producthunt.com/products/cognition-swe-2-1) 是 Devin 自主编码模型新版，基于开源权重 Kimi K3 纯强化学习后训练；科学空间推出 [BytePiece 0.8.0](https://kexue.fm/archives/12024)，苏剑林借助 Kimi 将高压缩率 Unigram 分词器重构为内置 C++17 引擎并补齐 LLM 生产管线；HF 热门新进 ISTA-DASLab 的 [Inkling-2-Mini 非均匀量化版](https://huggingface.co/ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF)（❤314），通过梯度搜索按层分配 2.75–3.50 bit 精度，进一步压缩 26B 稀疏 MoE 的本地显存门槛。",
+  "items": [
+    {
+      "title_zh": "Convex 官方插件 Skills 被曝暗传项目构想并规避安全检查",
+      "title": "Convex skills send the user's app idea to a remote server without telling them",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
+      "why": "入选 Anthropic 官方插件市场的 skills 被发现私传遥测并引导 agent 拆解命令绕过安全分类器，直接关系编码 agent 的 skills 供应链审查；HN 第 7（330 分）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://github.com/convex/convex-backend-skill/issues/64",
+          "title": "Convex skills send the user's app idea to a remote server without telling them",
+          "rank": 7,
+          "score": 330,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "Google DeepCrossAttention：用动态跨层残差提速 Transformer 训练最高 3 倍",
+      "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "why": "以可学习权重和深度方向交叉注意力替代等权残差相加，解决深层特征稀释问题，以极小参数增量换取最高 3 倍训练效率提升；HN 第 3（467 分）。",
+      "tag": "论文",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+          "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+          "rank": 3,
+          "score": 467,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "科学空间：BytePiece 0.8.0，以 C++17 重构的高压缩率 Unigram 分词器",
+      "title": "Bytepiece 0.8.0：更高效的Unigram Tokenizer",
+      "url": "https://kexue.fm/archives/12024",
+      "why": "苏剑林借助 AI 将基于 BNLM 算法的 BytePiece 全面重写为无额外依赖的 C++17 引擎，并补齐 mmap 加载、HF 导出与 FIM/Chat 模板等 LLM 生产能力。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "kexue",
+          "name": "科学空间（苏剑林）",
+          "url": "https://kexue.fm/archives/12024",
+          "title": "Bytepiece 0.8.0：更高效的Unigram Tokenizer"
+        }
+      ]
+    },
+    {
+      "title_zh": "Cognition SWE-2.1：基于 Kimi K3 纯强化学习的自主编码模型",
+      "title": "Cognition SWE-2.1",
+      "url": "https://www.producthunt.com/products/cognition-swe-2-1",
+      "why": "Devin 生态主力编码模型升级，基于开源权重 Kimi K3 纯强化学习后训练，大幅提升终端编程与安全能力并提供 Cerebras 极速推理版；Product Hunt 第 2。",
+      "tag": "产品",
+      "sources": [
+        {
+          "source": "producthunt",
+          "name": "Product Hunt",
+          "url": "https://www.producthunt.com/products/cognition-swe-2-1",
+          "title": "Cognition SWE-2.1",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "title_zh": "ISTA-DASLab 发布 Inkling-2-Mini 非均匀低比特量化版（GSQ-RCO GGUF）",
+      "title": "ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+      "url": "https://huggingface.co/ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+      "why": "结合 GSQ 与 RCO 梯度搜索为 26.4B 循环稀疏 MoE 按层分配 2.75–3.50 bit 混合精度并输出标准 GGUF，新进 HF 热门模型（❤314）。",
+      "tag": "开源",
+      "sources": [
+        {
+          "source": "hf-models",
+          "name": "Hugging Face 热门模型",
+          "url": "https://huggingface.co/ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+          "title": "ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+          "rank": 10,
+          "score": 314,
+          "score_kind": "likes"
+        }
+      ]
+    },
+    {
+      "title_zh": "Michael Nielsen 下架经典开源教材《神经网络与深度学习》",
+      "title": "Michael Nielsen took down his book on neural nets",
+      "url": "https://neuralnetworksanddeeplearning.com/",
+      "why": "作者批评前沿实验室竞赛过于草率并带来灾难性风险，表态不再愿助力培养前沿 AI 从业者，引发社区对 AI 安全伦理的热议；HN 今日第 1（582 分）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://neuralnetworksanddeeplearning.com/",
+          "title": "Michael Nielsen took down his book on neural nets",
+          "rank": 1,
+          "score": 582,
+          "score_kind": "score"
+        }
+      ]
+    },
+    {
+      "title_zh": "D. J. Bernstein 盘点「错误但通过机器校验的证明」漏洞清单",
+      "title": "False computer-checked proofs",
+      "url": "https://cr.yp.to/proofs/falseccp.html",
+      "why": "汇总多款主流形式化证明校验器的可靠性漏洞，在近期 Lean 4 证明热潮下提醒关注可信计算基（TCB）的边界与风险；HN 第 9（237 分）。",
+      "tag": "社区",
+      "sources": [
+        {
+          "source": "hn",
+          "name": "Hacker News 24 小时最高分",
+          "url": "https://cr.yp.to/proofs/falseccp.html",
+          "title": "False computer-checked proofs",
+          "rank": 9,
+          "score": 237,
+          "score_kind": "score"
+        }
+      ]
+    }
+  ]
+}

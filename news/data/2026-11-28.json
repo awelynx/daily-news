@@ -1,0 +1,881 @@
+{
+ "date": "2026-11-28",
+ "generated": "2026-11-28T08:20:45-05:00",
+ "feeds": [
+  {
+   "source": "kexue",
+   "name": "科学空间（苏剑林）",
+   "type": "feed",
+   "items": [
+    {
+     "id": "https://kexue.fm/archives/12024",
+     "title": "Bytepiece 0.8.0：更高效的Unigram Tokenizer",
+     "url": "https://kexue.fm/archives/12024",
+     "note": "从算法上来看，常用的Tokenizer可以分为BPE和Unigram两种。当前的主流无疑是BPE，大体上是因为在主流实现上（比如SentencePiece），BPE的压缩率通常更高。然而，我们三..."
+    }
+   ]
+  }
+ ],
+ "rankings": [
+  {
+   "source": "hn",
+   "name": "Hacker News 24 小时最高分",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "50670757",
+     "title": "Michael Nielsen took down his book on neural nets",
+     "url": "https://neuralnetworksanddeeplearning.com/",
+     "note": "582 points",
+     "discuss": {
+      "label": "387 评论",
+      "url": "https://news.ycombinator.com/item?id=50670757"
+     },
+     "score": 582,
+     "comments": 387,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50668145",
+     "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
+     "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
+     "note": "551 points",
+     "discuss": {
+      "label": "291 评论",
+      "url": "https://news.ycombinator.com/item?id=50668145"
+     },
+     "score": 551,
+     "comments": 291,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50672565",
+     "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+     "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+     "note": "467 points",
+     "discuss": {
+      "label": "171 评论",
+      "url": "https://news.ycombinator.com/item?id=50672565"
+     },
+     "score": 467,
+     "comments": 171,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50674218",
+     "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+     "url": "https://unkernel.dev",
+     "note": "426 points",
+     "discuss": {
+      "label": "110 评论",
+      "url": "https://news.ycombinator.com/item?id=50674218"
+     },
+     "score": 426,
+     "comments": 110,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50670855",
+     "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+     "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+     "note": "415 points",
+     "discuss": {
+      "label": "275 评论",
+      "url": "https://news.ycombinator.com/item?id=50670855"
+     },
+     "score": 415,
+     "comments": 275,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50667726",
+     "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+     "url": "https://bouncemarket.minhanhday.com/",
+     "note": "389 points",
+     "discuss": {
+      "label": "130 评论",
+      "url": "https://news.ycombinator.com/item?id=50667726"
+     },
+     "score": 389,
+     "comments": 130,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50669765",
+     "title": "Convex skills send the user's app idea to a remote server without telling them",
+     "url": "https://github.com/convex/convex-backend-skill/issues/64",
+     "note": "330 points",
+     "discuss": {
+      "label": "107 评论",
+      "url": "https://news.ycombinator.com/item?id=50669765"
+     },
+     "score": 330,
+     "comments": 107,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50676672",
+     "title": "Farewell",
+     "url": "https://github.com/p-e-w/heretic/issues/601",
+     "note": "247 points",
+     "discuss": {
+      "label": "74 评论",
+      "url": "https://news.ycombinator.com/item?id=50676672"
+     },
+     "score": 247,
+     "comments": 74,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50667989",
+     "title": "False computer-checked proofs",
+     "url": "https://cr.yp.to/proofs/falseccp.html",
+     "note": "237 points",
+     "discuss": {
+      "label": "107 评论",
+      "url": "https://news.ycombinator.com/item?id=50667989"
+     },
+     "score": 237,
+     "comments": 107,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50669561",
+     "title": "I'm Scared of AI",
+     "url": "https://thesoapbox.email/archive/3",
+     "note": "216 points",
+     "discuss": {
+      "label": "247 评论",
+      "url": "https://news.ycombinator.com/item?id=50669561"
+     },
+     "score": 216,
+     "comments": 247,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50673688",
+     "title": "Atari Homebrew Awards Cancelled",
+     "url": "https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/",
+     "note": "215 points",
+     "discuss": {
+      "label": "231 评论",
+      "url": "https://news.ycombinator.com/item?id=50673688"
+     },
+     "score": 215,
+     "comments": 231,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50674452",
+     "title": "Knuth: Moratorium on Error Reports",
+     "url": "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html",
+     "note": "202 points",
+     "discuss": {
+      "label": "102 评论",
+      "url": "https://news.ycombinator.com/item?id=50674452"
+     },
+     "score": 202,
+     "comments": 102,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50671301",
+     "title": "I am scared: Careless People – Sarah Wynn-Williams on living under a gag order",
+     "url": "https://www.theguardian.com/books/2026/nov/27/careless-people-author-sarah-wynn-williams-the-silence-is-mine-it-doesnt-have-to-be-yours",
+     "note": "197 points",
+     "discuss": {
+      "label": "115 评论",
+      "url": "https://news.ycombinator.com/item?id=50671301"
+     },
+     "score": 197,
+     "comments": 115,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50673521",
+     "title": "Woman evicted after landlord's AI assistant told her she could delay rent",
+     "url": "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai",
+     "note": "193 points",
+     "discuss": {
+      "label": "146 评论",
+      "url": "https://news.ycombinator.com/item?id=50673521"
+     },
+     "score": 193,
+     "comments": 146,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "50667744",
+     "title": "GPT 6.2 Astra solves a historical mystery",
+     "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+     "note": "167 points",
+     "discuss": {
+      "label": "1 评论",
+      "url": "https://news.ycombinator.com/item?id=50667744"
+     },
+     "score": 167,
+     "comments": 1,
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    }
+   ],
+   "fetched": "2026-11-28T08:20:45-05:00",
+   "history": true
+  },
+  {
+   "source": "github-trending",
+   "name": "GitHub Trending（今日）",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "elementalsouls/Claude-BugHunter",
+     "title": "elementalsouls/Claude-BugHunter",
+     "url": "https://github.com/elementalsouls/Claude-BugHunter",
+     "note": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.  (Python · +1,372⭐ 今日)",
+     "stars": 1372,
+     "lang": "Python",
+     "desc": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "obra/superpowers",
+     "title": "obra/superpowers",
+     "url": "https://github.com/obra/superpowers",
+     "note": "An agentic skills framework & software development methodology that works.  (Shell · +809⭐ 今日)",
+     "stars": 809,
+     "lang": "Shell",
+     "desc": "An agentic skills framework & software development methodology that works.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "HKUDS/CLI-Anything",
+     "title": "HKUDS/CLI-Anything",
+     "url": "https://github.com/HKUDS/CLI-Anything",
+     "note": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/  (Python · +561⭐ 今日)",
+     "stars": 561,
+     "lang": "Python",
+     "desc": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "jingyaogong/minimind",
+     "title": "jingyaogong/minimind",
+     "url": "https://github.com/jingyaogong/minimind",
+     "note": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.  (Python · +391⭐ 今日)",
+     "stars": 391,
+     "lang": "Python",
+     "desc": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "cursor/plugins",
+     "title": "cursor/plugins",
+     "url": "https://github.com/cursor/plugins",
+     "note": "Cursor plugin specification and official plugins  (TypeScript · +214⭐ 今日)",
+     "stars": 214,
+     "lang": "TypeScript",
+     "desc": "Cursor plugin specification and official plugins",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "firecrawl/firecrawl",
+     "title": "firecrawl/firecrawl",
+     "url": "https://github.com/firecrawl/firecrawl",
+     "note": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.  (TypeScript · +717⭐ 今日)",
+     "stars": 717,
+     "lang": "TypeScript",
+     "desc": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "nginx/nginx",
+     "title": "nginx/nginx",
+     "url": "https://github.com/nginx/nginx",
+     "note": "The official NGINX Open Source repository.  (C · +131⭐ 今日)",
+     "stars": 131,
+     "lang": "C",
+     "desc": "The official NGINX Open Source repository.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "openvinotoolkit/openvino",
+     "title": "openvinotoolkit/openvino",
+     "url": "https://github.com/openvinotoolkit/openvino",
+     "note": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference  (C++ · +111⭐ 今日)",
+     "stars": 111,
+     "lang": "C++",
+     "desc": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "cathrynlavery/diagram-design",
+     "title": "cathrynlavery/diagram-design",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "note": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.  (HTML · +499⭐ 今日)",
+     "stars": 499,
+     "lang": "HTML",
+     "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "mvanhorn/last30days-skill",
+     "title": "mvanhorn/last30days-skill",
+     "url": "https://github.com/mvanhorn/last30days-skill",
+     "note": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary  (Python · +519⭐ 今日)",
+     "stars": 519,
+     "lang": "Python",
+     "desc": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "google-labs-code/stitch-skills",
+     "title": "google-labs-code/stitch-skills",
+     "url": "https://github.com/google-labs-code/stitch-skills",
+     "note": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.  (TypeScript · +293⭐ 今日)",
+     "stars": 293,
+     "lang": "TypeScript",
+     "desc": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "mjmirza/app-store-compliance",
+     "title": "mjmirza/app-store-compliance",
+     "url": "https://github.com/mjmirza/app-store-compliance",
+     "note": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.  (Shell · +907⭐ 今日)",
+     "stars": 907,
+     "lang": "Shell",
+     "desc": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Tracer-Cloud/opensre",
+     "title": "Tracer-Cloud/opensre",
+     "url": "https://github.com/Tracer-Cloud/opensre",
+     "note": "The open-source agent for CI/CD reliability.  (Python · +270⭐ 今日)",
+     "stars": 270,
+     "lang": "Python",
+     "desc": "The open-source agent for CI/CD reliability.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "toeverything/AFFiNE",
+     "title": "toeverything/AFFiNE",
+     "url": "https://github.com/toeverything/AFFiNE",
+     "note": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.  (TypeScript · +495⭐ 今日)",
+     "stars": 495,
+     "lang": "TypeScript",
+     "desc": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "XiaoYouChR/Ghost-Downloader-3",
+     "title": "XiaoYouChR/Ghost-Downloader-3",
+     "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+     "note": "The only downloader you need. 下载器的集大成者。  (Python · +664⭐ 今日)",
+     "stars": 664,
+     "lang": "Python",
+     "desc": "The only downloader you need. 下载器的集大成者。",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    }
+   ],
+   "fetched": "2026-11-28T08:20:45-05:00",
+   "history": true
+  },
+  {
+   "source": "linuxdo",
+   "name": "LINUX DO 今日热门",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "https://linux.do/t/topic/3259745",
+     "title": "花一晚上搓了个虾蹬生成视频公益站",
+     "url": "https://linux.do/t/topic/3259745",
+     "note": "本帖使用社区公益推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的项目是免费使用的，无收费（变相收费、赞助）部分： 是 / 否 我的帖子已经打上 公益推广 标签： 是 / 否 我的项目属于个人项目，与公司或商业机构无关： 是 我的项目不存在QQ、TG等群组引流： 是 我的项目不存在非运营必要的网站引流： 是 我",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3262685",
+     "title": "长跑结束，求婚成功✌️",
+     "url": "https://linux.do/t/topic/3262685",
+     "note": "3000 多天的长跑结束啦，昨天在格雷梅的观景台跟女友求婚成功！ 到土耳其后就一直在计划在什么场景求婚，说什么。下热气球后，她说在热气球的时候以为我会求婚的。我说我也一直在找机会但 20 人框的气球还是蛮窄的，而且当时还是会社恐担心尴尬和打扰其他游客。她说有点失望，我差点没忍住说出后面的计划。 最后用徒步拍照的理由把她",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3261236",
+     "title": "给各位佬分享一下我最近优化了很久且用的很舒服的ppt skills，使用体验应该超过我用过的市面上其他的skills",
+     "url": "https://linux.do/t/topic/3261236",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是 ",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3260567",
+     "title": "Oracle Cloud注册成功了 我似乎发现诀窍了",
+     "url": "https://linux.do/t/topic/3260567",
+     "note": "我之前注册abc的时候，都是 按账单地址在地址一完整填写的 ，失败了大概5次，不同时间，中英文不同信用卡邮箱全部试了 这次我谷歌无痕，无 ， 163邮箱，地址中文， 地址1 填行政区 街道 地址2 小区加具体到房号 都是中文填写，这次就成了 我是先试了一次失败，感觉就是地址的问题，就连着注册的。 希望对大家有用 107",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3260047",
+     "title": "你的gpt不说人话？Gemini拯救它！把gpt接入antigravity使用！",
+     "url": "https://linux.do/t/topic/3260047",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是 ",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3260251",
+     "title": "Deepseek因pws语法错误误删我磁盘",
+     "url": "https://linux.do/t/topic/3260251",
+     "note": "今个打开之前某个项目发现文件夹空了，然后打开我AICoding文件夹感觉少了很多东西，于是让gemini4neon排查，发现deepseek今天在清理一个跑不起来的项目的时候因为语法错误直接删我磁盘文件持续3min，造成我1500个gpt free账号 + 十几个muse账号 + 十几个TG的Tdata格式账号全部丢失",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3259985",
+     "title": "Claude模型疑似会在机器学习相关任务请求中拉屎",
+     "url": "https://linux.do/t/topic/3259985",
+     "note": "据x上多位用户反馈，Claude系列模型会在处理机器学习相关请求时故意破坏，在项目里拉屎。 37 个帖子 - 29 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3260646",
+     "title": "关于灰产、捞偏门",
+     "url": "https://linux.do/t/topic/3260646",
+     "note": "本人情况：大一 这是我一直以来想问的问题，一是想问问大家有没有类似的困惑，二是想问问大家有没有什么建议。 先说我最想说的事情吧，那就是灰产现在这个年代实在是距离我们太近太近了，就比如说最经典的机场和 AI 中转站，基本上很多人，就起码我个人而言，在这些产品的使用过程中，不只是一个消费者，实际上本身也是一个违规者。 那就",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3260756",
+     "title": "L站是不是为数不多的净土了",
+     "url": "https://linux.do/t/topic/3260756",
+     "note": "平时L站跟x都都刷，x中文区真是没法看，90%都是机器人。 L站加入一个月了，感觉这里是为数不多没啥机器人的站了，这里的佬个个都很厉害，人也很好 51 个帖子 - 40 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3260698",
+     "title": "[ ArcaneAI ] 公益站开放了",
+     "url": "https://linux.do/t/topic/3260698",
+     "note": "本帖使用社区公益推广，符合推广要求。我申明并遵循社区要求的以下内容 （点击了解更多详细信息） 公益站重新复活了目前提供 Grok 模型（已本地测试，弄了50个号不知道够不够）GPT 模型目前测试不行，还在弄 签到功能还在弄，等着 [!注意] 网站实现信誉等级 lv2 注册码购买 LD士多 商品详情 - LD士多 在 L",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3262245",
+     "title": "Anthropic 被曝强加价值观，瞒着客户给代码“投毒”",
+     "url": "https://linux.do/t/topic/3262245",
+     "note": "把人家婚恋配对产品的算法偷偷强行改成政治正确，用Neon才审查出来问题。 OAI把它认为“不合规”的东西“无害化”，现在A/则是强塞自己的价值观到产品里，两者都是偷偷改，没有告知开发者。 所以现在这两家的AI是在教人类怎么做事？ 29 个帖子 - 28 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3261681",
+     "title": "小豆邀请码可以在站内邀请码交换平台获取",
+     "url": "https://linux.do/t/topic/3261681",
+     "note": "目前有小豆 cue muse hark邀请码 exchange.fshark.cloud 邀请码交换 分享多余的产品邀请码，领一个就销毁，分享者能看到谁领走了。 57 个帖子 - 47 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3262809",
+     "title": "【开源】受不了资源管理器转圈，用 Rust + GPUI 写了个文件管理器 Arke",
+     "url": "https://linux.do/t/topic/3262809",
+     "note": "本帖使用社区开源推广，符合推广要求。我申明并遵循社区要求的以下内容： 我的帖子已经打上 开源推广 标签： 是 我的开源项目完整开源，无未开源部分： 是 我的开源项目已链接认可 LINUX DO 社区： 是 我帖子内的项目介绍，AI生成、润色内容部分已截图发出： 是 以上选择我承诺是永久有效的，接受社区和佬友监督： 是 ",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3261422",
+     "title": "【京东E卡抽奖】小小指导顾问，拿下！",
+     "url": "https://linux.do/t/topic/3261422",
+     "note": "10 个解决方案是 L 站的一小步，却是 UEFI 的一大步 奖品内容：京东 E 卡 50 面额 * 2 份 截止时间： Sun, Nov 29, 2026 6:00 PM CST 参与方式：回复任意内容 153 个帖子 - 153 位参与者 阅读完整话题",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://linux.do/t/topic/3262293",
+     "title": "Google 把扫码验证转成直接发验证码验证教程，+86可过",
+     "url": "https://linux.do/t/topic/3262293",
+     "note": "用 Google Cloud Cloud Shell 过 Google 扫码验证教程 第一步：进入 Google Cloud 控制台 打开 https://console.cloud.google.com/ ，登录 Google 账号。 第二步：打开 Cloud Shell 点击控制台右上角铃铛左侧的终端图标，打开 C",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    }
+   ],
+   "fetched": "2026-11-28T08:20:45-05:00",
+   "history": true
+  },
+  {
+   "source": "hf-models",
+   "name": "Hugging Face 热门模型",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "thinkingmachines/Inkling-2-Mini",
+     "title": "thinkingmachines/Inkling-2-Mini",
+     "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+     "note": "image-text-to-text · ❤ 6533",
+     "likes": 6533,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "unsloth/Inkling-2-Mini-GGUF",
+     "title": "unsloth/Inkling-2-Mini-GGUF",
+     "url": "https://huggingface.co/unsloth/Inkling-2-Mini-GGUF",
+     "note": "image-text-to-text · ❤ 1637",
+     "likes": 1637,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "SulphurAI/Sulphur-3",
+     "title": "SulphurAI/Sulphur-3",
+     "url": "https://huggingface.co/SulphurAI/Sulphur-3",
+     "note": "❤ 1403",
+     "likes": 1403,
+     "mark": "streak",
+     "streak": 6,
+     "firstSeen": "2026-11-23"
+    },
+    {
+     "id": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+     "title": "prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+     "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+     "note": "text-generation · ❤ 672",
+     "likes": 672,
+     "tag": "text-generation",
+     "mark": "streak",
+     "streak": 4,
+     "firstSeen": "2026-11-25"
+    },
+    {
+     "id": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "title": "AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "url": "https://huggingface.co/AtomicChat/Inkling-2-Mini-Uncensored-GGUF",
+     "note": "image-text-to-text · ❤ 1056",
+     "likes": 1056,
+     "tag": "image-text-to-text",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "inworld/voice-isolator",
+     "title": "inworld/voice-isolator",
+     "url": "https://huggingface.co/inworld/voice-isolator",
+     "note": "audio-to-audio · ❤ 1021",
+     "likes": 1021,
+     "tag": "audio-to-audio",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Lightricks/LTX-2.5",
+     "title": "Lightricks/LTX-2.5",
+     "url": "https://huggingface.co/Lightricks/LTX-2.5",
+     "note": "image-to-video · ❤ 13778",
+     "likes": 13778,
+     "tag": "image-to-video",
+     "mark": "streak",
+     "streak": 3,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "llamaindex/OCRia-nano-1",
+     "title": "llamaindex/OCRia-nano-1",
+     "url": "https://huggingface.co/llamaindex/OCRia-nano-1",
+     "note": "image-to-text · ❤ 375",
+     "likes": 375,
+     "tag": "image-to-text",
+     "mark": "streak",
+     "streak": 4,
+     "firstSeen": "2026-11-25"
+    },
+    {
+     "id": "nvidia/Nemotron-Labs-Image-30B-A3B",
+     "title": "nvidia/Nemotron-Labs-Image-30B-A3B",
+     "url": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+     "note": "text-to-image · ❤ 353",
+     "likes": 353,
+     "tag": "text-to-image",
+     "mark": "streak",
+     "streak": 3,
+     "firstSeen": "2026-11-26"
+    },
+    {
+     "id": "ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+     "title": "ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+     "url": "https://huggingface.co/ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF",
+     "note": "text-generation · ❤ 314",
+     "likes": 314,
+     "tag": "text-generation",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    }
+   ],
+   "fetched": "2026-11-28T08:20:45-05:00",
+   "history": true
+  },
+  {
+   "source": "hf-spaces",
+   "name": "Hugging Face 热门 Spaces",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "JCisHERE/wan2-2-i2v-v3",
+     "title": "JCisHERE/wan2-2-i2v-v3",
+     "url": "https://huggingface.co/spaces/JCisHERE/wan2-2-i2v-v3",
+     "note": "gradio · ❤ 896",
+     "likes": 896,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "Lakonik/pi-H3",
+     "title": "Lakonik/pi-H3",
+     "url": "https://huggingface.co/spaces/Lakonik/pi-H3",
+     "note": "gradio · ❤ 213",
+     "likes": 213,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "MiniMaxAI/minimax-h3-image",
+     "title": "MiniMaxAI/minimax-h3-image",
+     "url": "https://huggingface.co/spaces/MiniMaxAI/minimax-h3-image",
+     "note": "gradio · ❤ 391",
+     "likes": 391,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "waitinghere/Krea2T-Revamped",
+     "title": "waitinghere/Krea2T-Revamped",
+     "url": "https://huggingface.co/spaces/waitinghere/Krea2T-Revamped",
+     "note": "gradio · ❤ 213",
+     "likes": 213,
+     "tag": "gradio",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "huggingface/moe-blogpost",
+     "title": "huggingface/moe-blogpost",
+     "url": "https://huggingface.co/spaces/huggingface/moe-blogpost",
+     "note": "docker · ❤ 883",
+     "likes": 883,
+     "tag": "docker",
+     "mark": "streak",
+     "streak": 7,
+     "firstSeen": "2026-11-22"
+    },
+    {
+     "id": "joelniklaus/harness-leaderboard",
+     "title": "joelniklaus/harness-leaderboard",
+     "url": "https://huggingface.co/spaces/joelniklaus/harness-leaderboard",
+     "note": "docker · ❤ 574",
+     "likes": 574,
+     "tag": "docker",
+     "mark": "streak",
+     "streak": 2,
+     "firstSeen": "2026-11-27"
+    }
+   ],
+   "fetched": "2026-11-28T08:20:45-05:00",
+   "history": true
+  },
+  {
+   "source": "producthunt",
+   "name": "Product Hunt",
+   "type": "ranking",
+   "items": [
+    {
+     "id": "https://www.producthunt.com/products/microsoft-decision-1-1",
+     "title": "Microsoft-Decision-1.1",
+     "url": "https://www.producthunt.com/products/microsoft-decision-1-1",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/cognition-swe-2-1",
+     "title": "Cognition SWE-2.1",
+     "url": "https://www.producthunt.com/products/cognition-swe-2-1",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/bento-11",
+     "title": "Bento",
+     "url": "https://www.producthunt.com/products/bento-11",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/superrelay",
+     "title": "Superrelay",
+     "url": "https://www.producthunt.com/products/superrelay",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/gutcheck-2",
+     "title": "gutcheck",
+     "url": "https://www.producthunt.com/products/gutcheck-2",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/deardarling",
+     "title": "DearDarling",
+     "url": "https://www.producthunt.com/products/deardarling",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/rankthesearch",
+     "title": "RankTheSearch",
+     "url": "https://www.producthunt.com/products/rankthesearch",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/overads-io",
+     "title": "overads.io",
+     "url": "https://www.producthunt.com/products/overads-io",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/graypass",
+     "title": "GrayPass",
+     "url": "https://www.producthunt.com/products/graypass",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    },
+    {
+     "id": "https://www.producthunt.com/products/tano",
+     "title": "Tano",
+     "url": "https://www.producthunt.com/products/tano",
+     "note": "",
+     "mark": "new",
+     "streak": 1,
+     "firstSeen": "2026-11-28"
+    }
+   ],
+   "fetched": "2026-11-28T08:20:45-05:00",
+   "history": true
+  }
+ ],
+ "status": []
+}
